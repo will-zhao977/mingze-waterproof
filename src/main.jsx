@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  ShieldCheck,
   Building2,
   Mail,
   MapPin,
@@ -17,7 +16,10 @@ import {
   Sparkles,
   Layers,
   ChevronRight,
-  ExternalLink,
+  Download,
+  Package,
+  ShieldCheck,
+  Check,
   PhoneCall
 } from 'lucide-react';
 import './styles.css';
@@ -29,19 +31,22 @@ import {
   STANDARDS_MATRIX,
   WHY_CHOOSE_US
 } from './data.js';
+import { ProductVisual } from './ProductVisual.jsx';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeNavTab, setActiveNavTab] = useState('home'); // home | catalog | solutions | standards | factory | contact
+  const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [isSampleModalOpen, setIsSampleModalOpen] = useState(false);
   const [quoteProductCode, setQuoteProductCode] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   // Filter products by category and search keyword
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(p => {
-      const matchCat = activeTab === 'all' || p.categoryId === activeTab;
+      const matchCat = activeCategory === 'all' || p.categoryId === activeCategory;
       const matchSearch = searchQuery === '' ||
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -49,7 +54,7 @@ function App() {
         p.applications.toLowerCase().includes(searchQuery.toLowerCase());
       return matchCat && matchSearch;
     });
-  }, [activeTab, searchQuery]);
+  }, [activeCategory, searchQuery]);
 
   const openQuoteModal = (productCode = '') => {
     setQuoteProductCode(productCode);
@@ -57,24 +62,31 @@ function App() {
     setFormSubmitted(false);
   };
 
-  const handleQuoteSubmit = (e) => {
+  const openSampleModal = (productCode = '') => {
+    setQuoteProductCode(productCode);
+    setIsSampleModalOpen(true);
+    setFormSubmitted(false);
+  };
+
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
     setTimeout(() => {
       setIsQuoteModalOpen(false);
+      setIsSampleModalOpen(false);
       setFormSubmitted(false);
     }, 2500);
   };
 
   return (
     <div className="site-wrapper">
-      {/* 1. Ultra-Clean Top Utility Strip */}
+      {/* 1. Global Utility Notification Bar */}
       <div className="top-utility-bar">
         <div className="top-utility-inner">
           <div className="top-utility-group">
             <span className="top-utility-item">
-              <Building2 size={13} color="#3B82F6" />
-              <span><strong>Factory Base:</strong> Shouguang, Weifang, China</span>
+              <Building2 size={13} color="#60A5FA" />
+              <span><strong>Manufacturing Base:</strong> Shouguang, Weifang, Shandong, China</span>
             </span>
             <span className="top-utility-item">
               <Anchor size={13} color="#10B981" />
@@ -83,8 +95,8 @@ function App() {
           </div>
 
           <div className="top-utility-group">
-            <a href={`mailto:${COMPANY_INFO.email}`} className="top-utility-link top-utility-item">
-              <Mail size={12} color="#3B82F6" />
+            <a href={`mailto:${COMPANY_INFO.email}`} className="top-utility-item" style={{ color: '#CBD5E1' }}>
+              <Mail size={12} color="#60A5FA" />
               <span>{COMPANY_INFO.email}</span>
             </a>
             <a href={COMPANY_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="top-utility-item" style={{ color: '#25D366', fontWeight: 600 }}>
@@ -95,10 +107,10 @@ function App() {
         </div>
       </div>
 
-      {/* 2. Architectural Sticky Header */}
+      {/* 2. Architectural Sticky Header with View Navigation */}
       <header className="site-header">
         <div className="header-inner">
-          <a href="#" className="brand-logo-area">
+          <a href="#" className="brand-logo-area" onClick={() => setActiveNavTab('home')}>
             <div className="brand-badge">MZ</div>
             <div className="brand-text">
               <h1>MINGZE WATERPROOF</h1>
@@ -106,18 +118,65 @@ function App() {
             </div>
           </a>
 
-          <nav className="site-nav">
-            <a href="#products" className="nav-link">Products ({PRODUCTS.length})</a>
-            <a href="#solutions" className="nav-link">Solutions</a>
-            <a href="#standards" className="nav-link">Technical & QA</a>
-            <a href="#about" className="nav-link">Factory</a>
-            <a href="#contact" className="nav-link">Contact</a>
+          {/* Central Navigation Tabs */}
+          <nav className="nav-tabs-group">
+            <button
+              onClick={() => { setActiveNavTab('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className={`nav-tab-btn ${activeNavTab === 'home' ? 'active' : ''}`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => {
+                setActiveNavTab('catalog');
+                document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`nav-tab-btn ${activeNavTab === 'catalog' ? 'active' : ''}`}
+            >
+              Materials ({PRODUCTS.length})
+            </button>
+            <button
+              onClick={() => {
+                setActiveNavTab('solutions');
+                document.getElementById('solutions-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`nav-tab-btn ${activeNavTab === 'solutions' ? 'active' : ''}`}
+            >
+              Solutions
+            </button>
+            <button
+              onClick={() => {
+                setActiveNavTab('standards');
+                document.getElementById('standards-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`nav-tab-btn ${activeNavTab === 'standards' ? 'active' : ''}`}
+            >
+              QA & Testing
+            </button>
+            <button
+              onClick={() => {
+                setActiveNavTab('factory');
+                document.getElementById('factory-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`nav-tab-btn ${activeNavTab === 'factory' ? 'active' : ''}`}
+            >
+              Factory Base
+            </button>
+            <button
+              onClick={() => {
+                setActiveNavTab('contact');
+                document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`nav-tab-btn ${activeNavTab === 'contact' ? 'active' : ''}`}
+            >
+              RFQ & Contact
+            </button>
           </nav>
 
           <div className="header-actions">
-            <a href={COMPANY_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-sm">
-              <MessageCircle size={15} /> WhatsApp
-            </a>
+            <button onClick={() => openSampleModal()} className="btn btn-outline btn-sm">
+              <Package size={14} /> Free Sample Box
+            </button>
             <button onClick={() => openQuoteModal()} className="btn btn-primary btn-sm">
               Get FOB Quote <ArrowRight size={14} />
             </button>
@@ -126,71 +185,80 @@ function App() {
       </header>
 
       {/* 3. Hero Section - Industrial Editorial */}
-      <section className="hero-architectural">
+      <section className="hero-editorial">
         <div className="section-container">
           <div className="hero-grid">
-            <div className="hero-content">
+            <div>
               <div className="eyebrow eyebrow-dark">
                 <Sparkles size={13} /> Direct Manufacturer Export Gateway
               </div>
-              <h1>High-Performance Waterproofing Systems for Global Infrastructure.</h1>
-              <p className="hero-lead">
-                Direct factory manufacturing of ASTM, CE & GB certified SBS/APP modified bitumen, TPO/PVC/EPDM single-ply sheets, pre-applied HDPE blindside membranes, and liquid elastomeric polymer coatings.
+              <h1 className="hero-title">
+                High-Performance Waterproofing Systems for <span>Global Infrastructure</span>.
+              </h1>
+              <p className="hero-p">
+                Direct industrial manufacturing of ASTM, CE & GB certified modified bitumen, single-ply TPO/PVC/EPDM sheets, pre-applied HDPE blindside membranes, and liquid elastomeric polymer coatings.
               </p>
 
-              <div className="hero-btn-row">
-                <button onClick={() => openQuoteModal()} className="btn btn-primary btn-lg">
-                  Request Product Catalog & TDS <FileText size={16} />
+              <div className="hero-actions-row">
+                <button
+                  onClick={() => {
+                    setActiveNavTab('catalog');
+                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="btn btn-primary btn-lg"
+                >
+                  Explore 37 Materials <ArrowRight size={16} />
+                </button>
+                <button onClick={() => openSampleModal()} className="btn btn-outline btn-lg" style={{ background: 'transparent', color: '#fff', borderColor: '#334155' }}>
+                  <Package size={16} /> Request Material Sample Box
                 </button>
                 <a href={COMPANY_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-lg">
-                  <MessageCircle size={16} /> Direct Export Desk
+                  <MessageCircle size={16} /> Export Desk
                 </a>
               </div>
 
-              {/* 4 Metrics in One Aligned Row */}
-              <div className="hero-metrics-bar">
-                <div className="hero-metric-item">
-                  <div className="metric-num">68,000 m²</div>
-                  <div className="metric-label">Automated Base</div>
+              {/* 4 Key Metrics in Single Solid Row */}
+              <div className="hero-stats-band">
+                <div className="hero-stat-card">
+                  <div className="num">68,000 m²</div>
+                  <div className="lbl">Automated Base</div>
                 </div>
-                <div className="hero-metric-item">
-                  <div className="metric-num">50M m²</div>
-                  <div className="metric-label">Annual Output</div>
+                <div className="hero-stat-card">
+                  <div className="num">50M m²</div>
+                  <div className="lbl">Annual Output</div>
                 </div>
-                <div className="hero-metric-item">
-                  <div className="metric-num">ASTM / CE / GB</div>
-                  <div className="metric-label">Certified Testing</div>
+                <div className="hero-stat-card">
+                  <div className="num">ASTM / CE / GB</div>
+                  <div className="lbl">Certified Lab QA</div>
                 </div>
-                <div className="hero-metric-item">
-                  <div className="metric-num">200 km</div>
-                  <div className="metric-label">To Qingdao Port</div>
+                <div className="hero-stat-card">
+                  <div className="num">200 km</div>
+                  <div className="lbl">To Qingdao Port</div>
                 </div>
               </div>
             </div>
 
-            {/* Hero Right Visual Card */}
-            <div className="hero-showcase-card">
-              <div className="hero-showcase-header">
-                <span>Production & Quality Control</span>
+            {/* Hero Right 3D Visual Showcase */}
+            <div className="hero-visual-card">
+              <div className="hero-visual-header">
+                <span>Material Engineering & Lab Tested</span>
                 <span style={{ color: '#10B981', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <CheckCircle2 size={13} /> CNAS Tested
+                  <CheckCircle2 size={13} /> Certified 0.7 MPa Watertight
                 </span>
               </div>
-              <img
-                src="/assets/images/product-bitumen.jpg"
-                alt="Mingze Waterproof Factory and Material Standards"
-                className="hero-showcase-img"
-              />
-              <div className="hero-showcase-body">
-                <h3>Full-Spectrum Waterproofing Materials</h3>
+              <div className="hero-visual-art">
+                <ProductVisual product={PRODUCTS[0]} size="hero" />
+              </div>
+              <div className="hero-visual-body">
+                <h3>Elastomeric SBS Modified Bitumen Membrane</h3>
                 <p>
-                  Containerized FOB & CIF export to 30+ countries across Southeast Asia, Middle East, Europe, South America, and Africa.
+                  Reinforced with heavy polyester mat, delivering extreme low-temperature flexibility down to -25°C and superior resistance to cyclic thermal fatigue.
                 </p>
-                <div className="hero-showcase-tags">
-                  <span className="hero-showcase-tag">ISO9001:2015</span>
-                  <span className="hero-showcase-tag">EN 13707</span>
-                  <span className="hero-showcase-tag">ASTM D6164</span>
-                  <span className="hero-showcase-tag">OEM / ODM Customization</span>
+                <div className="hero-chips-row">
+                  <span className="hero-chip">GB 18242-2008</span>
+                  <span className="hero-chip">ASTM D6164</span>
+                  <span className="hero-chip">EN 13707</span>
+                  <span className="hero-chip">FLL Root Resistant</span>
                 </div>
               </div>
             </div>
@@ -198,109 +266,129 @@ function App() {
         </div>
       </section>
 
-      {/* 4. Editorial Category Family Navigator */}
-      <section className="category-family-bar">
+      {/* 4. Five Core Material System Pillars */}
+      <section className="section-block" style={{ background: '#FFFFFF', borderBottom: '1px solid var(--slate-200)' }}>
         <div className="section-container">
-          <div className="category-family-grid">
-            {CATEGORIES.map((cat, idx) => (
-              <div
-                key={cat.id}
-                className={`category-family-card ${activeTab === cat.id ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveTab(cat.id);
-                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                <div>
-                  <div className="category-card-top">
-                    <span className="category-card-index">0{idx + 1}</span>
-                    <span className="category-card-count">{cat.count} SKUs</span>
-                  </div>
-                  <h4 className="category-card-title">{cat.name}</h4>
-                </div>
-                <p className="category-card-brief">{cat.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Complete Product Inventory & Catalog Section */}
-      <section className="section-block" id="products">
-        <div className="section-container">
-          <div className="catalog-header-bar">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <span className="eyebrow">Material Catalog (37 SKUs)</span>
-              <h2 className="section-heading">Full Technical Material Inventory</h2>
+              <span className="eyebrow">Product Classification</span>
+              <h2 className="section-heading">5 Core Waterproofing Material Systems</h2>
               <p className="section-desc">
-                Select any material to inspect exact laboratory specifications, thickness options, and international compliance standards.
+                Covering complete commercial roofing, underground basement tanking, civil tunnels, exposed metal decks, and geotechnical engineering.
               </p>
             </div>
+            <button
+              onClick={() => {
+                setActiveCategory('all');
+                document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="btn btn-outline btn-sm"
+            >
+              View Full 37 SKUs Catalog <ChevronRight size={14} />
+            </button>
+          </div>
 
-            <div className="catalog-search-wrap">
-              <Search size={16} className="catalog-search-icon" />
+          <div className="pillars-grid">
+            {CATEGORIES.map((cat, idx) => {
+              const repProduct = PRODUCTS.find(p => p.categoryId === cat.id) || PRODUCTS[0];
+              return (
+                <div
+                  key={cat.id}
+                  className={`pillar-card ${activeCategory === cat.id ? 'active' : ''}`}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+                    document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  <div>
+                    <div className="pillar-art-frame">
+                      <ProductVisual product={repProduct} size="card" />
+                    </div>
+                    <div className="pillar-index">SYSTEM 0{idx + 1}</div>
+                    <h3 className="pillar-title">{cat.name}</h3>
+                    <p className="pillar-desc">{cat.description}</p>
+                  </div>
+                  <div className="pillar-footer">
+                    <span>{cat.count} Standard SKUs</span>
+                    <span>Browse System →</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Full Product Catalog Suite */}
+      <section className="section-block" id="catalog-section">
+        <div className="section-container">
+          <div>
+            <span className="eyebrow">Complete Engineering Catalog</span>
+            <h2 className="section-heading">37 Industrial Material Specifications</h2>
+            <p className="section-desc">
+              Direct factory pricing with full batch COA certificates, test compliance reports, and export container packing data.
+            </p>
+          </div>
+
+          {/* Catalog Toolbar */}
+          <div className="catalog-toolbar" style={{ marginTop: '24px' }}>
+            <div className="catalog-tabs">
+              <button
+                onClick={() => setActiveCategory('all')}
+                className={`catalog-tab-btn ${activeCategory === 'all' ? 'active' : ''}`}
+              >
+                All Materials ({PRODUCTS.length})
+              </button>
+              {CATEGORIES.map(cat => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`catalog-tab-btn ${activeCategory === cat.id ? 'active' : ''}`}
+                >
+                  {cat.shortName} ({cat.count})
+                </button>
+              ))}
+            </div>
+
+            <div className="catalog-search-box">
+              <Search size={15} color="#94A3B8" />
               <input
                 type="text"
-                placeholder="Search name, code, standard..."
+                placeholder="Search material code, standard..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="catalog-search-input"
               />
             </div>
           </div>
 
-          {/* Filter Tab Chips */}
-          <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '12px', marginBottom: '28px' }}>
-            <button
-              onClick={() => setActiveTab('all')}
-              className={`btn btn-sm ${activeTab === 'all' ? 'btn-dark' : 'btn-outline'}`}
-            >
-              All Materials ({PRODUCTS.length})
-            </button>
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTab(cat.id)}
-                className={`btn btn-sm ${activeTab === cat.id ? 'btn-dark' : 'btn-outline'}`}
-              >
-                {cat.shortName} ({cat.count})
-              </button>
-            ))}
-          </div>
-
-          {/* Product Cards Grid */}
-          <div className="products-grid-architectural">
+          {/* Products Grid */}
+          <div className="products-grid-3">
             {filteredProducts.map(prod => (
-              <div key={prod.id} className="product-card">
-                <div className="product-card-img-frame">
-                  <img
-                    src={prod.image}
-                    alt={prod.name}
-                    loading="lazy"
-                    onError={(e) => { e.target.src = '/assets/images/placeholder.svg'; }}
-                  />
-                  <div className="product-code-pill">{prod.code}</div>
-                  <div className="product-cat-pill">{prod.categoryName.split(' ')[0]}</div>
+              <div key={prod.id} className="clean-product-card">
+                <div className="product-art-canvas">
+                  <ProductVisual product={prod} size="card" />
+                  <div className="product-code-tag">{prod.code}</div>
+                  <div className="product-series-tag">{prod.categoryName.split(' ')[0]}</div>
                 </div>
 
-                <div className="product-card-content">
-                  <h3 className="product-card-title">{prod.name}</h3>
-                  <p className="product-card-desc">{prod.brief}</p>
+                <div className="product-body">
+                  <h3 className="product-title">{prod.name}</h3>
+                  <p className="product-brief">{prod.brief}</p>
 
-                  <div className="product-card-specs-box">
-                    <div className="product-card-specs-row">
-                      <span>Standard</span>
+                  <div className="product-spec-pills">
+                    <div className="product-spec-row">
+                      <span>Standards:</span>
                       <span>{prod.standards}</span>
                     </div>
                     {prod.thickness && (
-                      <div className="product-card-specs-row">
-                        <span>Dimensions</span>
+                      <div className="product-spec-row">
+                        <span>Dimensions:</span>
                         <span>{prod.thickness}</span>
                       </div>
                     )}
                   </div>
 
-                  <div className="product-card-actions">
+                  <div className="product-btn-row">
                     <button
                       onClick={() => setSelectedProduct(prod)}
                       className="btn btn-outline btn-sm"
@@ -324,7 +412,7 @@ function App() {
               <p style={{ color: 'var(--slate-500)', fontSize: '0.95rem', marginBottom: '16px' }}>
                 No materials match your search keyword.
               </p>
-              <button onClick={() => { setSearchQuery(''); setActiveTab('all'); }} className="btn btn-primary">
+              <button onClick={() => { setSearchQuery(''); setActiveCategory('all'); }} className="btn btn-primary">
                 Reset Filter
               </button>
             </div>
@@ -332,44 +420,46 @@ function App() {
         </div>
       </section>
 
-      {/* 6. High-Contrast Architectural Solutions Section */}
-      <section className="solutions-dark-section" id="solutions">
+      {/* 6. High-Contrast Engineering Solutions */}
+      <section className="solutions-section" id="solutions-section">
         <div className="section-container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px' }}>
             <div>
-              <span className="eyebrow eyebrow-dark">Integrated Engineering Systems</span>
-              <h2 style={{ color: '#fff', fontSize: '2.1rem', letterSpacing: '-0.03em', marginBottom: '8px' }}>
-                Engineered Waterproofing Solutions
+              <span className="eyebrow eyebrow-dark">System Assembly Specs</span>
+              <h2 style={{ color: '#fff', fontSize: '2.25rem', letterSpacing: '-0.03em', marginBottom: '8px' }}>
+                Integrated Engineering Solutions
               </h2>
-              <p style={{ color: '#94A3B8', fontSize: '0.95rem', maxWidth: '580px', margin: 0 }}>
-                Tested multi-layer system assemblies engineered for high hydrostatic pressure, extreme weather cycles, and industrial environments.
+              <p style={{ color: '#94A3B8', fontSize: '0.95rem', maxWidth: '620px', margin: 0 }}>
+                Standardized multi-layer system assemblies tested to withstand hydrostatic heads up to 70m, extreme solar UV, and aggressive soil conditions.
               </p>
             </div>
           </div>
 
-          <div className="solutions-grid">
+          <div className="solutions-grid-2">
             {SOLUTIONS.map(sol => (
-              <div key={sol.id} className="solution-card-dark">
+              <div key={sol.id} className="solution-box">
                 <div>
-                  <div className="solution-eyebrow">{sol.subtitle}</div>
-                  <h3 className="solution-title">{sol.title}</h3>
-                  <p className="solution-desc">{sol.description}</p>
+                  <div className="solution-badge">{sol.subtitle}</div>
+                  <h3 className="solution-name">{sol.title}</h3>
+                  <p className="solution-para">{sol.description}</p>
 
-                  <div className="solution-layers-box">
-                    <div className="solution-layers-title">Standard System Assembly:</div>
+                  <div className="solution-layers-container">
+                    <div className="solution-layers-hdr">Typical System Build-Up:</div>
                     {sol.systemLayers.map((layer, idx) => (
-                      <div key={idx} className="solution-layer-item">
-                        <span className="solution-layer-num">{idx + 1}</span>
+                      <div key={idx} className="solution-layer-line">
+                        <span className="solution-layer-badge">{idx + 1}</span>
                         <span>{layer}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="solution-footer-row">
-                  <div className="solution-product-chips">
+                <div className="solution-card-footer">
+                  <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                     {sol.recommendedProducts.map(pcode => (
-                      <span key={pcode} className="solution-product-chip">{pcode}</span>
+                      <span key={pcode} style={{ background: '#1E2D4A', color: '#93C5FD', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', padding: '3px 8px', borderRadius: '4px' }}>
+                        {pcode}
+                      </span>
                     ))}
                   </div>
                   <button onClick={() => openQuoteModal(sol.title)} className="btn btn-outline btn-sm" style={{ color: '#fff', borderColor: '#334155', background: 'transparent' }}>
@@ -382,35 +472,35 @@ function App() {
         </div>
       </section>
 
-      {/* 7. Standards & QA Verification Matrix */}
-      <section className="section-block" id="standards">
+      {/* 7. QA Protocol & Standards Matrix */}
+      <section className="section-block" id="standards-section">
         <div className="section-container">
           <div>
             <span className="eyebrow">Quality Assurance Protocol</span>
             <h2 className="section-heading">International Compliance & Testing Matrix</h2>
             <p className="section-desc">
-              Every production batch undergoes mandatory CNAS-certified laboratory inspection with issued Mill Test Reports and Certificates of Analysis (COA).
+              Every master batch undergoes strict CNAS-standard testing with issued Mill Test Reports and Certificates of Analysis (COA).
             </p>
           </div>
 
           {/* 3-Step QA Pathway */}
-          <div className="qa-pipeline-grid">
-            <div className="qa-step-card">
-              <div className="qa-step-num">01</div>
+          <div className="qa-steps-grid">
+            <div className="qa-step-item">
+              <div className="qa-step-idx">01</div>
               <h4>Raw Polymer Screening</h4>
               <p>
                 Incoming virgin resins, synthetic rubber, and bitumen are strictly tested for penetration index, softening point, and melt flow rate prior to compounding.
               </p>
             </div>
-            <div className="qa-step-card">
-              <div className="qa-step-num">02</div>
+            <div className="qa-step-item">
+              <div className="qa-step-idx">02</div>
               <h4>Laser Inline Gauging</h4>
               <p>
                 Automated laser thickness micrometers continuously scan the entire 2.0m - 8.0m roll width during continuous calendar and extrusion production.
               </p>
             </div>
-            <div className="qa-step-card">
-              <div className="qa-step-num">03</div>
+            <div className="qa-step-item">
+              <div className="qa-step-idx">03</div>
               <h4>Batch COA Certification</h4>
               <p>
                 Mandatory hydrostatic pressure testing at 0.7 MPa, -25°C low-temperature flex bending, and tensile break tests for every finished production lot.
@@ -419,18 +509,18 @@ function App() {
           </div>
 
           {/* Standards Matrix Grid */}
-          <div className="standards-matrix-grid">
+          <div className="standards-3-grid">
             {STANDARDS_MATRIX.map((stdGroup, idx) => (
-              <div key={idx} className="standards-org-card">
-                <div className="standards-org-header">
+              <div key={idx} className="standards-col-card">
+                <div className="standards-col-hdr">
                   <Award size={20} color="#1D4ED8" />
                   <h3>{stdGroup.organization}</h3>
                 </div>
                 <div>
                   {stdGroup.standards.map((s, sidx) => (
-                    <div key={sidx} className="standard-item-row">
-                      <div className="standard-code">{s.code}</div>
-                      <div className="standard-title">{s.title}</div>
+                    <div key={sidx} className="std-row">
+                      <div className="std-code">{s.code}</div>
+                      <div className="std-title">{s.title}</div>
                     </div>
                   ))}
                 </div>
@@ -441,20 +531,20 @@ function App() {
       </section>
 
       {/* 8. Factory Advantages & Manufacturing Base */}
-      <section className="section-block" id="about" style={{ background: '#F1F5F9', borderTop: '1px solid var(--slate-200)', borderBottom: '1px solid var(--slate-200)' }}>
+      <section className="section-block" id="factory-section" style={{ background: '#F1F5F9', borderTop: '1px solid var(--slate-200)', borderBottom: '1px solid var(--slate-200)' }}>
         <div className="section-container">
           <div>
             <span className="eyebrow">Manufacturing Powerhouse</span>
             <h2 className="section-heading">Why Global Contractors Partner with Mingze</h2>
             <p className="section-desc">
-              Direct source manufacturing, scalable capacity, and direct access to Qingdao container terminals for seamless global distribution.
+              Direct source manufacturing, scalable capacity, and direct highway connection to Qingdao container terminals for seamless global distribution.
             </p>
           </div>
 
-          <div className="advantages-grid">
+          <div className="advantages-4-grid">
             {WHY_CHOOSE_US.map((item, idx) => (
-              <div key={idx} className="advantage-card">
-                <div className="advantage-index">0{idx + 1}</div>
+              <div key={idx} className="advantage-item">
+                <div className="adv-idx">0{idx + 1}</div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -464,53 +554,53 @@ function App() {
       </section>
 
       {/* 9. Direct Trade Channels & RFQ Conversion Suite */}
-      <section className="section-block" id="contact">
+      <section className="section-block" id="contact-section">
         <div className="section-container">
-          <div className="contact-grid">
-            {/* Left Contact Info */}
-            <div className="contact-channels-card">
+          <div className="conversion-grid">
+            {/* Left Contact Card */}
+            <div className="contact-card-white">
               <span className="eyebrow">Direct Trade Desk</span>
-              <h2 style={{ fontSize: '1.75rem', marginBottom: '12px' }}>Connect with Export Sales</h2>
+              <h2 style={{ fontSize: '1.85rem', marginBottom: '12px' }}>Connect with Export Sales</h2>
               <p style={{ color: 'var(--slate-600)', fontSize: '0.9rem', marginBottom: '28px' }}>
-                For instant FOB/CIF pricing, technical submittals, or sample swatches, reach out directly through official communication channels.
+                For instant FOB/CIF pricing, technical submittals, or physical sample swatch boxes, reach out directly through official communication channels.
               </p>
 
-              <div className="contact-channel-item">
-                <div className="contact-channel-icon">
+              <div className="channel-row">
+                <div className="channel-icon-box">
                   <Mail size={18} />
                 </div>
                 <div>
-                  <div className="contact-channel-label">Official Export Email</div>
-                  <a href={`mailto:${COMPANY_INFO.email}`} className="contact-channel-val" style={{ color: '#1D4ED8' }}>
+                  <div className="channel-lbl">Official Export Email</div>
+                  <a href={`mailto:${COMPANY_INFO.email}`} className="channel-val" style={{ color: '#1D4ED8' }}>
                     {COMPANY_INFO.email}
                   </a>
-                  <a href={`mailto:${COMPANY_INFO.altEmail}`} className="contact-channel-sub" style={{ display: 'block' }}>
+                  <a href={`mailto:${COMPANY_INFO.altEmail}`} className="channel-sub" style={{ display: 'block' }}>
                     {COMPANY_INFO.altEmail}
                   </a>
                 </div>
               </div>
 
-              <div className="contact-channel-item">
-                <div className="contact-channel-icon green">
+              <div className="channel-row">
+                <div className="channel-icon-box green">
                   <MessageCircle size={18} />
                 </div>
                 <div>
-                  <div className="contact-channel-label">24/7 WhatsApp Export Desk</div>
-                  <a href={COMPANY_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="contact-channel-val" style={{ color: '#059669' }}>
+                  <div className="channel-lbl">24/7 WhatsApp Export Desk</div>
+                  <a href={COMPANY_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="channel-val" style={{ color: '#059669' }}>
                     {COMPANY_INFO.whatsapp}
                   </a>
-                  <div className="contact-channel-sub">Instant response for technical submittals</div>
+                  <div className="channel-sub">Instant response for technical submittals</div>
                 </div>
               </div>
 
-              <div className="contact-channel-item">
-                <div className="contact-channel-icon" style={{ background: '#F1F5F9', color: '#334155' }}>
+              <div className="channel-row">
+                <div className="channel-icon-box" style={{ background: '#F1F5F9', color: '#334155' }}>
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <div className="contact-channel-label">Manufacturing Plant & Headquarters</div>
-                  <div className="contact-channel-val" style={{ fontSize: '0.88rem' }}>{COMPANY_INFO.address}</div>
-                  <div className="contact-channel-sub">Export Port: Qingdao Port (200 km)</div>
+                  <div className="channel-lbl">Manufacturing Plant & Headquarters</div>
+                  <div className="channel-val" style={{ fontSize: '0.88rem' }}>{COMPANY_INFO.address}</div>
+                  <div className="channel-sub">Export Port: Qingdao Port (200 km)</div>
                 </div>
               </div>
 
@@ -522,8 +612,8 @@ function App() {
             </div>
 
             {/* Right RFQ Form */}
-            <div className="rfq-form-card">
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '6px' }}>Submit Request for Quotation (RFQ)</h3>
+            <div className="rfq-box-white">
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '6px' }}>Submit Request for Quotation (RFQ)</h3>
               <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', marginBottom: '20px' }}>
                 Formal FOB/CIF quotation, packing list breakdown, and complete TDS package sent within 6 hours.
               </p>
@@ -537,33 +627,33 @@ function App() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleQuoteSubmit}>
-                  <div className="form-group-title">1. Contact Details</div>
-                  <div className="form-row-2">
-                    <div className="form-field" style={{ margin: 0 }}>
+                <form onSubmit={handleFormSubmit}>
+                  <div className="form-sec-title">1. Contact Details</div>
+                  <div className="form-grid-2">
+                    <div className="form-item" style={{ margin: 0 }}>
                       <label>Contact Name *</label>
                       <input type="text" required placeholder="John Smith" />
                     </div>
-                    <div className="form-field" style={{ margin: 0 }}>
+                    <div className="form-item" style={{ margin: 0 }}>
                       <label>Work Email *</label>
                       <input type="email" required placeholder="john@company.com" />
                     </div>
                   </div>
 
-                  <div className="form-group-title" style={{ marginTop: '16px' }}>2. Project & Logistics</div>
-                  <div className="form-row-2">
-                    <div className="form-field" style={{ margin: 0 }}>
+                  <div className="form-sec-title" style={{ marginTop: '16px' }}>2. Project & Logistics</div>
+                  <div className="form-grid-2">
+                    <div className="form-item" style={{ margin: 0 }}>
                       <label>WhatsApp / Phone</label>
                       <input type="text" placeholder="+1..." />
                     </div>
-                    <div className="form-field" style={{ margin: 0 }}>
+                    <div className="form-item" style={{ margin: 0 }}>
                       <label>Destination Port</label>
                       <input type="text" placeholder="e.g. Dubai / Hamburg / Santos" />
                     </div>
                   </div>
 
-                  <div className="form-field" style={{ marginTop: '14px' }}>
-                    <label>Product of Interest</label>
+                  <div className="form-item" style={{ marginTop: '14px' }}>
+                    <label>Material of Interest</label>
                     <select>
                       <option value="">-- Mixed Full Container Load (FCL) --</option>
                       {PRODUCTS.map(p => (
@@ -572,7 +662,7 @@ function App() {
                     </select>
                   </div>
 
-                  <div className="form-field">
+                  <div className="form-item">
                     <label>Specifications / Estimated Volume</label>
                     <textarea
                       rows="3"
@@ -591,9 +681,9 @@ function App() {
       </section>
 
       {/* 10. Pre-Footer Call to Action Banner */}
-      <section className="pre-footer-cta">
+      <section className="pre-footer-banner">
         <div className="section-container">
-          <div className="pre-footer-inner">
+          <div className="pre-footer-row">
             <div>
               <h2>Planning an Infrastructure or Roofing Project?</h2>
               <p>
@@ -601,18 +691,21 @@ function App() {
               </p>
             </div>
             <div style={{ display: 'flex', gap: '12px' }}>
+              <button onClick={() => openSampleModal()} className="btn btn-outline btn-lg" style={{ background: 'transparent', color: '#fff', borderColor: '#475569' }}>
+                <Package size={16} /> Request Free Swatch Kit
+              </button>
               <button onClick={() => openQuoteModal()} className="btn btn-primary btn-lg">
-                Request Formal Proforma Invoice
+                Request Proforma Invoice
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. Refined Footer */}
-      <footer className="site-footer">
+      {/* 11. Master Footer */}
+      <footer className="footer-master">
         <div className="section-container">
-          <div className="footer-grid">
+          <div className="footer-4-grid">
             <div className="footer-col">
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
                 <div style={{ background: 'var(--blue-600)', color: '#fff', padding: '4px 8px', borderRadius: '3px', fontWeight: 800, fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>MZ</div>
@@ -628,10 +721,16 @@ function App() {
 
             <div className="footer-col">
               <h4>Product Families</h4>
-              <ul className="footer-links">
+              <ul className="footer-links-list">
                 {CATEGORIES.map(cat => (
                   <li key={cat.id}>
-                    <a href="#products" onClick={() => setActiveTab(cat.id)}>
+                    <a
+                      href="#catalog-section"
+                      onClick={() => {
+                        setActiveCategory(cat.id);
+                        document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
                       {cat.name} ({cat.count})
                     </a>
                   </li>
@@ -641,12 +740,12 @@ function App() {
 
             <div className="footer-col">
               <h4>Quick Navigation</h4>
-              <ul className="footer-links">
-                <li><a href="#products">Technical Catalog</a></li>
-                <li><a href="#solutions">Engineering Solutions</a></li>
-                <li><a href="#standards">QA & Testing Matrix</a></li>
-                <li><a href="#about">Manufacturing Base</a></li>
-                <li><a href="#contact">RFQ & Trade Desk</a></li>
+              <ul className="footer-links-list">
+                <li><a href="#catalog-section">Technical Catalog (37 SKUs)</a></li>
+                <li><a href="#solutions-section">Engineering Solutions</a></li>
+                <li><a href="#standards-section">QA & Testing Matrix</a></li>
+                <li><a href="#factory-section">Manufacturing Base</a></li>
+                <li><a href="#contact-section">RFQ & Trade Desk</a></li>
               </ul>
             </div>
 
@@ -661,7 +760,7 @@ function App() {
             </div>
           </div>
 
-          <div className="footer-bottom">
+          <div className="footer-copyright-bar">
             <div>
               © {new Date().getFullYear()} Weifang Mingze Waterproof Material Co., Ltd. All Rights Reserved.
             </div>
@@ -677,7 +776,7 @@ function App() {
         href={COMPANY_INFO.whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="floating-whatsapp"
+        className="whatsapp-floating-btn"
       >
         <MessageCircle size={20} />
         <span>Chat on WhatsApp</span>
@@ -685,29 +784,24 @@ function App() {
 
       {/* 13. Technical Details & TDS Modal */}
       {selectedProduct && (
-        <div className="modal-backdrop" onClick={() => setSelectedProduct(null)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
+        <div className="modal-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header-dark">
               <div>
                 <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: '#60A5FA', fontWeight: 700 }}>
                   {selectedProduct.code} • {selectedProduct.categoryName}
                 </div>
                 <h3>{selectedProduct.name}</h3>
               </div>
-              <button onClick={() => setSelectedProduct(null)} className="modal-close-btn">
+              <button onClick={() => setSelectedProduct(null)} style={{ background: 'none', border: 'none', color: '#94A3B8', cursor: 'pointer' }}>
                 <X size={22} />
               </button>
             </div>
 
-            <div className="modal-body">
+            <div className="modal-body-content">
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', marginBottom: '24px' }}>
-                <div>
-                  <img
-                    src={selectedProduct.image}
-                    alt={selectedProduct.name}
-                    style={{ width: '100%', height: '240px', objectFit: 'contain', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '6px' }}
-                    onError={(e) => { e.target.src = '/assets/images/placeholder.svg'; }}
-                  />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: '8px', padding: '16px' }}>
+                  <ProductVisual product={selectedProduct} size="hero" />
                 </div>
                 <div>
                   <h4 style={{ fontSize: '0.92rem', marginBottom: '10px' }}>Key Engineering Highlights</h4>
@@ -771,21 +865,101 @@ function App() {
         </div>
       )}
 
-      {/* 14. Proforma & Quote Modal */}
-      {isQuoteModalOpen && (
-        <div className="modal-backdrop" onClick={() => setIsQuoteModalOpen(false)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '580px' }}>
-            <div className="modal-header">
+      {/* 14. Free Sample Swatch Box Modal */}
+      {isSampleModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsSampleModalOpen(false)}>
+          <div className="modal-dialog" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '580px' }}>
+            <div className="modal-header-dark" style={{ background: '#065F46' }}>
               <div>
-                <h3>Request Official FOB / CIF Quote</h3>
-                <span style={{ fontSize: '0.74rem', color: '#94A3B8' }}>Direct Factory Price Guarantee • Weifang Mingze Waterproof</span>
+                <h3>Request Free Material Sample Swatch Box</h3>
+                <span style={{ fontSize: '0.74rem', color: '#A7F3D0' }}>DHL / FedEx Express Delivery to Your Office • Factory Direct</span>
               </div>
-              <button onClick={() => setIsQuoteModalOpen(false)} className="modal-close-btn">
+              <button onClick={() => setIsSampleModalOpen(false)} style={{ background: 'none', border: 'none', color: '#A7F3D0', cursor: 'pointer' }}>
                 <X size={20} />
               </button>
             </div>
 
-            <div className="modal-body">
+            <div className="modal-body-content">
+              {formSubmitted ? (
+                <div style={{ padding: '32px 16px', textAlign: 'center' }}>
+                  <CheckCircle2 size={44} color="#059669" style={{ margin: '0 auto 12px' }} />
+                  <h3 style={{ color: '#065F46', marginBottom: '8px' }}>Sample Request Dispatched</h3>
+                  <p style={{ color: '#475569', fontSize: '0.88rem' }}>
+                    Our dispatch team will prepare your custom sample swatch box and email you the DHL tracking number within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: '#475569', marginBottom: '4px' }}>Target Material Swatch</label>
+                    <select
+                      defaultValue={quoteProductCode}
+                      style={{ width: '100%', padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }}
+                    >
+                      <option value="">-- Complete 5-Category Sample Box (All 37 Materials) --</option>
+                      {PRODUCTS.map(p => (
+                        <option key={p.code} value={p.code}>{p.code}: {p.name}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="form-grid-2">
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Recipient Name *</label>
+                      <input type="text" required placeholder="John Smith" style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Company & Email *</label>
+                      <input type="email" required placeholder="john@domain.com" style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
+                    </div>
+                  </div>
+
+                  <div className="form-grid-2">
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Mobile / WhatsApp (for DHL) *</label>
+                      <input type="text" required placeholder="+1..." style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Country & City *</label>
+                      <input type="text" required placeholder="e.g. Dubai, UAE" style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Delivery Address *</label>
+                    <textarea rows="2" required placeholder="Street address, building, postal code for express delivery..." style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }}></textarea>
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', marginTop: '8px' }}>
+                    <button type="button" onClick={() => setIsSampleModalOpen(false)} className="btn btn-outline">
+                      Cancel
+                    </button>
+                    <button type="submit" className="btn btn-primary" style={{ background: '#059669', borderColor: '#059669' }}>
+                      Dispatch Sample Kit (Free Express)
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 15. Proforma & FOB Quote Modal */}
+      {isQuoteModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsQuoteModalOpen(false)}>
+          <div className="modal-dialog" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '580px' }}>
+            <div className="modal-header-dark">
+              <div>
+                <h3>Request Official FOB / CIF Quote</h3>
+                <span style={{ fontSize: '0.74rem', color: '#94A3B8' }}>Direct Factory Price Guarantee • Weifang Mingze Waterproof</span>
+              </div>
+              <button onClick={() => setIsQuoteModalOpen(false)} style={{ background: 'none', border: 'none', color: '#94A3B8', cursor: 'pointer' }}>
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="modal-body-content">
               {formSubmitted ? (
                 <div style={{ padding: '32px 16px', textAlign: 'center' }}>
                   <CheckCircle2 size={44} color="#059669" style={{ margin: '0 auto 12px' }} />
@@ -795,7 +969,7 @@ function App() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleQuoteSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   <div>
                     <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: '#475569', marginBottom: '4px' }}>Selected Material</label>
                     <select
@@ -809,7 +983,7 @@ function App() {
                     </select>
                   </div>
 
-                  <div className="form-row-2">
+                  <div className="form-grid-2">
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>Contact Name *</label>
                       <input type="text" required placeholder="John Smith" style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
@@ -820,7 +994,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="form-row-2">
+                  <div className="form-grid-2">
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <label style={{ fontSize: '0.76rem', fontWeight: 600, color: '#475569' }}>WhatsApp / Phone</label>
                       <input type="text" placeholder="+1..." style={{ padding: '8px 12px', border: '1px solid #CBD5E1', borderRadius: '4px', fontSize: '0.85rem' }} />
