@@ -98,7 +98,11 @@ function App() {
       <header className="min-header">
         <div className="min-header-inner">
           <a href="#top" className="min-brand">
-            <span className="min-brand-dot" />
+            <img
+              src="/assets/images/brand-logo.png"
+              alt="Mingze Waterproof 明泽防水"
+              className="min-brand-logo"
+            />
             <span>MINGZE WATERPROOF</span>
           </a>
 

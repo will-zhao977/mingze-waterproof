@@ -5,13 +5,14 @@
 
 :root {
   --bg: #FFFFFF;
-  --bg-soft: #F4F7FB;
-  --text: #0B2A4A;
-  --text-sub: #5C6B7A;
-  --text-light: #8FA3B8;
-  --accent: #0B2A4A;
-  --blue: #0066CC;
-  --line: #E2E8F0;
+  --bg-soft: #FBF6F6;
+  --text: #22262E;
+  --text-sub: #5D6670;
+  --text-light: #9AA2AB;
+  --accent: #D7000F;
+  --accent-dark: #A8000C;
+  --blue: #D7000F;
+  --line: #EAE2E2;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --max-w: 1200px;
 }
@@ -94,11 +95,10 @@ button, input, select, textarea {
   gap: 10px;
 }
 
-.min-brand-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--blue);
-  border-radius: 50%;
+.min-brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .min-nav {
@@ -149,7 +149,7 @@ button, input, select, textarea {
 }
 
 .min-btn-dark:hover {
-  background: var(--blue);
+  background: var(--accent-dark);
 }
 
 .min-btn-ghost {
