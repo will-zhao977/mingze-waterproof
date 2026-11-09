@@ -18,7 +18,8 @@ This file tracks all visual assets used in the Weifang Mingze Waterproof Materia
 | `system-epdm` | `/assets/images/product-epdm.jpg` | `user-provided` | System 05: Geosynthetics & Auxiliaries visual | Verified local |
 | `cat-01` ~ `cat-37` | `/assets/images/products/cat-01.jpg` ~ `/assets/images/products/cat-37.jpg` | `user-provided` | Individual product technical packshots in TDS modal & spec grid | Verified local (37 files) |
 | `placeholder` | `/assets/images/placeholder.svg` | `placeholder` | Fallback technical drawing placeholder | Verified local |
-| `brand-logo` | `/assets/images/brand-logo.png` | `user-provided` | Company logo (red globe + 明泽防水) cropped from own Alibaba storefront sign banner, gradient background keyed to white; English wordmark rendered as header text | Verified local |
+| `brand-logo` | `/assets/images/brand-logo.png` | `user-provided` | (superseded) Cropped storefront logo, keyed background — replaced by v2 | Verified local |
+| `brand-logo-v2` | `/assets/images/brand-logo-v2.png` | `generated` | Clean vector-style redraw of company logo (red globe emblem + 明泽防水 + MINGZE WATERPROOF), user-approved regeneration; white background, trimmed | Verified local |
 
 ## v2 Product Image Replacements (2026-11-09, user-confirmed sourcing)
 

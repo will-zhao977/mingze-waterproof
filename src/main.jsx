@@ -99,11 +99,10 @@ function App() {
         <div className="min-header-inner">
           <a href="#top" className="min-brand">
             <img
-              src="/assets/images/brand-logo.png"
+              src="/assets/images/brand-logo-v2.png"
               alt="Mingze Waterproof 明泽防水"
               className="min-brand-logo"
             />
-            <span>MINGZE WATERPROOF</span>
           </a>
 
           <nav className="min-nav">
