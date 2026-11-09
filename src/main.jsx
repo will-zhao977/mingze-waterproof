@@ -36,7 +36,6 @@ function App() {
   const [heroSlide, setHeroSlide] = useState(0);
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [showAllProducts, setShowAllProducts] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const [rfqForm, setRfqForm] = useState({
@@ -74,12 +73,7 @@ function App() {
     });
   }, [activeCategory, searchQuery]);
 
-  const visibleProducts = useMemo(() => {
-    if (activeCategory !== "all" || searchQuery.trim() || showAllProducts) {
-      return filteredProducts;
-    }
-    return filteredProducts.slice(0, 12);
-  }, [filteredProducts, activeCategory, searchQuery, showAllProducts]);
+  const visibleProducts = filteredProducts;
 
   const handleInquireProduct = (product) => {
     setSelectedProduct(null);
@@ -273,22 +267,6 @@ function App() {
                 </article>
               ))}
             </div>
-
-            {activeCategory === "all" &&
-              !searchQuery.trim() &&
-              filteredProducts.length > 12 && (
-                <div className="min-more-wrap">
-                  <button
-                    type="button"
-                    className="min-btn min-btn-ghost"
-                    onClick={() => setShowAllProducts((prev) => !prev)}
-                  >
-                    {showAllProducts
-                      ? "Show Featured Products"
-                      : "View All Products ↓"}
-                  </button>
-                </div>
-              )}
           </div>
         </section>
 
