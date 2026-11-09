@@ -13,22 +13,23 @@ const HERO_SLIDES = [
   {
     label: "SBS / APP Bitumen",
     title: "SBS & APP Modified Bitumen Membrane",
-    image: "/assets/images/product-bitumen.jpg"
+    spec: "3.0mm / 4.0mm / 5.0mm · Torch-On & Self-Adhesive Rolls",
+    image: "/assets/images/products/cat-01-v2.jpg"
   },
   {
     label: "Pre-Applied HDPE",
     title: "Pre-Applied HDPE Waterproof Membrane",
-    image: "/assets/images/product-hdpe.jpg"
+    image: "/assets/images/products/cat-11-v2.png"
   },
   {
     label: "TPO / PVC Sheet",
     title: "TPO & PVC Single-Ply Roofing Membrane",
-    image: "/assets/images/product-polymer.jpg"
+    image: "/assets/images/products/cat-08-v2.jpg"
   },
   {
     label: "Liquid Coating",
     title: "Polyurethane & Polyurea Waterproof Coating",
-    image: "/assets/images/product-coating.jpg"
+    image: "/assets/images/products/cat-17-v2.jpg"
   }
 ];
 
