@@ -109,7 +109,7 @@ function App() {
           </a>
 
           <nav className="min-nav">
-            <a href="#products">Products (37)</a>
+            <a href="#products">Products</a>
             <a href="#solutions">Solutions</a>
             <a href="#factory">Factory</a>
             <a href="#contact">Contact</a>
@@ -213,7 +213,7 @@ function App() {
             <div className="min-sec-head">
               <div>
                 <span className="min-tag">Product Catalog</span>
-                <h2>37 Waterproofing Products</h2>
+                <h2>Waterproofing Products</h2>
                 <p>Click any product to view full technical specifications and TDS data.</p>
               </div>
               <input
@@ -232,7 +232,7 @@ function App() {
                   className={`min-tab ${activeCategory === "all" ? "active" : ""}`}
                   onClick={() => setActiveCategory("all")}
                 >
-                  All ({PRODUCTS.length})
+                  All
                 </button>
                 {CATEGORIES.map((cat) => (
                   <button
@@ -243,7 +243,7 @@ function App() {
                     }`}
                     onClick={() => setActiveCategory(cat.id)}
                   >
-                    {cat.shortName} ({cat.count})
+                    {cat.shortName}
                   </button>
                 ))}
               </div>
@@ -284,8 +284,8 @@ function App() {
                     onClick={() => setShowAllProducts((prev) => !prev)}
                   >
                     {showAllProducts
-                      ? "Show Featured 12 Products"
-                      : `View All ${PRODUCTS.length} Products ↓`}
+                      ? "Show Featured Products"
+                      : "View All Products ↓"}
                   </button>
                 </div>
               )}
