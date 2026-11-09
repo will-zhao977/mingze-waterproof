@@ -198,7 +198,7 @@ export const PRODUCTS = [
     name: "Mineral Granule Surface SBS Cap Sheet Membrane",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-06.jpg",
+    image: "/assets/images/products/cat-06-v2.png",
     brief: "Heavy-duty exposed top-layer SBS membrane covered with colored basalt mineral slates for robust UV shielding and mechanical walkability.",
     features: [
       "Colored mineral slate granules offer permanent UV block and solar reflection",
@@ -322,7 +322,7 @@ export const PRODUCTS = [
     name: "Pre-Applied HDPE Fully-Bonded Waterproof Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-11.jpg",
+    image: "/assets/images/products/cat-11-v2.png",
     brief: "High-density polyethylene sheet coated with pressure-sensitive adhesive and weather-resistant particulate layer for pre-applied blindside substructures.",
     features: [
       "Forms a permanent continuous chemical & mechanical bond with poured concrete",
@@ -395,7 +395,7 @@ export const PRODUCTS = [
     name: "T-Ribbed HDPE Concrete Protection Geomembrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-14.jpg",
+    image: "/assets/images/products/cat-14-v2.png",
     brief: "Extruded HDPE sheet with integral T-shaped continuous anchor ribs that lock physically into cast-in-place concrete structures.",
     features: [
       "Integral T-ribs provide massive mechanical pull-out resistance (> 500 N/rib)",
@@ -419,7 +419,7 @@ export const PRODUCTS = [
     name: "Chlorinated Polyethylene (CPE) Waterproof Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-15.jpg",
+    image: "/assets/images/products/cat-15-v2.png",
     brief: "Synthetic elastomeric sheet manufactured from high-grade chlorinated polyethylene with outstanding oil, chemical, and ozone resistance.",
     features: [
       "Inherent flame-retardant properties (high chlorine content)",
@@ -443,7 +443,7 @@ export const PRODUCTS = [
     name: "EVA/ECB Tunnel & Underground Waterproof Sheet",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-16.jpg",
+    image: "/assets/images/products/cat-16-v2.png",
     brief: "Ethylene Vinyl Acetate / Ethylene Copolymer Bitumen sheet engineered specifically for tunnel lining and underground civil engineering.",
     features: [
       "High flexibility allows tight contouring to irregular shotcrete surfaces",
@@ -665,7 +665,7 @@ export const PRODUCTS = [
     name: "Spray Applied Polyurea Elastomer Waterproof Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-25.jpg",
+    image: "/assets/images/products/cat-25-v2.png",
     brief: "Two-component 100% solid pure polyurea elastomer processed via high-pressure plural component spray equipment, curing within 15 seconds.",
     features: [
       "Ultra-fast curing: tack-free in 15 seconds, walkable in 10 minutes",
@@ -690,7 +690,7 @@ export const PRODUCTS = [
     name: "Fast-Setting Hydrophobic Water Plug / Leak Stopper",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-26.jpg",
+    image: "/assets/images/products/cat-26-v2.png",
     brief: "Rapid hardening inorganic hydraulic cementitious compound that sets in 60-90 seconds to instantly stop active water gushing under pressure.",
     features: [
       "Initial set in 1 - 2 minutes, final hard set in 3 - 5 minutes",
@@ -789,7 +789,7 @@ export const PRODUCTS = [
     name: "Heavy-Duty Marine Hatch Cover Sealing Tape",
     categoryId: "flashing-butyl",
     categoryName: "Flashing & Butyl Tapes",
-    image: "/assets/images/products/cat-30.jpg",
+    image: "/assets/images/products/cat-30-v2.png",
     brief: "Heavy-gauge bituminous rubber strip backed with reinforced woven polyethylene fabric for marine cargo ship hatch cover weatherproofing.",
     features: [
       "Withstands high seas, heavy wave wash, and extreme marine salt fog",
@@ -839,7 +839,7 @@ export const PRODUCTS = [
     name: "HDPE Impermeable Smooth / Textured Geomembrane",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-32.jpg",
+    image: "/assets/images/products/cat-32-v2.png",
     brief: "Prime 100% virgin high-density polyethylene resin liner designed for landfill waste containment, mining tailings, and municipal artificial reservoirs.",
     features: [
       "Exceptional chemical resistance against aggressive acids, alkalis, and toxic leachates",
@@ -864,7 +864,7 @@ export const PRODUCTS = [
     name: "Non-Woven Needle-Punched Polyester (PET) Geotextile",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-33.jpg",
+    image: "/assets/images/products/cat-33-v2.png",
     brief: "Continuous filament / staple fiber needle-punched geotextile fabric engineered for filtration, soil separation, drainage, and geomembrane cushion protection.",
     features: [
       "High multi-directional hydraulic water permeability and soil particle retention",
@@ -937,7 +937,7 @@ export const PRODUCTS = [
     name: "Reinforcing Polyester Spunbond / Fiberglass Carrier Mat",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-36.jpg",
+    image: "/assets/images/products/cat-36-v2.png",
     brief: "Non-woven spunbond polyester and glass fiber scrim reinforcement carriers used in the continuous industrial production of modified bitumen membranes.",
     features: [
       "High tensile modulus and thermal stability through 200°C bitumen coating pans",

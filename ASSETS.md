@@ -24,4 +24,4 @@ This file tracks all visual assets used in the Weifang Mingze Waterproof Materia
 26 SKUs replaced with new filenames (`-v2` suffix) after user confirmation:
 - **Verified clean web images (10)**: cat-01, 04, 08, 09, 10, 12, 22, 31, 34, 35 — visually checked: no third-party watermark/logo/text.
 - **Own Alibaba storefront listing images (16)**: cat-02, 03, 05, 07, 13, 17, 18, 19, 20, 21, 23, 24, 27, 28, 29, 37 — first-party assets from wfmingze.en.alibaba.com product list; some carry Mingze's own brand print (acceptable).
-- **Still on original `cat-XX.jpg` (11, pending user decision)**: 06, 11, 14, 15, 16, 25, 26, 30, 32, 33, 36 — no clean web image and no matching storefront listing found.
+- **AI-generated unified white-background packshots (11, user-confirmed 2026-11-09)**: cat-06, 11, 14, 15, 16, 25, 26, 30, 32, 33, 36 (`cat-XX-v2.png`) — illustrative studio-style renders, no text/logo/watermark. All 37 SKUs now reference `-v2` files; original `cat-XX.jpg` retained on disk as archive only.
