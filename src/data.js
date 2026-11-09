@@ -71,7 +71,7 @@ export const PRODUCTS = [
     name: "Elastomeric SBS Modified Bitumen Waterproof Membrane",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-01.jpg",
+    image: "/assets/images/products/cat-01-v2.jpg",
     brief: "Premium polyester/fiberglass reinforced SBS torch-on membrane with unmatched low-temperature flexibility down to -25°C.",
     features: [
       "Low temperature flexibility down to -20°C / -25°C",
@@ -98,7 +98,7 @@ export const PRODUCTS = [
     name: "Plastomeric APP Modified Bitumen Waterproof Membrane",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-02.jpg",
+    image: "/assets/images/products/cat-02-v2.jpg",
     brief: "Atactic Polypropylene modified bitumen torch-on membrane engineered for superior high-temperature stability (up to 130°C) in tropical/arid climates.",
     features: [
       "High softening point and heat resistance up to 130°C",
@@ -124,7 +124,7 @@ export const PRODUCTS = [
     name: "Self-Adhesive Polymer Modified Bitumen Waterproof Membrane",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-03.jpg",
+    image: "/assets/images/products/cat-03-v2.png",
     brief: "Cold-applied, peel-and-stick bitumen membrane eliminating open flames, ideal for fire-restricted sites, timber roofs, and rapid basement installations.",
     features: [
       "100% Cold-applied peel-and-stick (zero open flame, zero VOC emission)",
@@ -149,7 +149,7 @@ export const PRODUCTS = [
     name: "Architectural Fiberglass Asphalt Roofing Shingles",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-04.jpg",
+    image: "/assets/images/products/cat-04-v2.jpg",
     brief: "Multi-layered decorative fiberglass reinforced asphalt shingles with natural ceramic granules for luxury residential villas and slope roofs.",
     features: [
       "Heavy-duty fiberglass core coated with oxidized weathering bitumen",
@@ -174,7 +174,7 @@ export const PRODUCTS = [
     name: "Breathable Synthetic Roofing Underlayment",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-05.jpg",
+    image: "/assets/images/products/cat-05-v2.jpg",
     brief: "High-strength woven polypropylene multi-layer breathable roof underlayment with high vapor permeability and superior slip resistance.",
     features: [
       "Micro-porous breathable membrane layer allows moisture vapor to escape",
@@ -222,7 +222,7 @@ export const PRODUCTS = [
     name: "Root Puncture Resistant SBS Green Roof Membrane",
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
-    image: "/assets/images/products/cat-07.jpg",
+    image: "/assets/images/products/cat-07-v2.jpg",
     brief: "Specially formulated SBS membrane infused with chemical root barrier additives (imported Preventol B2) for intensive/extensive green roof systems.",
     features: [
       "Dual root defense: high-strength copper foil / polymer core + chemical root inhibitor",
@@ -248,7 +248,7 @@ export const PRODUCTS = [
     name: "Thermoplastic Polyolefin (TPO) Single-Ply Roofing Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-08.jpg",
+    image: "/assets/images/products/cat-08-v2.jpg",
     brief: "State-of-the-art ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.",
     features: [
       "High solar reflectance (SRI > 104) drastically lowers building cooling load",
@@ -274,7 +274,7 @@ export const PRODUCTS = [
     name: "Polyvinyl Chloride (PVC) Commercial Single-Ply Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-09.jpg",
+    image: "/assets/images/products/cat-09-v2.jpg",
     brief: "Premium polyester scrim reinforced PVC waterproof sheet formulated with high-molecular plasticizers and UV stabilizers for exposed roofing.",
     features: [
       "Exceptional fire retardancy: self-extinguishing when removed from fire",
@@ -298,7 +298,7 @@ export const PRODUCTS = [
     name: "Ethylene Propylene Diene Monomer (EPDM) Rubber Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-10.jpg",
+    image: "/assets/images/products/cat-10-v2.jpg",
     brief: "100% vulcanized synthetic rubber membrane offering over 50 years of proven outdoor durability, ozone resistance, and 450% ultimate elongation.",
     features: [
       "Extreme elongation (≥ 450%) effortlessly accommodates structural movements",
@@ -347,7 +347,7 @@ export const PRODUCTS = [
     name: "Cross-Laminated Film Self-Adhesive Waterproof Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-12.jpg",
+    image: "/assets/images/products/cat-12-v2.jpg",
     brief: "Biaxially cross-laminated Valéron-grade HDPE film laminated with polymer self-adhesive compound, delivering extreme tear and puncture resistance.",
     features: [
       "Special 45° angle cross-laminated film eliminates directional tearing",
@@ -371,7 +371,7 @@ export const PRODUCTS = [
     name: "Non-Bituminous Polymer Self-Adhesive Film Membrane",
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
-    image: "/assets/images/products/cat-13.jpg",
+    image: "/assets/images/products/cat-13-v2.jpg",
     brief: "Bitumen-free pure synthetic polymer adhesive film with high optical clarity, excellent aging resistance, and zero oil leaching.",
     features: [
       "100% bitumen-free: no volatile plasticizer or oil bleed onto concrete",
@@ -469,7 +469,7 @@ export const PRODUCTS = [
     name: "Single-Component Moisture-Curing Polyurethane (PU) Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-17.jpg",
+    image: "/assets/images/products/cat-17-v2.jpg",
     brief: "High-solids elastomeric polyurethane liquid coating that reacts with ambient moisture to form a tough, seamless, rubber-like waterproof membrane.",
     features: [
       "Ready-to-use direct application without on-site ratio mixing errors",
@@ -495,7 +495,7 @@ export const PRODUCTS = [
     name: "Two-Component Polyurethane Waterproof Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-18.jpg",
+    image: "/assets/images/products/cat-18-v2.jpg",
     brief: "Fast chemical-curing two-pack polyurethane system (Isocyanate prepolymer + Polyol blend) for thick heavy-duty waterproof elastomeric layers.",
     features: [
       "Fast curing speed independent of ambient humidity levels",
@@ -519,7 +519,7 @@ export const PRODUCTS = [
     name: "JS Polymer Cementitious Elastomeric Waterproof Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-19.jpg",
+    image: "/assets/images/products/cat-19-v2.jpg",
     brief: "Two-pack flexible waterproof coating combining premium acrylic copolymer emulsion and high-grade Portland cement with active inorganic additives.",
     features: [
       "Applicable directly on damp (dry-free) concrete substrates",
@@ -543,7 +543,7 @@ export const PRODUCTS = [
     name: "Acrylic High-Elastic Metal Roofing Waterproof Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-20.jpg",
+    image: "/assets/images/products/cat-20-v2.jpg",
     brief: "Pure acrylic elastomeric emulsion system reinforced with stitch-bonded polyester fabric, specifically engineered for corrugated metal roofs.",
     features: [
       "Outstanding UV and thermal reflection (> 85%), reducing roof surface temps by 15-20°C",
@@ -568,7 +568,7 @@ export const PRODUCTS = [
     name: "K11 Polymer Waterproof Slurry (Flexible / General)",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-21.jpg",
+    image: "/assets/images/products/cat-21-v2.jpg",
     brief: "Two-component polymer-modified cement slurry that penetrates microscopic concrete pores while creating a tough waterproof surface barrier.",
     features: [
       "Dual action: crystallization penetration into capillaries + flexible surface barrier",
@@ -592,7 +592,7 @@ export const PRODUCTS = [
     name: "Cementitious Capillary Crystalline Waterproofing (CCCW)",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-22.jpg",
+    image: "/assets/images/products/cat-22-v2.jpg",
     brief: "Active chemical crystalline powder that reacts with moisture and unhydrated cement to grow insoluble dendritic crystals deep inside concrete capillaries.",
     features: [
       "Self-healing mechanism: reactivates whenever water appears to seal micro-cracks ≤ 0.4mm",
@@ -616,7 +616,7 @@ export const PRODUCTS = [
     name: "Transparent Polyurethane Waterproof Sealer",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-23.jpg",
+    image: "/assets/images/products/cat-23-v2.jpg",
     brief: "Non-yellowing crystal-clear aliphatic polyurethane liquid sealant designed for direct repair over existing tiles, marble, and glass mosaics without demolition.",
     features: [
       "100% transparent and glossy: preserves original tile appearance and color",
@@ -640,7 +640,7 @@ export const PRODUCTS = [
     name: "Non-Curing Rubber Bitumen Waterproof Coating",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-24.jpg",
+    image: "/assets/images/products/cat-24-v2.png",
     brief: "High-performance hot-melt rubber modified bitumen compound that remains perpetually paste-like, self-healing, and viscous over its entire lifespan.",
     features: [
       "Never cures: maintains permanent flexible paste state (zero fatigue failure)",
@@ -714,7 +714,7 @@ export const PRODUCTS = [
     name: "Water-Based Polyurethane Polymer Waterproof Emulsion",
     categoryId: "liquid-coatings",
     categoryName: "Liquid Coatings & Slurry",
-    image: "/assets/images/products/cat-27.jpg",
+    image: "/assets/images/products/cat-27-v2.jpg",
     brief: "Eco-friendly aqueous polyurethane dispersion coating with high tensile elasticity, zero toxic solvents, and exceptional wet-substrate adhesion.",
     features: [
       "Water-based green formulation with near-zero VOC",
@@ -740,7 +740,7 @@ export const PRODUCTS = [
     name: "Aluminum Foil Reinforced Butyl Waterproof Flashing Tape",
     categoryId: "flashing-butyl",
     categoryName: "Flashing & Butyl Tapes",
-    image: "/assets/images/products/cat-28.jpg",
+    image: "/assets/images/products/cat-28-v2.jpg",
     brief: "Pure butyl rubber adhesive compounded onto heavy-duty embossed aluminum/foil facing for instant, permanent, weather-resistant flashing repairs.",
     features: [
       "Reflective metallic aluminum foil provides 100% UV and weather shielding",
@@ -765,7 +765,7 @@ export const PRODUCTS = [
     name: "Double-Sided Butyl Rubber Sealing Joint Tape",
     categoryId: "flashing-butyl",
     categoryName: "Flashing & Butyl Tapes",
-    image: "/assets/images/products/cat-29.jpg",
+    image: "/assets/images/products/cat-29-v2.jpg",
     brief: "High-cohesion double-sided butyl bonding tape designed for watertight lap sealing between metal panels, PC sunsheets, and membrane splices.",
     features: [
       "Double-sided aggressive tack for hidden compression joint sealing",
@@ -813,7 +813,7 @@ export const PRODUCTS = [
     name: "Bituminous Damp Proof Course (DPC) Strip",
     categoryId: "flashing-butyl",
     categoryName: "Flashing & Butyl Tapes",
-    image: "/assets/images/products/cat-31.jpg",
+    image: "/assets/images/products/cat-31-v2.jpg",
     brief: "Extruded bitumen/polyethylene barrier strip installed in masonry cavity walls to block rising damp from sub-structures into living spaces.",
     features: [
       "Prevents rising damp and capillary water penetration in brickwork and blockwork",
@@ -888,7 +888,7 @@ export const PRODUCTS = [
     name: "Composite Dimple Drainage Sheet with Geotextile",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-34.jpg",
+    image: "/assets/images/products/cat-34-v2.webp",
     brief: "High-impact polystyrene / HDPE vacuum-formed dimple core thermally bonded with non-woven filter geotextile for rapid underground water drainage.",
     features: [
       "High compressive strength (> 200 - 400 kPa) resists heavy earth backfill pressure",
@@ -912,7 +912,7 @@ export const PRODUCTS = [
     name: "Redispersible Polymer Powder (RDP / VAE) for Mortars",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-35.jpg",
+    image: "/assets/images/products/cat-35-v2.jpg",
     brief: "Water-soluble vinyl acetate-ethylene copolymer powder manufactured by spray-drying, boosting flexible adhesion and water repellency in dry-mix mortars.",
     features: [
       "Drastically improves flexural tensile bond strength on concrete, EPS, and tiles",
@@ -961,7 +961,7 @@ export const PRODUCTS = [
     name: "Rapid Setting Leak Stopper Mortar & Grouting Compound",
     categoryId: "geosynthetics-aux",
     categoryName: "Geosynthetics & Auxiliaries",
-    image: "/assets/images/products/cat-37.jpg",
+    image: "/assets/images/products/cat-37-v2.jpg",
     brief: "High-strength fast-curing expanding cementitious repair mortar for anchoring, crack stitching, and filling structural voids under heavy hydrostatic pressure.",
     features: [
       "Micro-expansion properties eliminate curing shrinkage cracks",

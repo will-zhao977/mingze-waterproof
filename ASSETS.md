@@ -18,3 +18,10 @@ This file tracks all visual assets used in the Weifang Mingze Waterproof Materia
 | `system-epdm` | `/assets/images/product-epdm.jpg` | `user-provided` | System 05: Geosynthetics & Auxiliaries visual | Verified local |
 | `cat-01` ~ `cat-37` | `/assets/images/products/cat-01.jpg` ~ `/assets/images/products/cat-37.jpg` | `user-provided` | Individual product technical packshots in TDS modal & spec grid | Verified local (37 files) |
 | `placeholder` | `/assets/images/placeholder.svg` | `placeholder` | Fallback technical drawing placeholder | Verified local |
+
+## v2 Product Image Replacements (2026-11-09, user-confirmed sourcing)
+
+26 SKUs replaced with new filenames (`-v2` suffix) after user confirmation:
+- **Verified clean web images (10)**: cat-01, 04, 08, 09, 10, 12, 22, 31, 34, 35 — visually checked: no third-party watermark/logo/text.
+- **Own Alibaba storefront listing images (16)**: cat-02, 03, 05, 07, 13, 17, 18, 19, 20, 21, 23, 24, 27, 28, 29, 37 — first-party assets from wfmingze.en.alibaba.com product list; some carry Mingze's own brand print (acceptable).
+- **Still on original `cat-XX.jpg` (11, pending user decision)**: 06, 11, 14, 15, 16, 25, 26, 30, 32, 33, 36 — no clean web image and no matching storefront listing found.
