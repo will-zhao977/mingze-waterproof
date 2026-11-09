@@ -10,93 +10,62 @@ import {
   WHY_CHOOSE_US
 } from "./data";
 
-const QA_PATHWAY_STEPS = [
-  {
-    code: "STAGE 01 / IQC",
-    title: "Raw Bitumen & Polymer Verification",
-    marker: "100% INCOMING BATCH TEST",
-    desc: "Every shipment of base bitumen, SBS/APP modifiers, polyester mat, and virgin TPO/HDPE resin undergoes softening point, melt flow index, and ash content verification before entering mixing silos."
-  },
-  {
-    code: "STAGE 02 / IPQC",
-    title: "In-Line Gauge & Tensile Calibration",
-    marker: "CONTINUOUS LASER MONITORING",
-    desc: "Automated calendering and extrusion lines monitor membrane thickness (±0.05mm), carrier impregnation saturation, and seam peel strength every 500 linear meters."
-  },
-  {
-    code: "STAGE 03 / OQC",
-    title: "CNAS-Standard Lab & COA Release",
-    marker: "LOT-STAMPED TRACEABILITY",
-    desc: "Finished rolls and liquid batches are tested for -25°C low-temperature flexibility, 0.3 MPa hydrostatic impermeability, and UV aging prior to issuing batch-specific COA & TDS documents."
-  }
-];
-
-const LAYER_ROLES = [
-  "STRUCTURAL SUBSTRATE",
-  "PRIMARY VAPOR / BASE LAYER",
-  "CORE WATERPROOFING / INSULATION",
-  "EXPOSED / PROTECTION FINISH"
-];
-
-const HERO_SPECIMENS = [
-  {
-    id: "hdpe",
-    code: "PLATE 00-A / PRE-APPLIED HDPE",
-    title: "Pre-Applied HDPE Blindside Membrane (MZ-CAT-11)",
-    standard: "ASTM D5385 · GB/T 23457",
-    image: "/assets/images/product-hdpe.jpg",
-    specLeft: "1.2mm / 1.5mm / 2.0mm Virgin HDPE",
-    specRight: "70m Hydrostatic Head Resistance"
-  },
+const HERO_FEATURED_SYSTEMS = [
   {
     id: "bitumen",
-    code: "PLATE 00-B / SBS & APP BITUMEN",
-    title: "SBS / APP Torch-Applied Bitumen Roll (MZ-CAT-01)",
+    tabLabel: "SBS / APP Bitumen",
+    badge: "Best-Selling Roofing Series",
     standard: "EN 13707 · ASTM D6164",
-    image: "/assets/images/product-bitumen.jpg",
-    specLeft: "3.0mm / 4.0mm / 5.0mm PY Reinforced",
-    specRight: "-25°C Arctic to +130°C Tropical Grade"
+    title: "SBS & APP Modified Bitumen Waterproof Membranes",
+    spec: "3.0mm / 4.0mm / 5.0mm · Torch-On & Self-Adhesive Rolls",
+    image: "/assets/images/product-bitumen.jpg"
+  },
+  {
+    id: "hdpe",
+    tabLabel: "Pre-Applied HDPE",
+    badge: "Basement & Tunnel Flagship",
+    standard: "ASTM D5385 · GB/T 23457",
+    title: "Pre-Applied HDPE Blindside Waterproofing Membrane",
+    spec: "1.2mm / 1.5mm / 2.0mm · 70m Hydrostatic Head Resistance",
+    image: "/assets/images/product-hdpe.jpg"
   },
   {
     id: "polymer",
-    code: "PLATE 00-C / TPO & PVC SINGLE-PLY",
-    title: "TPO / PVC Exposed Roofing Sheet (MZ-CAT-08)",
+    tabLabel: "TPO / PVC Sheet",
+    badge: "Commercial Cool Roof",
     standard: "ASTM D6878 · EN 13956",
-    image: "/assets/images/product-polymer.jpg",
-    specLeft: "1.2mm / 1.5mm / 2.0mm Weldable Sheet",
-    specRight: "High SRI Solar Reflective Cool Roof"
+    title: "TPO & PVC Exposed Single-Ply Roofing Membranes",
+    spec: "1.2mm / 1.5mm / 2.0mm · Hot-Air Weldable & UV Resistant",
+    image: "/assets/images/product-polymer.jpg"
   },
   {
     id: "coating",
-    code: "PLATE 00-D / LIQUID POLYURETHANE",
-    title: "Elastomeric PU & Polyurea Coating (MZ-CAT-17)",
+    tabLabel: "Liquid Coatings",
+    badge: "Seamless Elastomeric",
     standard: "ASTM C836 · GB/T 19250",
-    image: "/assets/images/product-coating.jpg",
-    specLeft: "≥ 450% Elongation · Seamless Film",
-    specRight: "20kg / 25kg Steel & HDPE Pails"
+    title: "Polyurethane (PU), JS Cementitious & Polyurea Coatings",
+    spec: "≥ 450% Elongation · 20kg / 25kg Export Pails",
+    image: "/assets/images/product-coating.jpg"
   }
 ];
 
 function App() {
-  // Hero specimen switcher
-  const [heroSpecimenIdx, setHeroSpecimenIdx] = useState(0);
+  // Hero featured product switcher
+  const [heroTabIdx, setHeroTabIdx] = useState(0);
 
-  // Catalogue filter & view states
+  // Product catalogue filter & search states
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [viewMode, setViewMode] = useState("ledger"); // 'ledger' | 'packshot'
-
-  // Mobile navigation disclosure
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Modals: TDS Dossier Modal & Sample Swatch Box Modal
-  const [selectedTdsProduct, setSelectedTdsProduct] = useState(null);
+  // Modals: Product Details (TDS) & Free Sample Box
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [sampleModalOpen, setSampleModalOpen] = useState(false);
 
-  // Copy feedback state
-  const [copiedKey, setCopiedKey] = useState(null);
+  // Copy feedback
+  const [copiedField, setCopiedField] = useState(null);
 
-  // RFQ Form state & validation
+  // Inquiry Form State
   const [rfqForm, setRfqForm] = useState({
     company: "",
     email: "",
@@ -108,143 +77,102 @@ function App() {
     requestSampleBox: true,
     notes: ""
   });
-  const [rfqTouched, setRfqTouched] = useState({});
   const [rfqErrors, setRfqErrors] = useState({});
   const [rfqSubmitted, setRfqSubmitted] = useState(false);
 
-  // Sample Box Modal Form state
+  // Sample Box Modal Form State
   const [sampleForm, setSampleForm] = useState({
     company: "",
     contactName: "",
     email: "",
     country: "",
-    courierNote: "",
-    selectedSystems: ["bitumen-shingles", "polymer-hdpe"]
+    notes: ""
   });
   const [sampleSubmitted, setSampleSubmitted] = useState(false);
 
-  // Escape key closes active modal
+  // Close modals on Escape key
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const onKeyDown = (e) => {
       if (e.key === "Escape") {
-        if (selectedTdsProduct) setSelectedTdsProduct(null);
+        if (selectedProduct) setSelectedProduct(null);
         if (sampleModalOpen) setSampleModalOpen(false);
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedTdsProduct, sampleModalOpen]);
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [selectedProduct, sampleModalOpen]);
 
-  // Filtered 37-SKU products
+  // Filter 37 products by category & search query
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((item) => {
-      const matchesCat =
+      const matchCat =
         activeCategory === "all" || item.categoryId === activeCategory;
       const q = searchQuery.trim().toLowerCase();
-      if (!q) return matchesCat;
-      const matchesQuery =
+      if (!q) return matchCat;
+      const matchQuery =
         item.code.toLowerCase().includes(q) ||
         item.name.toLowerCase().includes(q) ||
         item.standards.toLowerCase().includes(q) ||
         item.applications.toLowerCase().includes(q) ||
         item.categoryName.toLowerCase().includes(q);
-      return matchesCat && matchesQuery;
+      return matchCat && matchQuery;
     });
   }, [activeCategory, searchQuery]);
 
-  // Select category from 01 / Material Systems and jump to 02 / Catalogue
-  const handleSelectSystem = (categoryId) => {
-    setActiveCategory(categoryId);
-    const el = document.getElementById("catalogue");
+  // Select series card -> filter product grid & scroll to products
+  const handleSelectSeries = (catId) => {
+    setActiveCategory(catId);
+    const el = document.getElementById("products");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Prefill RFQ form with a specific SKU and jump to 06 / Trade Desk
+  // Click Inquire Now on a product card -> prefill RFQ form & scroll to contact
   const handleInquireProduct = (product) => {
-    setSelectedTdsProduct(null);
+    setSelectedProduct(null);
     setRfqForm((prev) => ({
       ...prev,
-      productInterest: `${product.code} — ${product.name} (${product.thickness})`
+      productInterest: `${product.code} - ${product.name} (${product.thickness})`
     }));
     setRfqSubmitted(false);
-    const el = document.getElementById("trade-desk");
+    const el = document.getElementById("contact");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Copy contact string helper
-  const handleCopyText = (key, value) => {
+  // Copy contact helper
+  const handleCopy = (key, text) => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(value).catch(() => {});
+      navigator.clipboard.writeText(text).catch(() => {});
     }
-    setCopiedKey(key);
+    setCopiedField(key);
     setTimeout(() => {
-      setCopiedKey((prev) => (prev === key ? null : prev));
+      setCopiedField((prev) => (prev === key ? null : prev));
     }, 2200);
   };
 
-  // Validate RFQ fields
-  const validateRfq = (values) => {
-    const errs = {};
-    if (!values.company.trim()) {
-      errs.company = "REQUIRED: Enter company or contractor name.";
-    }
-    if (!values.email.trim()) {
-      errs.email = "REQUIRED: Enter official business email address.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
-      errs.email = "INVALID FORMAT: Provide a valid email (e.g. name@company.com).";
-    }
-    if (!values.country.trim()) {
-      errs.country = "REQUIRED: Specify destination country or region.";
-    }
-    if (!values.quantity.trim()) {
-      errs.quantity = "REQUIRED: Enter estimated area (m²), rolls, or containers.";
-    }
-    return errs;
-  };
-
-  const handleRfqChange = (field, value) => {
-    const next = { ...rfqForm, [field]: value };
-    setRfqForm(next);
-    if (rfqTouched[field]) {
-      setRfqErrors(validateRfq(next));
-    }
-  };
-
-  const handleRfqBlur = (field) => {
-    const nextTouched = { ...rfqTouched, [field]: true };
-    setRfqTouched(nextTouched);
-    setRfqErrors(validateRfq(rfqForm));
-  };
-
+  // Validate RFQ form
   const handleRfqSubmit = (e) => {
     e.preventDefault();
-    const allTouched = {
-      company: true,
-      email: true,
-      country: true,
-      quantity: true
-    };
-    setRfqTouched(allTouched);
-    const errs = validateRfq(rfqForm);
+    const errs = {};
+    if (!rfqForm.company.trim()) {
+      errs.company = "Please enter your company name.";
+    }
+    if (!rfqForm.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rfqForm.email.trim())) {
+      errs.email = "Please enter a valid business email address.";
+    }
+    if (!rfqForm.country.trim()) {
+      errs.country = "Please enter your destination country or region.";
+    }
+    if (!rfqForm.quantity.trim()) {
+      errs.quantity = "Please enter estimated order quantity (m², rolls, or containers).";
+    }
     setRfqErrors(errs);
     if (Object.keys(errs).length === 0) {
       setRfqSubmitted(true);
     }
-  };
-
-  // Toggle system in Sample Swatch Modal
-  const toggleSampleSystem = (catId) => {
-    setSampleForm((prev) => {
-      const exists = prev.selectedSystems.includes(catId);
-      const next = exists
-        ? prev.selectedSystems.filter((id) => id !== catId)
-        : [...prev.selectedSystems, catId];
-      return { ...prev, selectedSystems: next };
-    });
   };
 
   const handleSampleSubmit = (e) => {
@@ -253,35 +181,34 @@ function App() {
     setSampleSubmitted(true);
   };
 
+  const activeHeroItem = HERO_FEATURED_SYSTEMS[heroTabIdx];
+
   return (
-    <div className="dossier-shell">
+    <div>
       {/* ====================================================================
-          TOP UTILITY STRIP (Dark Engineering Context Band)
+          1. CORPORATE TOP BAR
           ==================================================================== */}
-      <div className="utility-strip" data-component="utility-strip">
-        <div className="utility-strip-inner">
-          <div className="utility-cluster">
-            <span className="utility-item">
-              <strong>DOSSIER REF:</strong> MZ-EXP-2026 / REV.04
+      <div className="b2b-topbar" data-component="topbar">
+        <div className="b2b-topbar-inner">
+          <div className="b2b-topbar-group">
+            <span className="b2b-topbar-item">
+              <strong>Direct Factory Since 2008:</strong> 68,000 m² Manufacturing Base in Shandong, China
             </span>
-            <span className="utility-item">
-              <strong>STANDARDS:</strong> ISO9001 · CE EN 13707 / EN 13956 · ASTM
-            </span>
-            <span className="utility-item">
-              <strong>PORT DISPATCH:</strong> QINGDAO PORT (200 KM)
+            <span className="b2b-topbar-item">
+              <strong>Certifications:</strong> ISO9001 · CE (EN 13707 / EN 13956) · ASTM
             </span>
           </div>
-          <div className="utility-cluster">
-            <span className="utility-item">
-              <strong>EXPORT DESK:</strong>{" "}
-              <a className="utility-link" href={`mailto:${COMPANY_INFO.email}`}>
+          <div className="b2b-topbar-group">
+            <span className="b2b-topbar-item">
+              <strong>Email:</strong>{" "}
+              <a className="b2b-topbar-link" href={`mailto:${COMPANY_INFO.email}`}>
                 {COMPANY_INFO.email}
               </a>
             </span>
-            <span className="utility-item">
-              <strong>WHATSAPP:</strong>{" "}
+            <span className="b2b-topbar-item">
+              <strong>WhatsApp:</strong>{" "}
               <a
-                className="utility-link"
+                className="b2b-topbar-link"
                 href={COMPANY_INFO.whatsappLink}
                 target="_blank"
                 rel="noreferrer"
@@ -294,295 +221,230 @@ function App() {
       </div>
 
       {/* ====================================================================
-          STICKY ARCHITECTURAL HEADER (68px)
+          2. STICKY CORPORATE NAVIGATION HEADER
           ==================================================================== */}
-      <header className="site-header" data-component="site-header">
-        <div className="header-inner">
-          <a href="#top" className="brand-lockup">
-            <span className="brand-monogram" aria-hidden="true">
-              MZ
-            </span>
-            <span className="brand-wordmark">
-              <span className="brand-wordmark-main">MINGZE WATERPROOF</span>
-              <span className="brand-wordmark-sub">
-                SHANDONG MANUFACTURING BASE · EST. 2008
+      <header className="b2b-header" data-component="header">
+        <div className="b2b-header-inner">
+          <a href="#top" className="b2b-logo-link">
+            <span className="b2b-logo-badge">MZ</span>
+            <span className="b2b-logo-text">
+              <span className="b2b-logo-title">MINGZE WATERPROOF</span>
+              <span className="b2b-logo-subtitle">
+                Global Waterproofing Manufacturer &amp; Exporter
               </span>
             </span>
           </a>
 
-          <nav className="header-nav" aria-label="Primary Engineering Dossier Navigation">
-            <a href="#systems" className="header-anchor">
-              01 / SYSTEMS
+          <nav className="b2b-nav" aria-label="Main Navigation">
+            <a href="#series" className="b2b-nav-link">
+              Product Series
             </a>
-            <a href="#catalogue" className="header-anchor">
-              02 / 37-SKU CATALOGUE
+            <a href="#products" className="b2b-nav-link">
+              All 37 Products
             </a>
-            <a href="#assemblies" className="header-anchor">
-              03 / ASSEMBLIES
+            <a href="#solutions" className="b2b-nav-link">
+              Engineering Solutions
             </a>
-            <a href="#standards" className="header-anchor">
-              04 / QA &amp; STANDARDS
+            <a href="#factory" className="b2b-nav-link">
+              Factory &amp; QC
             </a>
-            <a href="#factory" className="header-anchor">
-              05 / FACTORY
-            </a>
-            <a href="#trade-desk" className="header-anchor">
-              06 / TRADE DESK
+            <a href="#contact" className="b2b-nav-link">
+              Contact Us
             </a>
           </nav>
 
-          <div className="header-cta-wrap">
+          <div className="b2b-header-actions">
             <button
               type="button"
-              className="arch-btn arch-btn-secondary arch-btn-compact"
+              className="b2b-btn b2b-btn-outline b2b-btn-sm"
               onClick={() => {
                 setSampleSubmitted(false);
                 setSampleModalOpen(true);
               }}
             >
-              SAMPLE BOX
+              Free Sample Box
             </button>
-            <a href="#trade-desk" className="arch-btn arch-btn-primary arch-btn-compact">
-              REQUEST FOB QUOTE
+            <a href="#contact" className="b2b-btn b2b-btn-primary b2b-btn-sm">
+              Get A Free Quote
             </a>
             <button
               type="button"
-              className="mobile-menu-toggle"
+              className="b2b-mobile-toggle"
               aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation drawer"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
             >
-              <span className="tech-label" style={{ color: "inherit" }}>
-                {mobileMenuOpen ? "CLOSE" : "MENU"}
-              </span>
+              {mobileMenuOpen ? "Close ✕" : "Menu ☰"}
             </button>
           </div>
         </div>
-      </header>
 
-      {/* Mobile Navigation Drawer */}
-      {mobileMenuOpen && (
-        <div className="mobile-drawer" data-component="mobile-drawer">
-          <div className="mobile-drawer-links">
-            <a
-              href="#systems"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              01 / MATERIAL SYSTEMS (05 SERIES)
-            </a>
-            <a
-              href="#catalogue"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              02 / 37-SKU TECHNICAL CATALOGUE
-            </a>
-            <a
-              href="#assemblies"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              03 / ENGINEERING ASSEMBLIES
-            </a>
-            <a
-              href="#standards"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              04 / QA PATHWAY &amp; STANDARDS
-            </a>
-            <a
-              href="#factory"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              05 / FACTORY BASE (68,000 M²)
-            </a>
-            <a
-              href="#trade-desk"
-              className="header-anchor"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              06 / DIRECT TRADE DESK &amp; RFQ
-            </a>
+        {/* Mobile Dropdown Navigation */}
+        {mobileMenuOpen && (
+          <div className="b2b-mobile-menu">
+            <div className="b2b-mobile-nav-list">
+              <a
+                href="#series"
+                className="b2b-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                5 Core Product Series
+              </a>
+              <a
+                href="#products"
+                className="b2b-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                All 37 Waterproofing Products
+              </a>
+              <a
+                href="#solutions"
+                className="b2b-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Engineering Application Solutions
+              </a>
+              <a
+                href="#factory"
+                className="b2b-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Factory Strength &amp; Standards
+              </a>
+              <a
+                href="#contact"
+                className="b2b-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Request A Quote &amp; Contact
+              </a>
+            </div>
+            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <a
+                href="#contact"
+                className="b2b-btn b2b-btn-primary b2b-btn-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get A Free Quote
+              </a>
+              <button
+                type="button"
+                className="b2b-btn b2b-btn-outline b2b-btn-sm"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setSampleSubmitted(false);
+                  setSampleModalOpen(true);
+                }}
+              >
+                Request Free Sample Box
+              </button>
+            </div>
           </div>
-          <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-            <a
-              href="#trade-desk"
-              className="arch-btn arch-btn-primary arch-btn-compact"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              REQUEST FOB QUOTE
-            </a>
-            <button
-              type="button"
-              className="arch-btn arch-btn-secondary arch-btn-compact"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setSampleSubmitted(false);
-                setSampleModalOpen(true);
-              }}
-            >
-              REQUEST SAMPLE SWATCH BOX
-            </button>
-          </div>
-        </div>
-      )}
+        )}
+      </header>
 
       <main id="top">
         {/* ==================================================================
-            ASYMMETRIC 7 / 5 PROOF-LED HERO PLATE
+            3. MAINSTREAM B2B CORPORATE HERO BANNER
             ================================================================== */}
-        <section className="plate-warm hero-plate" data-component="hero-section">
-          <div className="arch-container">
-            <div className="hero-asymmetric-grid">
-              {/* Left 7 Columns: Dominant Statement & Primary Actions */}
-              <div className="hero-left-field">
-                <div>
-                  <div className="hero-eyebrow-row">
-                    <span className="hero-locator-tag">
-                      FOB QINGDAO · DIRECT MANUFACTURER
-                    </span>
-                    <span className="tech-label">
-                      WEIFANG MINGZE WATERPROOF MATERIAL CO., LTD.
-                    </span>
-                  </div>
-                  <h1>
-                    ARCHITECTURAL WATERPROOFING MEMBRANES &amp; LIQUID SYSTEMS FOR GLOBAL INFRASTRUCTURE.
-                  </h1>
-                  <p className="hero-deck">
-                    Engineered in Taitou Industrial Zone, China’s waterproof manufacturing hub. We manufacture and export 37 standardized SKUs across SBS/APP modified bitumen, TPO/PVC/HDPE single-ply sheets, and elastomeric coatings with full ASTM, EN/CE, and GB batch compliance.
-                  </p>
+        <section className="b2b-hero" data-component="hero-banner">
+          <div className="b2b-container">
+            <div className="b2b-hero-grid">
+              {/* Left Column: Corporate Value Proposition */}
+              <div className="b2b-hero-content">
+                <div className="b2b-hero-badges">
+                  <span className="b2b-hero-pill">ISO 9001 / 14001 Certified</span>
+                  <span className="b2b-hero-pill">CE &amp; ASTM Compliant</span>
+                  <span className="b2b-hero-pill">FOB Qingdao Port Direct</span>
                 </div>
 
-                <div className="hero-action-cluster">
-                  <a href="#trade-desk" className="arch-btn arch-btn-primary">
-                    REQUEST FOB / CIF CONTAINER QUOTE
+                <h1>
+                  Leading Industrial Manufacturer of{" "}
+                  <span>Waterproofing Membranes &amp; Coatings</span>
+                </h1>
+
+                <p className="b2b-hero-desc">
+                  Weifang Mingze Waterproof Material Co., Ltd. supplies global contractors, building material distributors, and infrastructure developers with 37 standardized waterproofing products — factory-direct from China’s largest waterproof production base.
+                </p>
+
+                <ul className="b2b-hero-check-list">
+                  <li>
+                    <span className="b2b-check-dot">✓</span>
+                    50,000,000+ m² Annual Membrane Output
+                  </li>
+                  <li>
+                    <span className="b2b-check-dot">✓</span>
+                    25,000+ Tons Liquid Coatings Capacity
+                  </li>
+                  <li>
+                    <span className="b2b-check-dot">✓</span>
+                    7–10 Days Rapid Container Loading
+                  </li>
+                  <li>
+                    <span className="b2b-check-dot">✓</span>
+                    OEM / ODM Private Label &amp; Free Samples
+                  </li>
+                </ul>
+
+                <div className="b2b-hero-actions">
+                  <a href="#contact" className="b2b-btn b2b-btn-primary b2b-btn-lg">
+                    Request Factory Price List
                   </a>
-                  <a href="#catalogue" className="arch-btn arch-btn-secondary">
-                    INSPECT 37-SKU TECHNICAL LEDGER
+                  <a href="#products" className="b2b-btn b2b-btn-ghost-light b2b-btn-lg">
+                    Browse 37 Products
                   </a>
-                  <button
-                    type="button"
-                    className="arch-btn arch-btn-secondary"
-                    onClick={() => {
-                      setSampleSubmitted(false);
-                      setSampleModalOpen(true);
-                    }}
+                  <a
+                    href={COMPANY_INFO.whatsappLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="b2b-btn b2b-btn-whatsapp b2b-btn-lg"
                   >
-                    ORDER FREE SAMPLE BOX
-                  </button>
+                    WhatsApp Export Desk
+                  </a>
                 </div>
               </div>
 
-              {/* Right 5 Columns: Architectural Showcase Frame */}
-              <div className="hero-right-field">
-                <div className="showcase-frame">
-                  <div className="showcase-frame-bar">
-                    <span className="tech-label">
-                      {HERO_SPECIMENS[heroSpecimenIdx].code}
-                    </span>
-                    <span className="tech-label tech-label-cobalt">
-                      {HERO_SPECIMENS[heroSpecimenIdx].standard}
-                    </span>
-                  </div>
-                  <div
-                    className="showcase-media-box"
-                    style={{ backgroundColor: "#FFFFFF", padding: "12px" }}
-                  >
-                    <img
-                      src={HERO_SPECIMENS[heroSpecimenIdx].image}
-                      alt={HERO_SPECIMENS[heroSpecimenIdx].title}
-                      style={{ objectFit: "contain" }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(4, 1fr)",
-                      borderBottom: "1px solid var(--color-border)",
-                      backgroundColor: "var(--color-surface-warm)"
-                    }}
-                  >
-                    {HERO_SPECIMENS.map((spec, idx) => (
-                      <button
-                        key={spec.id}
-                        type="button"
-                        onClick={() => setHeroSpecimenIdx(idx)}
-                        style={{
-                          minHeight: "44px",
-                          border: "none",
-                          borderRight:
-                            idx < 3 ? "1px solid var(--color-border)" : "none",
-                          borderBottom:
-                            heroSpecimenIdx === idx
-                              ? "3px solid var(--color-tertiary)"
-                              : "3px solid transparent",
-                          backgroundColor:
-                            heroSpecimenIdx === idx
-                              ? "var(--color-surface)"
-                              : "transparent",
-                          fontFamily: "var(--font-mono)",
-                          fontSize: "0.68rem",
-                          fontWeight: 600,
-                          textTransform: "uppercase",
-                          cursor: "pointer",
-                          color: "var(--color-primary)"
-                        }}
-                      >
-                        0{idx + 1} / {spec.id}
-                      </button>
-                    ))}
-                  </div>
-                  <div className="showcase-caption-grid">
-                    <div className="showcase-spec-cell">
-                      <span className="tech-label">SPECIMEN SPECIFICATION</span>
-                      <strong>{HERO_SPECIMENS[heroSpecimenIdx].title}</strong>
-                      <span>{HERO_SPECIMENS[heroSpecimenIdx].specLeft}</span>
-                    </div>
-                    <div className="showcase-spec-cell">
-                      <span className="tech-label">ENGINEERING PERFORMANCE</span>
-                      <strong>{HERO_SPECIMENS[heroSpecimenIdx].specRight}</strong>
-                      <span>20GP / 40HQ Palletized Export Loading</span>
-                    </div>
-                  </div>
+              {/* Right Column: Interactive Flagship Product Card */}
+              <div className="b2b-hero-showcase-card">
+                <div className="b2b-showcase-header">
+                  <span className="b2b-showcase-tag">{activeHeroItem.badge}</span>
+                  <span className="b2b-showcase-std">{activeHeroItem.standard}</span>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/* 4-Cell Ruled Proof Metric Strip */}
-          <div className="hero-metrics-strip">
-            <div className="arch-container">
-              <div className="hero-metrics-grid">
-                <div className="hero-metric-cell">
-                  <span className="tech-label">01 / ESTABLISHED TRACK RECORD</span>
-                  <div className="metric-value">2008 / 18+ YRS</div>
-                  <p className="metric-qualifier">
-                    Dedicated industrial waterproofing synthesis &amp; global container export.
-                  </p>
+                <div className="b2b-showcase-img-box">
+                  <img
+                    src={activeHeroItem.image}
+                    alt={activeHeroItem.title}
+                  />
                 </div>
-                <div className="hero-metric-cell">
-                  <span className="tech-label">02 / FACILITY FOOTPRINT</span>
-                  <div className="metric-value">68,000 m²</div>
-                  <p className="metric-qualifier">
-                    Automated bitumen, polymer extrusion &amp; chemical reaction plant in Shandong.
-                  </p>
+
+                <div className="b2b-showcase-tabs" role="tablist">
+                  {HERO_FEATURED_SYSTEMS.map((item, idx) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={heroTabIdx === idx}
+                      className={`b2b-showcase-tab ${
+                        heroTabIdx === idx ? "active" : ""
+                      }`}
+                      onClick={() => setHeroTabIdx(idx)}
+                    >
+                      {item.tabLabel}
+                    </button>
+                  ))}
                 </div>
-                <div className="hero-metric-cell">
-                  <span className="tech-label">03 / ANNUAL OUTPUT CAPACITY</span>
-                  <div className="metric-value">50M+ m² / YR</div>
-                  <p className="metric-qualifier">
-                    50,000,000 m² waterproof membranes + 25,000 metric tons liquid coatings.
-                  </p>
-                </div>
-                <div className="hero-metric-cell">
-                  <span className="tech-label">04 / MARITIME LOGISTICS</span>
-                  <div className="metric-value">200 km PORT</div>
-                  <p className="metric-qualifier">
-                    2.5-hour highway transit to Qingdao Port for rapid global shipping.
-                  </p>
+
+                <div className="b2b-showcase-footer">
+                  <div>
+                    <h3>{activeHeroItem.title}</h3>
+                    <p>{activeHeroItem.spec}</p>
+                  </div>
+                  <a
+                    href="#products"
+                    className="b2b-btn b2b-btn-primary b2b-btn-sm"
+                  >
+                    View Catalog →
+                  </a>
                 </div>
               </div>
             </div>
@@ -590,153 +452,120 @@ function App() {
         </section>
 
         {/* ==================================================================
-            01 / MATERIAL SYSTEMS (Numbered 01–05 Architectural Index)
+            4. ELEVATED CORPORATE STATS BAR
             ================================================================== */}
-        <section
-          id="systems"
-          className="plate-paper section-pad"
-          data-component="material-systems-section"
-        >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-cobalt">SECTION 01</span>
-                <span className="plate-index-num">01 / 05</span>
-                <span className="tech-label">MATERIAL SYSTEMS</span>
+        <div className="b2b-stats-wrap" data-component="stats-bar">
+          <div className="b2b-container">
+            <div className="b2b-stats-grid">
+              <div className="b2b-stat-card">
+                <div className="b2b-stat-num">2008</div>
+                <div className="b2b-stat-title">Established Manufacturer</div>
+                <p className="b2b-stat-desc">
+                  18+ years specializing in industrial waterproofing R&amp;D, manufacturing, and global container export.
+                </p>
               </div>
-              <div className="plate-title-col">
-                <h2>FIVE CORE WATERPROOFING PRODUCT FAMILIES</h2>
-                <p className="plate-deck">
-                  Our manufacturing program is organized into five engineered material families covering subterranean foundations, exposed industrial roofs, civil tunnels, and structural joint sealing. Select any system to filter the 37-SKU technical ledger below.
+              <div className="b2b-stat-card">
+                <div className="b2b-stat-num">68,000 m²</div>
+                <div className="b2b-stat-title">Modern Factory Area</div>
+                <p className="b2b-stat-desc">
+                  Automated bitumen, TPO/PVC/HDPE extrusion, and polyurethane synthesis lines in Weifang, Shandong.
+                </p>
+              </div>
+              <div className="b2b-stat-card">
+                <div className="b2b-stat-num">50M+ m²</div>
+                <div className="b2b-stat-title">Annual Production Capacity</div>
+                <p className="b2b-stat-desc">
+                  50 million m² roll membranes plus 25,000 tons of liquid coatings for stable bulk supply.
+                </p>
+              </div>
+              <div className="b2b-stat-card">
+                <div className="b2b-stat-num">200 km</div>
+                <div className="b2b-stat-title">To Qingdao Seaport</div>
+                <p className="b2b-stat-desc">
+                  2.5-hour highway access to Qingdao Port ensuring fast 20GP/40HQ container booking and low inland freight.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div className="systems-ledger">
-              {CATEGORIES.map((cat, idx) => {
-                const isSelected = activeCategory === cat.id;
-                const indexStr = String(idx + 1).padStart(2, "0");
-                return (
-                  <div
-                    key={cat.id}
-                    className={`system-ledger-row ${isSelected ? "active-system" : ""}`}
-                  >
-                    <div className="system-num-cell">{indexStr}</div>
-                    <div className="system-name-cell">
-                      <span className="tech-label">
-                        SYSTEM FAMILY {indexStr} · {cat.count} SKUS
-                      </span>
-                      <h3>{cat.name}</h3>
-                    </div>
-                    <div className="system-desc-cell">{cat.description}</div>
-                    <div className="system-thumb-cell">
-                      <img src={cat.image} alt={cat.name} loading="lazy" />
-                    </div>
-                    <div className="system-action-cell">
-                      <button
-                        type="button"
-                        className={`arch-btn arch-btn-compact ${
-                          isSelected ? "arch-btn-primary" : "arch-btn-secondary"
-                        }`}
-                        onClick={() => handleSelectSystem(cat.id)}
-                      >
-                        {isSelected ? "ACTIVE FILTER" : `FILTER ${cat.count} SKUS →`}
-                      </button>
-                    </div>
+        {/* ==================================================================
+            5. FIVE CORE PRODUCT SERIES OVERVIEW
+            ================================================================== */}
+        <section
+          id="series"
+          className="b2b-section"
+          data-component="product-series-section"
+        >
+          <div className="b2b-container">
+            <div className="b2b-section-header">
+              <span className="b2b-eyebrow">5 Core Product Categories</span>
+              <h2>Comprehensive Waterproofing Product Portfolio</h2>
+              <p>
+                Click any product family below to filter our complete 37-product catalog. All products support custom roll dimensions, thickness, and private-label OEM packaging.
+              </p>
+            </div>
+
+            <div className="b2b-series-grid">
+              {CATEGORIES.map((cat) => (
+                <div
+                  key={cat.id}
+                  className={`b2b-series-card ${
+                    activeCategory === cat.id ? "active" : ""
+                  }`}
+                  onClick={() => handleSelectSeries(cat.id)}
+                >
+                  <div className="b2b-series-img">
+                    <img src={cat.image} alt={cat.name} loading="lazy" />
                   </div>
-                );
-              })}
+                  <div className="b2b-series-body">
+                    <span className="b2b-series-count">{cat.count} Products</span>
+                    <h3>{cat.name}</h3>
+                    <p>{cat.description}</p>
+                    <span className="b2b-series-link">
+                      Filter {cat.shortName} →
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* ==================================================================
-            02 / 37-SKU TECHNICAL CATALOGUE (Ledger Table + Packshot Spec Grid)
+            6. STANDARD B2B PRODUCT CARD GRID (ALL 37 SKUS)
             ================================================================== */}
         <section
-          id="catalogue"
-          className="plate-warm section-pad"
-          data-component="technical-catalogue-section"
+          id="products"
+          className="b2b-section-alt"
+          data-component="product-catalog-section"
         >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-cobalt">SECTION 02</span>
-                <span className="plate-index-num">37 SKUS</span>
-                <span className="tech-label">TECHNICAL LEDGER</span>
-              </div>
-              <div className="plate-title-col">
-                <h2>COMPLETE 37-SKU EXPORT SPECIFICATION CATALOGUE</h2>
-                <p className="plate-deck">
-                  100% aligned with Mingze Waterproof official technical submittals. Every product record includes verified execution standards, nominal thickness/packaging, studio product photography, and downloadable Technical Data Sheet (TDS) parameters.
-                </p>
-              </div>
+          <div className="b2b-container">
+            <div className="b2b-section-header">
+              <span className="b2b-eyebrow">Official Product Catalog</span>
+              <h2>All 37 Waterproofing Products &amp; Specifications</h2>
+              <p>
+                High-resolution studio product photos, verified ASTM / EN / GB execution standards, and detailed technical specifications for global B2B procurement.
+              </p>
             </div>
 
-            {/* Catalogue Search, View Switcher & Segmented Category Filters */}
-            <div className="catalogue-controls-plate">
-              <div className="catalogue-top-bar">
-                <div className="search-field-group">
-                  <label htmlFor="sku-search-input" className="tech-label">
-                    SEARCH BY SKU CODE, MATERIAL NAME, STANDARD (ASTM / EN / GB) OR USE CASE
-                  </label>
-                  <div className="search-input-wrap">
-                    <input
-                      id="sku-search-input"
-                      type="search"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="e.g. MZ-CAT-01, TPO, ASTM D6878, HDPE, Polyurea..."
-                    />
-                    {searchQuery && (
-                      <button
-                        type="button"
-                        className="search-clear-btn"
-                        onClick={() => setSearchQuery("")}
-                      >
-                        CLEAR
-                      </button>
-                    )}
-                  </div>
-                </div>
-
-                <div className="view-mode-group" role="group" aria-label="Catalogue display mode">
-                  <button
-                    type="button"
-                    className={`filter-segment-btn ${
-                      viewMode === "ledger" ? "active" : ""
-                    }`}
-                    onClick={() => setViewMode("ledger")}
-                  >
-                    TECHNICAL LEDGER VIEW
-                  </button>
-                  <button
-                    type="button"
-                    className={`filter-segment-btn ${
-                      viewMode === "packshot" ? "active" : ""
-                    }`}
-                    onClick={() => setViewMode("packshot")}
-                  >
-                    PACKSHOT SPEC GRID
-                  </button>
-                </div>
-              </div>
-
+            {/* Top 5 Category Filter Tabs + Search Box */}
+            <div className="b2b-catalogue-toolbar">
               <div
-                className="filter-segmented-row"
+                className="b2b-category-tabs"
                 role="tablist"
-                aria-label="Filter products by material system"
+                aria-label="Product Category Filters"
               >
                 <button
                   type="button"
                   role="tab"
                   aria-selected={activeCategory === "all"}
-                  className={`filter-segment-btn ${
+                  className={`b2b-tab-btn ${
                     activeCategory === "all" ? "active" : ""
                   }`}
                   onClick={() => setActiveCategory("all")}
                 >
-                  ALL SYSTEMS ({PRODUCTS.length})
+                  All Products ({PRODUCTS.length})
                 </button>
                 {CATEGORIES.map((cat) => (
                   <button
@@ -744,7 +573,7 @@ function App() {
                     type="button"
                     role="tab"
                     aria-selected={activeCategory === cat.id}
-                    className={`filter-segment-btn ${
+                    className={`b2b-tab-btn ${
                       activeCategory === cat.id ? "active" : ""
                     }`}
                     onClick={() => setActiveCategory(cat.id)}
@@ -753,157 +582,123 @@ function App() {
                   </button>
                 ))}
               </div>
+
+              <div className="b2b-search-row">
+                <div className="b2b-search-box">
+                  <input
+                    type="search"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search by product name, model (e.g. MZ-CAT-01), standard (ASTM, EN), or application..."
+                    aria-label="Search products"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      className="b2b-search-clear"
+                      onClick={() => setSearchQuery("")}
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+
+                <div className="b2b-catalogue-count">
+                  Showing <strong>{filteredProducts.length}</strong> of{" "}
+                  <strong>{PRODUCTS.length}</strong> Export Products
+                </div>
+              </div>
             </div>
 
-            <div className="catalogue-status-bar">
-              <span>
-                DISPLAYING <strong>{filteredProducts.length}</strong> OF{" "}
-                <strong>{PRODUCTS.length}</strong> CERTIFIED EXPORT SKUS
-                {activeCategory !== "all" ? ` · FILTER: ${activeCategory.toUpperCase()}` : ""}
-                {searchQuery ? ` · QUERY: "${searchQuery}"` : ""}
-              </span>
-              <span>UNIT SYSTEM: METRIC (MM / M / KG) · FOB QINGDAO</span>
-            </div>
-
-            {/* Empty Filter State */}
+            {/* Product Grid or Empty State */}
             {filteredProducts.length === 0 ? (
-              <div className="empty-ledger-box">
-                <p className="tech-label tech-label-signal" style={{ marginBottom: "8px" }}>
-                  NO MATCHING SPECIFICATION RECORDS
-                </p>
-                <h3 style={{ marginBottom: "12px", color: "var(--color-primary)" }}>
-                  No SKU matched "{searchQuery}" under the selected category filter.
+              <div
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid var(--color-border)",
+                  borderRadius: "var(--radius-md)",
+                  padding: "48px 24px",
+                  textAlign: "center"
+                }}
+              >
+                <h3
+                  style={{
+                    color: "var(--color-primary)",
+                    marginBottom: "8px"
+                  }}
+                >
+                  No products matched "{searchQuery}"
                 </h3>
+                <p
+                  style={{
+                    color: "var(--color-text-secondary)",
+                    marginBottom: "16px"
+                  }}
+                >
+                  Try clearing your search keyword or switching to "All Products".
+                </p>
                 <button
                   type="button"
-                  className="arch-btn arch-btn-secondary arch-btn-compact"
+                  className="b2b-btn b2b-btn-primary b2b-btn-sm"
                   onClick={() => {
                     setActiveCategory("all");
                     setSearchQuery("");
                   }}
                 >
-                  RESET ALL CATALOGUE FILTERS
+                  Show All 37 Products
                 </button>
               </div>
-            ) : viewMode === "ledger" ? (
-              /* MODE A: DENSE TECHNICAL LEDGER TABLE */
-              <div className="ledger-table-wrap">
-                <div className="ledger-head-row" aria-hidden="true">
-                  <div>SKU CODE</div>
-                  <div>MATERIAL SPECIFICATION &amp; PHOTO</div>
-                  <div>EXECUTION STANDARDS</div>
-                  <div>DIMENSIONS / PACKAGING</div>
-                  <div style={{ textAlign: "right" }}>TECHNICAL ACTIONS</div>
-                </div>
-
-                {filteredProducts.map((product) => (
-                  <div key={product.id} className="ledger-item-row">
-                    <div className="ledger-sku-cell">
-                      <span className="sku-code-mono">{product.code}</span>
-                      <span className="sku-cat-tag">{product.categoryName}</span>
-                    </div>
-
-                    <div className="ledger-product-cell">
-                      <div className="ledger-mini-thumb">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="ledger-product-info">
-                        <h3>{product.name}</h3>
-                        <p>{product.brief}</p>
-                      </div>
-                    </div>
-
-                    <div className="ledger-std-cell">
-                      <span className="ledger-cell-mobile-label">
-                        EXECUTION STANDARDS
-                      </span>
-                      {product.standards}
-                    </div>
-
-                    <div className="ledger-dim-cell">
-                      <span className="ledger-cell-mobile-label">
-                        THICKNESS &amp; PACKAGING
-                      </span>
-                      <div>
-                        <strong>THK:</strong> {product.thickness}
-                      </div>
-                      <div>
-                        <strong>PKG:</strong> {product.rollSize}
-                      </div>
-                    </div>
-
-                    <div className="ledger-actions-cell">
-                      <button
-                        type="button"
-                        className="arch-btn arch-btn-secondary arch-btn-compact"
-                        onClick={() => setSelectedTdsProduct(product)}
-                      >
-                        OPEN TDS
-                      </button>
-                      <button
-                        type="button"
-                        className="arch-btn arch-btn-primary arch-btn-compact"
-                        onClick={() => handleInquireProduct(product)}
-                      >
-                        INQUIRE
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
             ) : (
-              /* MODE B: STUDIO PACKSHOT SPECIFICATION GRID */
-              <div className="spec-packshot-grid">
+              <div className="b2b-product-grid">
                 {filteredProducts.map((product) => (
-                  <article key={product.id} className="spec-sheet-item">
-                    <div className="spec-sheet-top">
-                      <span className="sku-code-mono">{product.code}</span>
-                      <span className="tech-label">{product.categoryName}</span>
-                    </div>
-                    <div className="spec-sheet-media">
+                  <article key={product.id} className="b2b-product-card">
+                    <div
+                      className="b2b-product-thumb"
+                      onClick={() => setSelectedProduct(product)}
+                      title="Click to view Technical Data Sheet (TDS)"
+                    >
+                      <span className="b2b-sku-badge">{product.code}</span>
+                      <span className="b2b-cat-badge">{product.categoryName}</span>
                       <img
                         src={product.image}
                         alt={product.name}
                         loading="lazy"
                       />
                     </div>
-                    <div className="spec-sheet-body">
+
+                    <div className="b2b-product-body">
                       <h3>{product.name}</h3>
-                      <p>{product.brief}</p>
-                      <dl className="spec-sheet-dl">
-                        <div className="spec-sheet-dl-row">
-                          <dt>STANDARD</dt>
-                          <dd>{product.standards}</dd>
+                      <p className="b2b-product-brief">{product.brief}</p>
+
+                      <div className="b2b-product-specs">
+                        <div className="b2b-spec-line">
+                          <span>Standard:</span>
+                          <strong>{product.standards}</strong>
                         </div>
-                        <div className="spec-sheet-dl-row">
-                          <dt>THICKNESS</dt>
-                          <dd>{product.thickness}</dd>
+                        <div className="b2b-spec-line">
+                          <span>Thickness / Spec:</span>
+                          <strong>{product.thickness}</strong>
                         </div>
-                        <div className="spec-sheet-dl-row">
-                          <dt>PACKAGING</dt>
-                          <dd>{product.rollSize}</dd>
+                        <div className="b2b-spec-line">
+                          <span>Package Size:</span>
+                          <strong>{product.rollSize}</strong>
                         </div>
-                      </dl>
-                      <div style={{ display: "flex", gap: "8px" }}>
+                      </div>
+
+                      <div className="b2b-product-actions">
                         <button
                           type="button"
-                          className="arch-btn arch-btn-secondary arch-btn-compact"
-                          style={{ flex: 1 }}
-                          onClick={() => setSelectedTdsProduct(product)}
+                          className="b2b-btn b2b-btn-outline b2b-btn-sm"
+                          onClick={() => setSelectedProduct(product)}
                         >
-                          OPEN TDS
+                          View Details
                         </button>
                         <button
                           type="button"
-                          className="arch-btn arch-btn-primary arch-btn-compact"
-                          style={{ flex: 1 }}
+                          className="b2b-btn b2b-btn-primary b2b-btn-sm"
                           onClick={() => handleInquireProduct(product)}
                         >
-                          INQUIRE
+                          Inquire Now
                         </button>
                       </div>
                     </div>
@@ -915,85 +710,65 @@ function App() {
         </section>
 
         {/* ==================================================================
-            03 / ENGINEERING ASSEMBLIES (Dark Plate Cross-Section Drawings)
+            7. ENGINEERING APPLICATION SOLUTIONS
             ================================================================== */}
         <section
-          id="assemblies"
-          className="plate-dark section-pad"
-          data-component="engineering-assemblies-section"
+          id="solutions"
+          className="b2b-section"
+          data-component="solutions-section"
         >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-dark">SECTION 03</span>
-                <span className="plate-index-num">04 DETAILS</span>
-                <span className="tech-label tech-label-dark">BUILD-UP ASSEMBLIES</span>
-              </div>
-              <div className="plate-title-col">
-                <h2>ARCHITECTURAL BUILD-UP &amp; LAYER ASSEMBLIES</h2>
-                <p className="plate-deck">
-                  Standardized multi-layer waterproofing cross-sections for commercial flat roofs, blindside underground foundations, exposed metal roof refurbishment, and civil tunnels. Click any recommended SKU badge to inspect its full Technical Data Sheet.
-                </p>
-              </div>
+          <div className="b2b-container">
+            <div className="b2b-section-header">
+              <span className="b2b-eyebrow">Engineering Application Systems</span>
+              <h2>Complete Waterproofing Solutions by Project Type</h2>
+              <p>
+                Proven multi-layer waterproofing assemblies for industrial flat roofs, deep underground foundations, exposed metal roof refurbishment, and civil tunnels.
+              </p>
             </div>
 
-            <div className="assemblies-grid">
-              {SOLUTIONS.map((sol, sIdx) => (
-                <article key={sol.id} className="assembly-plate">
+            <div className="b2b-solutions-grid">
+              {SOLUTIONS.map((sol) => (
+                <article key={sol.id} className="b2b-solution-card">
                   <div>
-                    <div className="assembly-plate-header">
-                      <span className="tech-label tech-label-dark">
-                        DRAWING DETAIL 03-{sIdx + 1} · {sol.subtitle}
-                      </span>
-                      <h3>{sol.title}</h3>
-                      <p>{sol.description}</p>
-                    </div>
+                    <div className="b2b-solution-sub">{sol.subtitle}</div>
+                    <h3>{sol.title}</h3>
+                    <p className="b2b-solution-desc">{sol.description}</p>
 
-                    {/* Architectural Layer Cross-Section Schematic */}
-                    <div className="assembly-drawing-box">
-                      <div className="drawing-datum-label">
-                        <span>CROSS-SECTION LAYER STACK (TOP TO SUBSTRATE)</span>
-                        <span>DATUM: 1:5 SCALE</span>
+                    <div className="b2b-layers-box">
+                      <div className="b2b-layers-title">
+                        Recommended System Build-Up Layers:
                       </div>
-                      <div className="drawing-stack">
-                        {[...sol.systemLayers].reverse().map((layerName, lIdx) => {
-                          const layerNum = sol.systemLayers.length - lIdx;
-                          const toneClass = `band-tone-${(lIdx % 4) + 1}`;
-                          return (
-                            <div
-                              key={layerName}
-                              className={`drawing-layer-band ${toneClass}`}
-                            >
-                              <span className="layer-coord">L0{layerNum}</span>
-                              <span className="layer-name">{layerName}</span>
-                              <span className="layer-role-tag">
-                                {LAYER_ROLES[layerNum - 1] || "SYSTEM LAYER"}
-                              </span>
-                            </div>
-                          );
-                        })}
-                      </div>
+                      {sol.systemLayers.map((layer, idx) => (
+                        <div key={layer} className="b2b-layer-step">
+                          <span className="b2b-layer-num">{idx + 1}</span>
+                          <span>{layer}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="assembly-plate-footer">
+                  <div className="b2b-solution-footer">
                     <div>
                       <span
-                        className="tech-label tech-label-dark"
-                        style={{ display: "block", marginBottom: "6px" }}
+                        style={{
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          color: "var(--color-text-muted)",
+                          display: "block",
+                          marginBottom: "6px"
+                        }}
                       >
-                        SPECIFIED MINGZE SKUS (CLICK FOR TDS):
+                        Matching Products (Click for TDS):
                       </span>
-                      <div className="assembly-sku-list">
+                      <div className="b2b-rec-pills">
                         {sol.recommendedProducts.map((code) => {
                           const prod = PRODUCTS.find((p) => p.code === code);
                           return (
                             <button
                               key={code}
                               type="button"
-                              className="assembly-sku-code"
-                              style={{ cursor: "pointer" }}
-                              onClick={() => prod && setSelectedTdsProduct(prod)}
+                              className="b2b-rec-pill"
+                              onClick={() => prod && setSelectedProduct(prod)}
                               title={prod ? prod.name : code}
                             >
                               {code}
@@ -1004,17 +779,17 @@ function App() {
                     </div>
 
                     <a
-                      href="#trade-desk"
-                      className="arch-btn arch-btn-outline-dark arch-btn-compact"
+                      href="#contact"
+                      className="b2b-btn b2b-btn-primary b2b-btn-sm"
                       onClick={() => {
                         setRfqForm((prev) => ({
                           ...prev,
                           projectType: sol.title,
-                          productInterest: `System Assembly: ${sol.title} (${sol.recommendedProducts.join(", ")})`
+                          productInterest: `${sol.title} System (${sol.recommendedProducts.join(", ")})`
                         }));
                       }}
                     >
-                      QUOTE THIS SYSTEM →
+                      Get Solution Quote
                     </a>
                   </div>
                 </article>
@@ -1024,535 +799,504 @@ function App() {
         </section>
 
         {/* ==================================================================
-            04 / QA PATHWAY & INTERNATIONAL STANDARDS MATRIX
-            ================================================================== */}
-        <section
-          id="standards"
-          className="plate-paper section-pad"
-          data-component="qa-standards-section"
-        >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-cobalt">SECTION 04</span>
-                <span className="plate-index-num">QA / LAB</span>
-                <span className="tech-label">COMPLIANCE MATRIX</span>
-              </div>
-              <div className="plate-title-col">
-                <h2>3-STAGE LABORATORY QA PATHWAY &amp; INTERNATIONAL STANDARDS</h2>
-                <p className="plate-deck">
-                  Every container shipped from our Weifang facility is backed by full batch traceability. Our in-house testing center executes rigorous physical and chemical testing in accordance with ASTM International, European CE (EN), and Chinese GB standards.
-                </p>
-              </div>
-            </div>
-
-            {/* 3-Step Horizontal Laboratory QA Pathway */}
-            <div className="qa-pathway-grid">
-              {QA_PATHWAY_STEPS.map((step) => (
-                <div key={step.code} className="qa-stage-cell">
-                  <div className="qa-stage-top">
-                    <span className="tech-label">{step.code}</span>
-                    <span className="tech-label tech-label-signal">{step.marker}</span>
-                  </div>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* ASTM / EN / GB Compliance Ledger Matrix */}
-            <div className="standards-ledger-table">
-              {STANDARDS_MATRIX.map((group) => (
-                <div key={group.organization} className="standards-group-block">
-                  <div className="standards-group-bar">
-                    <h3>{group.organization}</h3>
-                    <span className="tech-label">
-                      {group.standards.length} VERIFIED TEST PROTOCOLS
-                    </span>
-                  </div>
-                  <div className="standards-rows-list">
-                    {group.standards.map((std) => (
-                      <div key={std.code} className="standard-record-cell">
-                        <div className="standard-record-code">{std.code}</div>
-                        <div className="standard-record-title">{std.title}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ==================================================================
-            05 / FACTORY BASE & PRODUCTION CAPABILITY PLATE
+            8. FACTORY STRENGTH & INTERNATIONAL STANDARDS
             ================================================================== */}
         <section
           id="factory"
-          className="plate-warm section-pad"
-          data-component="factory-capability-section"
+          className="b2b-section-alt"
+          data-component="factory-section"
         >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-cobalt">SECTION 05</span>
-                <span className="plate-index-num">68,000 m²</span>
-                <span className="tech-label">MANUFACTURING BASE</span>
-              </div>
-              <div className="plate-title-col">
-                <h2>SHANDONG INDUSTRIAL MANUFACTURING &amp; OEM EXPORT BASE</h2>
-                <p className="plate-deck">
-                  Headquartered in Taitou Industrial Zone, Shouguang, Weifang City — China’s primary waterproof material manufacturing cluster. We eliminate trading intermediaries by delivering factory-direct container loads with full OEM private-label support.
-                </p>
-              </div>
+          <div className="b2b-container">
+            <div className="b2b-section-header">
+              <span className="b2b-eyebrow">Why Partner With Mingze</span>
+              <h2>Source Factory Advantages &amp; International Quality Standards</h2>
+              <p>
+                Every batch undergoes rigorous raw material inspection, in-line thickness gauge control, and laboratory testing before shipment from Qingdao Port.
+              </p>
             </div>
 
-            <div className="factory-capability-grid">
+            <div className="b2b-why-grid">
               {WHY_CHOOSE_US.map((item, idx) => (
-                <div key={item.title} className="capability-block">
-                  <div className="capability-num">0{idx + 1}</div>
+                <div key={item.title} className="b2b-why-card">
+                  <div className="b2b-why-icon">0{idx + 1}</div>
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            {/* Dark Specification Rail */}
-            <div className="factory-spec-rail">
-              <div className="spec-rail-item">
-                <span className="tech-label tech-label-dark">PLANT LOCATION</span>
-                <strong>Taitou Industrial Zone, Weifang, China</strong>
+            <div className="b2b-standards-panel">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                  gap: "12px"
+                }}
+              >
+                <div>
+                  <h3
+                    style={{
+                      fontSize: "1.25rem",
+                      color: "var(--color-primary)",
+                      marginBottom: "4px"
+                    }}
+                  >
+                    International Testing &amp; Compliance Standards
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      color: "var(--color-text-secondary)"
+                    }}
+                  >
+                    Full TDS, MSDS, and batch Certificate of Analysis (COA) provided with every export container.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className="b2b-btn b2b-btn-outline b2b-btn-sm"
+                  onClick={() => {
+                    setSampleSubmitted(false);
+                    setSampleModalOpen(true);
+                  }}
+                >
+                  Request Free Sample &amp; Test Reports
+                </button>
               </div>
-              <div className="spec-rail-item">
-                <span className="tech-label tech-label-dark">EXPORT LOADING PORT</span>
-                <strong>Qingdao Port (200 km / 2.5h Transit)</strong>
-              </div>
-              <div className="spec-rail-item">
-                <span className="tech-label tech-label-dark">CERTIFICATIONS</span>
-                <strong>ISO9001 · ISO14001 · CE EN 13707/13956</strong>
-              </div>
-              <div className="spec-rail-item">
-                <span className="tech-label tech-label-dark">TRADE TERMS &amp; OEM</span>
-                <strong>FOB / CIF / CFR · Custom Private Label</strong>
+
+              <div className="b2b-standards-columns">
+                {STANDARDS_MATRIX.map((group) => (
+                  <div key={group.organization} className="b2b-std-col">
+                    <h4>{group.organization}</h4>
+                    {group.standards.map((std) => (
+                      <div key={std.code} className="b2b-std-item">
+                        <div className="b2b-std-code">{std.code}</div>
+                        <div className="b2b-std-title">{std.title}</div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* ==================================================================
-            06 / DIRECT TRADE DESK & RFQ CONVERSION SUITE
+            9. DIRECT EXPORT CONTACT & RFQ INQUIRY SECTION
             ================================================================== */}
         <section
-          id="trade-desk"
-          className="plate-paper section-pad"
-          data-component="direct-trade-desk-section"
+          id="contact"
+          className="b2b-section"
+          data-component="contact-section"
         >
-          <div className="arch-container">
-            <div className="plate-header-grid">
-              <div className="plate-index-col">
-                <span className="tech-label tech-label-cobalt">SECTION 06</span>
-                <span className="plate-index-num">RFQ DESK</span>
-                <span className="tech-label">DIRECT EXPORT CONTACT</span>
-              </div>
-              <div className="plate-title-col">
-                <h2>DIRECT FACTORY TRADE DESK &amp; PROJECT RFQ SUBMITTAL</h2>
-                <p className="plate-deck">
-                  Connect directly with our international export engineering team for container pricing (20GP / 40HQ), custom project submittals (TDS, MSDS, COA), and complimentary physical sample swatch boxes.
-                </p>
-              </div>
+          <div className="b2b-container">
+            <div className="b2b-section-header">
+              <span className="b2b-eyebrow">Direct Factory Export Desk</span>
+              <h2>Request A Free Quote or Sample Swatch Box</h2>
+              <p>
+                Contact our international sales engineers directly via Email or WhatsApp, or submit your project requirements below for a fast FOB / CIF quotation within 24 hours.
+              </p>
             </div>
 
-            <div className="trade-desk-grid">
-              {/* Left 5 Columns: Official Verified Contact Ledger & Sample Promise */}
-              <div className="trade-channels-panel">
-                <span className="tech-label tech-label-cobalt">
-                  OFFICIAL VERIFIED EXPORT CHANNELS
-                </span>
-                <h3
+            <div className="b2b-contact-grid">
+              {/* Left Column: Direct Contact Channels */}
+              <div className="b2b-contact-card">
+                <h3>Weifang Mingze Waterproof Material Co., Ltd.</h3>
+                <p
                   style={{
-                    fontSize: "var(--text-headline-sm)",
-                    color: "var(--color-primary)",
-                    margin: "8px 0 16px"
+                    color: "#CBD5E1",
+                    fontSize: "0.9rem",
+                    marginBottom: "16px"
                   }}
                 >
-                  Weifang Mingze Waterproof Export Department
-                </h3>
+                  Direct Manufacturer &amp; Global Exporter · Response within 24 Hours
+                </p>
 
-                <div className="contact-ledger-row">
-                  <span className="tech-label">PRIMARY EXPORT EMAIL (24H RESPONSE)</span>
+                <div className="b2b-contact-item">
+                  <span className="b2b-contact-label">Official Export Email</span>
                   <a
                     href={`mailto:${COMPANY_INFO.email}`}
-                    className="contact-value-link"
+                    className="b2b-contact-val"
                   >
                     {COMPANY_INFO.email}
                   </a>
                   <div style={{ marginTop: "8px" }}>
                     <button
                       type="button"
-                      className="arch-btn arch-btn-secondary arch-btn-compact"
-                      onClick={() => handleCopyText("email1", COMPANY_INFO.email)}
+                      className="b2b-btn b2b-btn-ghost-light b2b-btn-sm"
+                      onClick={() => handleCopy("email1", COMPANY_INFO.email)}
                     >
-                      {copiedKey === "email1" ? "COPIED TO CLIPBOARD ✓" : "COPY EMAIL"}
+                      {copiedField === "email1" ? "Copied ✓" : "Copy Email"}
                     </button>
                   </div>
                 </div>
 
-                <div className="contact-ledger-row">
-                  <span className="tech-label">ALTERNATE CORPORATE EMAIL</span>
+                <div className="b2b-contact-item">
+                  <span className="b2b-contact-label">Alternate Email</span>
                   <a
                     href={`mailto:${COMPANY_INFO.altEmail}`}
-                    className="contact-value-link"
+                    className="b2b-contact-val"
                   >
                     {COMPANY_INFO.altEmail}
                   </a>
                   <div style={{ marginTop: "8px" }}>
                     <button
                       type="button"
-                      className="arch-btn arch-btn-secondary arch-btn-compact"
-                      onClick={() => handleCopyText("email2", COMPANY_INFO.altEmail)}
+                      className="b2b-btn b2b-btn-ghost-light b2b-btn-sm"
+                      onClick={() => handleCopy("email2", COMPANY_INFO.altEmail)}
                     >
-                      {copiedKey === "email2" ? "COPIED TO CLIPBOARD ✓" : "COPY ALT EMAIL"}
+                      {copiedField === "email2" ? "Copied ✓" : "Copy Alt Email"}
                     </button>
                   </div>
                 </div>
 
-                <div className="contact-ledger-row">
-                  <span className="tech-label">DIRECT WHATSAPP / WECHAT ENGINEERING DESK</span>
+                <div className="b2b-contact-item">
+                  <span className="b2b-contact-label">
+                    WhatsApp / WeChat Instant Support
+                  </span>
                   <a
                     href={COMPANY_INFO.whatsappLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="contact-value-link"
+                    className="b2b-contact-val"
                   >
                     {COMPANY_INFO.whatsapp}
                   </a>
-                  <div style={{ marginTop: "8px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      display: "flex",
+                      gap: "8px",
+                      flexWrap: "wrap"
+                    }}
+                  >
                     <a
                       href={COMPANY_INFO.whatsappLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="arch-btn arch-btn-primary arch-btn-compact"
+                      className="b2b-btn b2b-btn-whatsapp b2b-btn-sm"
                     >
-                      CHAT ON WHATSAPP →
+                      Chat on WhatsApp →
                     </a>
                     <button
                       type="button"
-                      className="arch-btn arch-btn-secondary arch-btn-compact"
-                      onClick={() => handleCopyText("whatsapp", COMPANY_INFO.whatsapp)}
+                      className="b2b-btn b2b-btn-ghost-light b2b-btn-sm"
+                      onClick={() => handleCopy("wa", COMPANY_INFO.whatsapp)}
                     >
-                      {copiedKey === "whatsapp" ? "COPIED ✓" : "COPY NUMBER"}
+                      {copiedField === "wa" ? "Copied ✓" : "Copy Number"}
                     </button>
                   </div>
                 </div>
 
-                <div className="contact-ledger-row">
-                  <span className="tech-label">MANUFACTURING PLANT ADDRESS</span>
-                  <p
-                    style={{
-                      fontSize: "var(--text-body-sm)",
-                      color: "var(--color-on-surface)",
-                      marginTop: "4px"
-                    }}
-                  >
+                <div className="b2b-contact-item">
+                  <span className="b2b-contact-label">Factory Address &amp; Port</span>
+                  <p style={{ fontSize: "0.88rem", color: "#E2E8F0" }}>
                     {COMPANY_INFO.address}
+                    <br />
+                    Loading Port: {COMPANY_INFO.port}
                   </p>
                 </div>
 
-                <div className="sample-box-callout">
-                  <span className="tech-label tech-label-signal">
-                    COMPLIMENTARY ENGINEERING SWATCH KIT
-                  </span>
-                  <h4
-                    style={{
-                      fontSize: "1rem",
-                      color: "var(--color-primary)",
-                      margin: "6px 0"
-                    }}
-                  >
-                    Free Physical Membrane &amp; Coating Sample Box
+                <div className="b2b-sample-banner">
+                  <h4 style={{ fontSize: "1rem", marginBottom: "6px" }}>
+                    Free Physical Sample Swatch Box
                   </h4>
                   <p
                     style={{
-                      fontSize: "var(--text-body-sm)",
-                      color: "var(--color-secondary)",
-                      marginBottom: "14px"
+                      fontSize: "0.84rem",
+                      color: "#E2E8F0",
+                      marginBottom: "12px"
                     }}
                   >
-                    We dispatch physical A4/swatch cuts of SBS, APP, TPO, PVC, Pre-Applied HDPE, and Butyl Tapes via DHL/FedEx for contractor submittal approval and lab testing.
+                    We provide free A4 physical membrane &amp; coating samples via DHL/FedEx for contractor submittal approval and quality evaluation.
                   </p>
                   <button
                     type="button"
-                    className="arch-btn arch-btn-dark arch-btn-compact"
+                    className="b2b-btn b2b-btn-primary b2b-btn-sm"
                     onClick={() => {
                       setSampleSubmitted(false);
                       setSampleModalOpen(true);
                     }}
                   >
-                    OPEN SAMPLE BOX REQUEST FORM
+                    Request Free Sample Box
                   </button>
                 </div>
               </div>
 
-              {/* Right 7 Columns: Structured Engineering RFQ Form */}
-              <div className="rfq-dossier-form">
-                <div className="rfq-form-header">
-                  <span className="tech-label">
-                    FORM DOC: MZ-RFQ-2026 · DIRECT FACTORY QUOTATION
-                  </span>
-                  <h3
-                    style={{
-                      fontSize: "var(--text-headline-md)",
-                      color: "var(--color-primary)",
-                      marginTop: "4px"
-                    }}
-                  >
-                    SUBMIT PROJECT SPECIFICATION &amp; CONTAINER INQUIRY
-                  </h3>
-                </div>
+              {/* Right Column: Standard B2B Inquiry Form */}
+              <div className="b2b-rfq-card">
+                <h3
+                  style={{
+                    fontSize: "1.35rem",
+                    color: "var(--color-primary)",
+                    marginBottom: "6px"
+                  }}
+                >
+                  Send Your Inquiry Direct to Factory
+                </h3>
+                <p
+                  style={{
+                    fontSize: "0.9rem",
+                    color: "var(--color-text-secondary)",
+                    marginBottom: "20px"
+                  }}
+                >
+                  Fill out your project or wholesale requirements below. Our export manager will reply with FOB/CIF pricing and TDS files.
+                </p>
 
                 {rfqSubmitted ? (
-                  <div className="form-success-banner" role="status">
-                    <span className="tech-label" style={{ color: "var(--color-success)" }}>
-                      RFQ DOSSIER PREPARED · READY FOR IMMEDIATE DISPATCH
-                    </span>
+                  <div
+                    style={{
+                      backgroundColor: "#F0FDF4",
+                      border: "1px solid #86EFAC",
+                      borderRadius: "var(--radius-md)",
+                      padding: "24px"
+                    }}
+                  >
                     <h4
                       style={{
-                        fontSize: "var(--text-headline-sm)",
-                        color: "var(--color-primary)",
-                        margin: "8px 0"
+                        color: "var(--color-success)",
+                        fontSize: "1.1rem",
+                        marginBottom: "8px"
                       }}
                     >
-                      Thank you, {rfqForm.company}. Your inquiry package is structured.
+                      Inquiry Prepared Successfully — Thank You, {rfqForm.company}!
                     </h4>
                     <p
                       style={{
-                        fontSize: "var(--text-body-sm)",
-                        color: "var(--color-on-surface)",
+                        fontSize: "0.9rem",
+                        color: "var(--color-text-main)",
                         marginBottom: "16px"
                       }}
                     >
-                      Choose your preferred instant transmission channel below to send your specification directly to our export engineering desk ({COMPANY_INFO.email} / WhatsApp {COMPANY_INFO.whatsapp}):
+                      Click either button below to send your inquiry immediately via Email or WhatsApp to our export team:
                     </p>
-                    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                       <a
-                        className="arch-btn arch-btn-primary arch-btn-compact"
+                        className="b2b-btn b2b-btn-primary b2b-btn-sm"
                         href={`mailto:${COMPANY_INFO.email}?subject=${encodeURIComponent(
-                          `[RFQ Inquiry] ${rfqForm.company} - ${rfqForm.country}`
+                          `[Product Inquiry] ${rfqForm.company} (${rfqForm.country})`
                         )}&body=${encodeURIComponent(
-                          `Company: ${rfqForm.company}\nWork Email: ${rfqForm.email}\nCountry/Region: ${rfqForm.country}\nProject Type: ${rfqForm.projectType}\nSpecified SKU/System: ${rfqForm.productInterest || "General Catalogue"}\nEstimated Quantity: ${rfqForm.quantity}\nTarget Destination Port: ${rfqForm.port || "TBD"}\nSample Swatch Box Requested: ${rfqForm.requestSampleBox ? "Yes" : "No"}\n\nProject Notes:\n${rfqForm.notes}`
+                          `Company: ${rfqForm.company}\nEmail: ${rfqForm.email}\nCountry: ${rfqForm.country}\nApplication: ${rfqForm.projectType}\nProducts of Interest: ${rfqForm.productInterest || "General Catalog"}\nQuantity: ${rfqForm.quantity}\nDestination Port: ${rfqForm.port || "TBD"}\nFree Sample Box Needed: ${rfqForm.requestSampleBox ? "Yes" : "No"}\n\nNotes:\n${rfqForm.notes}`
                         )}`}
                       >
-                        SEND VIA EMAIL CLIENT ({COMPANY_INFO.email})
+                        Send via Email ({COMPANY_INFO.email})
                       </a>
                       <a
-                        className="arch-btn arch-btn-dark arch-btn-compact"
+                        className="b2b-btn b2b-btn-whatsapp b2b-btn-sm"
                         target="_blank"
                         rel="noreferrer"
                         href={`https://wa.me/8616658506707?text=${encodeURIComponent(
-                          `Hello Mingze Export Desk, RFQ from ${rfqForm.company} (${rfqForm.country}). Email: ${rfqForm.email}. Product: ${rfqForm.productInterest || "Waterproofing Membranes"}. Qty: ${rfqForm.quantity}. Port: ${rfqForm.port || "TBD"}. Sample Box: ${rfqForm.requestSampleBox ? "Yes" : "No"}.`
+                          `Hello Mingze Waterproof, Inquiry from ${rfqForm.company} (${rfqForm.country}). Email: ${rfqForm.email}. Product: ${rfqForm.productInterest || "Waterproofing Materials"}. Qty: ${rfqForm.quantity}. Port: ${rfqForm.port || "TBD"}.`
                         )}`}
                       >
-                        SEND VIA WHATSAPP (+86 16658506707)
+                        Send via WhatsApp (+86 16658506707)
                       </a>
                       <button
                         type="button"
-                        className="arch-btn arch-btn-secondary arch-btn-compact"
+                        className="b2b-btn b2b-btn-outline b2b-btn-sm"
                         onClick={() => setRfqSubmitted(false)}
                       >
-                        EDIT INQUIRY FIELDS
+                        Modify Inquiry
                       </button>
                     </div>
                   </div>
                 ) : (
                   <form onSubmit={handleRfqSubmit} noValidate>
-                    {Object.keys(rfqErrors).length > 0 && (
-                      <div className="form-error-summary" role="alert">
-                        <h4>
-                          VALIDATION ALERT: PLEASE RESOLVE {Object.keys(rfqErrors).length} REQUIRED FIELD(S)
-                        </h4>
-                        <ul style={{ paddingLeft: "18px", fontSize: "var(--text-body-sm)" }}>
-                          {Object.values(rfqErrors).map((errMsg) => (
-                            <li key={errMsg}>{errMsg}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    <div className="form-row-split">
-                      <div className="arch-field">
-                        <label htmlFor="rfq-company">COMPANY / CONTRACTOR NAME *</label>
+                    <div className="b2b-form-row">
+                      <div className="b2b-field">
+                        <label htmlFor="rfq-company">Company Name *</label>
                         <input
                           id="rfq-company"
                           type="text"
-                          className="arch-input"
+                          className="b2b-input"
                           value={rfqForm.company}
-                          onChange={(e) => handleRfqChange("company", e.target.value)}
-                          onBlur={() => handleRfqBlur("company")}
-                          aria-invalid={Boolean(rfqErrors.company)}
-                          placeholder="e.g. Apex Roofing & Civil Engineering Ltd."
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, company: e.target.value })
+                          }
+                          placeholder="Your company or contractor name"
                         />
                         {rfqErrors.company && (
-                          <span className="field-error-msg">{rfqErrors.company}</span>
+                          <span className="b2b-field-error">{rfqErrors.company}</span>
                         )}
                       </div>
 
-                      <div className="arch-field">
-                        <label htmlFor="rfq-email">OFFICIAL WORK EMAIL *</label>
+                      <div className="b2b-field">
+                        <label htmlFor="rfq-email">Business Email *</label>
                         <input
                           id="rfq-email"
                           type="email"
-                          className="arch-input"
+                          className="b2b-input"
                           value={rfqForm.email}
-                          onChange={(e) => handleRfqChange("email", e.target.value)}
-                          onBlur={() => handleRfqBlur("email")}
-                          aria-invalid={Boolean(rfqErrors.email)}
-                          placeholder="e.g. procurement@company.com"
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, email: e.target.value })
+                          }
+                          placeholder="name@company.com"
                         />
                         {rfqErrors.email && (
-                          <span className="field-error-msg">{rfqErrors.email}</span>
+                          <span className="b2b-field-error">{rfqErrors.email}</span>
                         )}
                       </div>
                     </div>
 
-                    <div className="form-row-split">
-                      <div className="arch-field">
-                        <label htmlFor="rfq-country">DESTINATION COUNTRY / REGION *</label>
+                    <div className="b2b-form-row">
+                      <div className="b2b-field">
+                        <label htmlFor="rfq-country">Country / Region *</label>
                         <input
                           id="rfq-country"
                           type="text"
-                          className="arch-input"
+                          className="b2b-input"
                           value={rfqForm.country}
-                          onChange={(e) => handleRfqChange("country", e.target.value)}
-                          onBlur={() => handleRfqBlur("country")}
-                          aria-invalid={Boolean(rfqErrors.country)}
-                          placeholder="e.g. UAE, Saudi Arabia, Singapore, Australia"
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, country: e.target.value })
+                          }
+                          placeholder="e.g. UAE, Saudi Arabia, Singapore, Chile"
                         />
                         {rfqErrors.country && (
-                          <span className="field-error-msg">{rfqErrors.country}</span>
+                          <span className="b2b-field-error">{rfqErrors.country}</span>
                         )}
                       </div>
 
-                      <div className="arch-field">
-                        <label htmlFor="rfq-project-type">APPLICATION / PROJECT SECTOR</label>
+                      <div className="b2b-field">
+                        <label htmlFor="rfq-type">Project / Business Type</label>
                         <select
-                          id="rfq-project-type"
-                          className="arch-select"
+                          id="rfq-type"
+                          className="b2b-select"
                           value={rfqForm.projectType}
-                          onChange={(e) => handleRfqChange("projectType", e.target.value)}
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, projectType: e.target.value })
+                          }
                         >
-                          <option value="Commercial / Industrial Flat Roofing">
-                            Commercial / Industrial Flat Roofing
+                          <option value="Commercial / Industrial Roofing">
+                            Commercial / Industrial Roofing
                           </option>
-                          <option value="Underground Basement & Foundation (Pre-Applied)">
-                            Underground Basement &amp; Foundation (Pre-Applied)
+                          <option value="Underground Basement & Foundation">
+                            Underground Basement &amp; Foundation
                           </option>
                           <option value="Exposed Metal Roof Refurbishment">
                             Exposed Metal Roof Refurbishment
                           </option>
-                          <option value="Bridges, Tunnels & Civil Infrastructure">
-                            Bridges, Tunnels &amp; Civil Infrastructure
+                          <option value="Bridges, Tunnels & Civil Engineering">
+                            Bridges, Tunnels &amp; Civil Engineering
                           </option>
-                          <option value="Wholesale Distribution / OEM Private Label">
-                            Wholesale Distribution / OEM Private Label
+                          <option value="Building Material Distributor / OEM">
+                            Building Material Distributor / OEM
                           </option>
                         </select>
                       </div>
                     </div>
 
-                    <div className="arch-field">
+                    <div className="b2b-field">
                       <label htmlFor="rfq-product">
-                        SPECIFIED SKU CODE OR MATERIAL SYSTEM
+                        Product Name or Model Number
                       </label>
                       <input
                         id="rfq-product"
                         type="text"
-                        className="arch-input"
+                        className="b2b-input"
                         value={rfqForm.productInterest}
-                        onChange={(e) => handleRfqChange("productInterest", e.target.value)}
-                        placeholder="e.g. MZ-CAT-01 SBS 4mm, MZ-CAT-08 TPO 1.5mm, or click INQUIRE on any SKU above"
+                        onChange={(e) =>
+                          setRfqForm({
+                            ...rfqForm,
+                            productInterest: e.target.value
+                          })
+                        }
+                        placeholder="e.g. MZ-CAT-01 SBS Membrane, TPO Sheet, or click 'Inquire Now' on any product card"
                       />
                     </div>
 
-                    <div className="form-row-split">
-                      <div className="arch-field">
-                        <label htmlFor="rfq-quantity">
-                          ESTIMATED ORDER VOLUME (M² / ROLLS / CONTAINERS) *
+                    <div className="b2b-form-row">
+                      <div className="b2b-field">
+                        <label htmlFor="rfq-qty">
+                          Estimated Order Quantity *
                         </label>
                         <input
-                          id="rfq-quantity"
+                          id="rfq-qty"
                           type="text"
-                          className="arch-input"
+                          className="b2b-input"
                           value={rfqForm.quantity}
-                          onChange={(e) => handleRfqChange("quantity", e.target.value)}
-                          onBlur={() => handleRfqBlur("quantity")}
-                          aria-invalid={Boolean(rfqErrors.quantity)}
-                          placeholder="e.g. 25,000 m² or 1×20GP Container"
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, quantity: e.target.value })
+                          }
+                          placeholder="e.g. 20,000 m² or 1×20GP Container"
                         />
                         {rfqErrors.quantity && (
-                          <span className="field-error-msg">{rfqErrors.quantity}</span>
+                          <span className="b2b-field-error">{rfqErrors.quantity}</span>
                         )}
                       </div>
 
-                      <div className="arch-field">
+                      <div className="b2b-field">
                         <label htmlFor="rfq-port">
-                          TARGET DISCHARGE PORT (FOR CIF / CFR QUOTE)
+                          Destination Port (for CIF Quote)
                         </label>
                         <input
                           id="rfq-port"
                           type="text"
-                          className="arch-input"
+                          className="b2b-input"
                           value={rfqForm.port}
-                          onChange={(e) => handleRfqChange("port", e.target.value)}
-                          placeholder="e.g. Jebel Ali, Port Klang, Santos, Rotterdam"
+                          onChange={(e) =>
+                            setRfqForm({ ...rfqForm, port: e.target.value })
+                          }
+                          placeholder="e.g. Jebel Ali, Port Klang, Santos"
                         />
                       </div>
                     </div>
 
-                    <label className="checkbox-row">
+                    <label className="b2b-checkbox-box">
                       <input
                         type="checkbox"
                         checked={rfqForm.requestSampleBox}
                         onChange={(e) =>
-                          handleRfqChange("requestSampleBox", e.target.checked)
+                          setRfqForm({
+                            ...rfqForm,
+                            requestSampleBox: e.target.checked
+                          })
                         }
                       />
                       <div>
-                        <span
-                          className="tech-label"
-                          style={{ color: "var(--color-primary)", display: "block" }}
-                        >
-                          INCLUDE COMPLIMENTARY PHYSICAL SAMPLE SWATCH BOX
-                        </span>
-                        <span
+                        <strong
                           style={{
-                            fontSize: "var(--text-body-sm)",
-                            color: "var(--color-secondary)"
+                            display: "block",
+                            fontSize: "0.88rem",
+                            color: "var(--color-primary)"
                           }}
                         >
-                          Check to receive physical membrane cuts, TDS sheets, and batch test reports with your quotation.
+                          Request Free Physical Sample Box Together With Quote
+                        </strong>
+                        <span
+                          style={{
+                            fontSize: "0.8rem",
+                            color: "var(--color-text-secondary)"
+                          }}
+                        >
+                          Includes A4 membrane cuts, TDS sheets, and lab test reports.
                         </span>
                       </div>
                     </label>
 
-                    <div className="arch-field">
+                    <div className="b2b-field">
                       <label htmlFor="rfq-notes">
-                        TECHNICAL SPECIFICATIONS, THICKNESS, REINFORCEMENT OR OEM NOTES
+                        Detailed Specifications / Thickness / Reinforcement / OEM Requirements
                       </label>
                       <textarea
                         id="rfq-notes"
-                        className="arch-textarea"
+                        className="b2b-textarea"
                         value={rfqForm.notes}
-                        onChange={(e) => handleRfqChange("notes", e.target.value)}
-                        placeholder="Specify reinforcement type (Polyester PY / Fiberglass G), surface finish (PE / Sand / Mineral Slate), climate grade (-25°C SBS / +130°C APP), or custom OEM label requirements..."
+                        onChange={(e) =>
+                          setRfqForm({ ...rfqForm, notes: e.target.value })
+                        }
+                        placeholder="Please let us know your required thickness, surface finish (PE film / sand / mineral slate), or custom packaging needs..."
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="arch-btn arch-btn-primary"
+                      className="b2b-btn b2b-btn-primary b2b-btn-lg"
                       style={{ width: "100%" }}
                     >
-                      GENERATE OFFICIAL RFQ SUBMITTAL &amp; CONNECT WITH EXPORT DESK
+                      Submit Inquiry for Factory Quote
                     </button>
                   </form>
                 )}
@@ -1563,80 +1307,61 @@ function App() {
       </main>
 
       {/* ====================================================================
-          ARCHITECTURAL TITLE-BLOCK FOOTER
+          10. CORPORATE FOOTER
           ==================================================================== */}
-      <footer className="titleblock-footer" data-component="site-footer">
-        <div className="arch-container">
-          <div className="titleblock-grid">
-            <div className="titleblock-cell">
-              <h4>MANUFACTURER IDENTIFICATION</h4>
-              <p
-                style={{
-                  fontWeight: 700,
-                  fontSize: "1.05rem",
-                  marginBottom: "6px",
-                  color: "var(--color-on-dark)"
-                }}
-              >
-                {COMPANY_INFO.name}
+      <footer className="b2b-footer" data-component="footer">
+        <div className="b2b-container">
+          <div className="b2b-footer-grid">
+            <div className="b2b-footer-col">
+              <h4>{COMPANY_INFO.name}</h4>
+              <p style={{ fontSize: "0.86rem", marginBottom: "12px" }}>
+                Direct manufacturer and global exporter of SBS/APP modified bitumen membranes, TPO/PVC/HDPE polymeric sheets, liquid waterproof coatings, and butyl sealing tapes since 2008.
               </p>
-              <p
-                style={{
-                  fontSize: "var(--text-body-sm)",
-                  color: "var(--color-border)",
-                  marginBottom: "12px"
-                }}
-              >
-                {COMPANY_INFO.legalNameZh} · Direct Industrial Waterproofing Manufacturer &amp; Global Exporter since 2008.
-              </p>
-              <p className="tech-label tech-label-dark">
-                PLANT: TAITOU INDUSTRIAL ZONE, SHOUGUANG, WEIFANG, SHANDONG, CHINA
+              <p style={{ fontSize: "0.8rem", color: "#94A3B8" }}>
+                Factory Base: {COMPANY_INFO.address}
               </p>
             </div>
 
-            <div className="titleblock-cell">
-              <h4>MATERIAL SYSTEMS (37 SKUS)</h4>
-              <ul className="titleblock-links">
+            <div className="b2b-footer-col">
+              <h4>Product Categories</h4>
+              <ul className="b2b-footer-links">
                 {CATEGORIES.map((cat) => (
                   <li key={cat.id}>
                     <a
-                      href="#catalogue"
+                      href="#products"
                       onClick={() => setActiveCategory(cat.id)}
                     >
-                      {cat.shortName} ({cat.count} SKUs)
+                      {cat.shortName} ({cat.count})
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="titleblock-cell">
-              <h4>DOSSIER NAVIGATION</h4>
-              <ul className="titleblock-links">
+            <div className="b2b-footer-col">
+              <h4>Quick Navigation</h4>
+              <ul className="b2b-footer-links">
                 <li>
-                  <a href="#systems">01 / Material Systems Index</a>
+                  <a href="#series">5 Core Product Series</a>
                 </li>
                 <li>
-                  <a href="#catalogue">02 / 37-SKU Technical Ledger</a>
+                  <a href="#products">All 37 Export Products</a>
                 </li>
                 <li>
-                  <a href="#assemblies">03 / Build-Up Assemblies</a>
+                  <a href="#solutions">Engineering Solutions</a>
                 </li>
                 <li>
-                  <a href="#standards">04 / Lab QA &amp; Standards Matrix</a>
+                  <a href="#factory">Factory &amp; Quality Control</a>
                 </li>
                 <li>
-                  <a href="#factory">05 / 68,000 m² Factory Base</a>
-                </li>
-                <li>
-                  <a href="#trade-desk">06 / Direct Trade Desk &amp; RFQ</a>
+                  <a href="#contact">Request A Quote</a>
                 </li>
               </ul>
             </div>
 
-            <div className="titleblock-cell">
-              <h4>EXPORT DESK CONTACTS</h4>
-              <ul className="titleblock-links">
+            <div className="b2b-footer-col">
+              <h4>Export Department</h4>
+              <ul className="b2b-footer-links">
                 <li>
                   <a href={`mailto:${COMPANY_INFO.email}`}>
                     Email: {COMPANY_INFO.email}
@@ -1644,7 +1369,7 @@ function App() {
                 </li>
                 <li>
                   <a href={`mailto:${COMPANY_INFO.altEmail}`}>
-                    Alt: {COMPANY_INFO.altEmail}
+                    Alt Email: {COMPANY_INFO.altEmail}
                   </a>
                 </li>
                 <li>
@@ -1656,157 +1381,171 @@ function App() {
                     WhatsApp: {COMPANY_INFO.whatsapp}
                   </a>
                 </li>
-                <li>
-                  <span
-                    style={{
-                      fontSize: "var(--text-body-sm)",
-                      color: "var(--color-border)"
-                    }}
-                  >
-                    Port: {COMPANY_INFO.port}
-                  </span>
-                </li>
+                <li>Port: {COMPANY_INFO.port}</li>
               </ul>
             </div>
           </div>
 
-          <div className="titleblock-closing">
+          <div className="b2b-footer-bottom">
             <span>
-              © {new Date().getFullYear()} {COMPANY_INFO.name} ALL RIGHTS RESERVED.
+              © {new Date().getFullYear()} {COMPANY_INFO.name} All Rights Reserved.
             </span>
             <span>
-              DRAWING SYSTEM: SWISS ARCHITECTURAL DOSSIER · ISO9001 / CE / ASTM COMPLIANT
+              ISO9001:2015 · ISO14001:2015 · CE EN 13707 / EN 13956 · ASTM Compliant
             </span>
           </div>
         </div>
       </footer>
 
+      {/* Floating WhatsApp Quick Chat Button */}
+      <a
+        href={COMPANY_INFO.whatsappLink}
+        target="_blank"
+        rel="noreferrer"
+        className="b2b-floating-wa"
+        aria-label="Chat with Mingze Waterproof on WhatsApp"
+      >
+        <span>WhatsApp: {COMPANY_INFO.whatsapp}</span>
+      </a>
+
       {/* ====================================================================
-          MODAL 1: TECHNICAL DATA SHEET (TDS) DOSSIER MODAL
+          MODAL 1: PRODUCT TECHNICAL DATA SHEET (TDS) MODAL
           ==================================================================== */}
-      {selectedTdsProduct && (
+      {selectedProduct && (
         <div
-          className="arch-modal-backdrop"
+          className="b2b-modal-overlay"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="tds-modal-title"
-          onClick={() => setSelectedTdsProduct(null)}
+          aria-labelledby="tds-title"
+          onClick={() => setSelectedProduct(null)}
         >
           <div
-            className="arch-modal-frame"
+            className="b2b-modal-card"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="arch-modal-bar">
+            <div className="b2b-modal-header">
               <div>
-                <span className="tech-label tech-label-dark">
-                  TECHNICAL DATA SHEET (TDS) · {selectedTdsProduct.code}
-                </span>
-                <h3
-                  id="tds-modal-title"
-                  style={{ fontSize: "1.15rem", marginTop: "2px" }}
+                <span
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "#93C5FD",
+                    fontWeight: 700,
+                    textTransform: "uppercase"
+                  }}
                 >
-                  {selectedTdsProduct.name}
+                  Technical Data Sheet (TDS) · Model {selectedProduct.code}
+                </span>
+                <h3 id="tds-title" style={{ fontSize: "1.15rem", marginTop: "2px" }}>
+                  {selectedProduct.name}
                 </h3>
               </div>
               <button
                 type="button"
-                className="arch-modal-close"
-                onClick={() => setSelectedTdsProduct(null)}
+                className="b2b-modal-close"
+                onClick={() => setSelectedProduct(null)}
               >
-                ESC / CLOSE ✕
+                Close ✕
               </button>
             </div>
 
-            <div className="arch-modal-body">
-              <div className="tds-modal-top-grid">
+            <div className="b2b-modal-body">
+              <div className="b2b-modal-top-split">
                 <div
                   style={{
-                    border: "1px solid var(--color-primary)",
-                    backgroundColor: "#FFFFFF",
-                    padding: "12px"
+                    border: "1px solid var(--color-border)",
+                    borderRadius: "var(--radius-md)",
+                    padding: "14px",
+                    backgroundColor: "#FFFFFF"
                   }}
                 >
                   <img
-                    src={selectedTdsProduct.image}
-                    alt={selectedTdsProduct.name}
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
                     style={{ width: "100%", height: "auto", objectFit: "contain" }}
                   />
                 </div>
+
                 <div>
-                  <span className="tech-label tech-label-cobalt">
-                    {selectedTdsProduct.categoryName}
+                  <span className="b2b-eyebrow" style={{ marginBottom: "8px" }}>
+                    {selectedProduct.categoryName}
                   </span>
                   <p
                     style={{
-                      fontSize: "var(--text-body-md)",
-                      color: "var(--color-primary)",
-                      margin: "8px 0 14px"
+                      fontSize: "0.95rem",
+                      color: "var(--color-text-main)",
+                      marginBottom: "14px"
                     }}
                   >
-                    {selectedTdsProduct.brief}
+                    {selectedProduct.brief}
                   </p>
-                  <div className="tds-modal-meta-grid">
-                    <div>
-                      <span className="tech-label" style={{ display: "block" }}>
-                        EXECUTION STANDARDS
-                      </span>
-                      <strong>{selectedTdsProduct.standards}</strong>
+                  <div className="b2b-product-specs" style={{ marginBottom: 0 }}>
+                    <div className="b2b-spec-line">
+                      <span>Execution Standards:</span>
+                      <strong>{selectedProduct.standards}</strong>
                     </div>
-                    <div>
-                      <span className="tech-label" style={{ display: "block" }}>
-                        NOMINAL THICKNESS
-                      </span>
-                      <strong>{selectedTdsProduct.thickness}</strong>
+                    <div className="b2b-spec-line">
+                      <span>Thickness / Spec:</span>
+                      <strong>{selectedProduct.thickness}</strong>
                     </div>
-                    <div>
-                      <span className="tech-label" style={{ display: "block" }}>
-                        PACKAGING / ROLL DIMENSIONS
-                      </span>
-                      <strong>{selectedTdsProduct.rollSize}</strong>
+                    <div className="b2b-spec-line">
+                      <span>Packaging / Roll Size:</span>
+                      <strong>{selectedProduct.rollSize}</strong>
                     </div>
-                    <div>
-                      <span className="tech-label" style={{ display: "block" }}>
-                        PRIMARY ENGINEERING APPLICATIONS
-                      </span>
-                      <span>{selectedTdsProduct.applications}</span>
+                    <div className="b2b-spec-line">
+                      <span>Applications:</span>
+                      <strong>{selectedProduct.applications}</strong>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <span className="tech-label">
-                KEY ENGINEERING ADVANTAGES &amp; FORMULATION FEATURES
-              </span>
-              <ul
+              <h4
                 style={{
-                  margin: "8px 0 20px",
-                  paddingLeft: "20px",
-                  fontSize: "var(--text-body-sm)",
-                  color: "var(--color-on-surface)"
+                  fontSize: "0.95rem",
+                  color: "var(--color-primary)",
+                  marginBottom: "8px"
                 }}
               >
-                {selectedTdsProduct.features.map((feat) => (
-                  <li key={feat} style={{ marginBottom: "4px" }}>
-                    {feat}
+                Key Product Advantages &amp; Features
+              </h4>
+              <ul
+                style={{
+                  paddingLeft: "20px",
+                  marginBottom: "20px",
+                  fontSize: "0.88rem",
+                  color: "var(--color-text-secondary)"
+                }}
+              >
+                {selectedProduct.features.map((f) => (
+                  <li key={f} style={{ marginBottom: "4px" }}>
+                    {f}
                   </li>
                 ))}
               </ul>
 
-              <span className="tech-label">
-                LABORATORY PHYSICAL &amp; MECHANICAL PROPERTY LEDGER
-              </span>
-              <table className="tds-spec-table">
+              <h4
+                style={{
+                  fontSize: "0.95rem",
+                  color: "var(--color-primary)",
+                  marginBottom: "6px"
+                }}
+              >
+                Technical Parameters &amp; Laboratory Test Data
+              </h4>
+              <table className="b2b-tds-table">
                 <thead>
                   <tr>
-                    <th>TEST PROPERTY / PARAMETER</th>
-                    <th>VERIFIED SPECIFICATION VALUE</th>
+                    <th>Property / Test Item</th>
+                    <th>Standard Specification Value</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {selectedTdsProduct.specs.map((row) => (
+                  {selectedProduct.specs.map((row) => (
                     <tr key={row.property}>
                       <td>{row.property}</td>
-                      <td>{row.value}</td>
+                      <td>
+                        <strong>{row.value}</strong>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -1815,31 +1554,25 @@ function App() {
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: "12px",
+                  justifyContent: "flex-end",
+                  gap: "10px",
                   flexWrap: "wrap"
                 }}
               >
-                <span className="tech-label">
-                  BATCH COA &amp; MSDS INCLUDED WITH EVERY CONTAINER SHIPMENT
-                </span>
-                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                  <button
-                    type="button"
-                    className="arch-btn arch-btn-secondary arch-btn-compact"
-                    onClick={() => window.print()}
-                  >
-                    PRINT / SAVE TDS SHEET
-                  </button>
-                  <button
-                    type="button"
-                    className="arch-btn arch-btn-primary arch-btn-compact"
-                    onClick={() => handleInquireProduct(selectedTdsProduct)}
-                  >
-                    REQUEST FOB QUOTE FOR {selectedTdsProduct.code} →
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  className="b2b-btn b2b-btn-outline b2b-btn-sm"
+                  onClick={() => window.print()}
+                >
+                  Print / Save PDF
+                </button>
+                <button
+                  type="button"
+                  className="b2b-btn b2b-btn-primary b2b-btn-sm"
+                  onClick={() => handleInquireProduct(selectedProduct)}
+                >
+                  Inquire Now for {selectedProduct.code} →
+                </button>
               </div>
             </div>
           </div>
@@ -1847,78 +1580,92 @@ function App() {
       )}
 
       {/* ====================================================================
-          MODAL 2: COMPLIMENTARY SAMPLE SWATCH BOX MODAL
+          MODAL 2: FREE SAMPLE SWATCH BOX REQUEST MODAL
           ==================================================================== */}
       {sampleModalOpen && (
         <div
-          className="arch-modal-backdrop"
+          className="b2b-modal-overlay"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="sample-modal-title"
+          aria-labelledby="sample-title"
           onClick={() => setSampleModalOpen(false)}
         >
           <div
-            className="arch-modal-frame"
+            className="b2b-modal-card"
+            style={{ maxWidth: "600px" }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="arch-modal-bar">
+            <div className="b2b-modal-header">
               <div>
-                <span className="tech-label tech-label-dark">
-                  ENGINEERING SUBMITTAL KIT · DHL / FEDEX GLOBAL DISPATCH
-                </span>
-                <h3
-                  id="sample-modal-title"
-                  style={{ fontSize: "1.15rem", marginTop: "2px" }}
+                <span
+                  style={{
+                    fontSize: "0.75rem",
+                    color: "#93C5FD",
+                    fontWeight: 700,
+                    textTransform: "uppercase"
+                  }}
                 >
-                  Request Complimentary Physical Sample Swatch Box
+                  DHL / FedEx Global Dispatch
+                </span>
+                <h3 id="sample-title" style={{ fontSize: "1.15rem", marginTop: "2px" }}>
+                  Request Free Physical Sample Swatch Box
                 </h3>
               </div>
               <button
                 type="button"
-                className="arch-modal-close"
+                className="b2b-modal-close"
                 onClick={() => setSampleModalOpen(false)}
               >
-                ESC / CLOSE ✕
+                Close ✕
               </button>
             </div>
 
-            <div className="arch-modal-body">
+            <div className="b2b-modal-body">
               {sampleSubmitted ? (
-                <div className="form-success-banner" role="status">
-                  <span className="tech-label" style={{ color: "var(--color-success)" }}>
-                    SAMPLE KIT REQUEST READY
-                  </span>
-                  <h4 style={{ margin: "8px 0", color: "var(--color-primary)" }}>
-                    Sample Swatch Box Request Prepared for {sampleForm.company}
+                <div
+                  style={{
+                    backgroundColor: "#F0FDF4",
+                    border: "1px solid #86EFAC",
+                    borderRadius: "var(--radius-md)",
+                    padding: "20px"
+                  }}
+                >
+                  <h4
+                    style={{
+                      color: "var(--color-success)",
+                      marginBottom: "8px"
+                    }}
+                  >
+                    Sample Request Ready for {sampleForm.company}
                   </h4>
                   <p
                     style={{
-                      fontSize: "var(--text-body-sm)",
-                      marginBottom: "16px"
+                      fontSize: "0.88rem",
+                      marginBottom: "14px"
                     }}
                   >
-                    Click below to confirm your delivery address with our export desk via Email or WhatsApp so our laboratory can prepare your cut samples within 24 hours:
+                    Click below to confirm your delivery details with our export team via Email or WhatsApp:
                   </p>
                   <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                     <a
-                      className="arch-btn arch-btn-primary arch-btn-compact"
+                      className="b2b-btn b2b-btn-primary b2b-btn-sm"
                       href={`mailto:${COMPANY_INFO.email}?subject=${encodeURIComponent(
-                        `[Sample Swatch Box Request] ${sampleForm.company} - ${sampleForm.country}`
+                        `[Free Sample Box Request] ${sampleForm.company}`
                       )}&body=${encodeURIComponent(
-                        `Company: ${sampleForm.company}\nContact Person: ${sampleForm.contactName}\nEmail: ${sampleForm.email}\nCountry/Address: ${sampleForm.country}\nSelected Material Systems: ${sampleForm.selectedSystems.join(", ")}\nNotes / Courier Account: ${sampleForm.courierNote}`
+                        `Company: ${sampleForm.company}\nContact Name: ${sampleForm.contactName}\nEmail: ${sampleForm.email}\nCountry/City: ${sampleForm.country}\nRequired Samples: ${sampleForm.notes}`
                       )}`}
                     >
-                      CONFIRM VIA EMAIL ({COMPANY_INFO.email})
+                      Confirm via Email
                     </a>
                     <a
-                      className="arch-btn arch-btn-dark arch-btn-compact"
+                      className="b2b-btn b2b-btn-whatsapp b2b-btn-sm"
                       target="_blank"
                       rel="noreferrer"
                       href={`https://wa.me/8616658506707?text=${encodeURIComponent(
-                        `Hello Mingze Export Desk, I would like to request the Free Sample Swatch Box for ${sampleForm.company} (${sampleForm.country}). Contact: ${sampleForm.contactName} (${sampleForm.email}). Systems: ${sampleForm.selectedSystems.join(", ")}.`
+                        `Hello Mingze Waterproof, I would like to request the Free Sample Box for ${sampleForm.company} (${sampleForm.country}). Contact: ${sampleForm.contactName} (${sampleForm.email}). Samples needed: ${sampleForm.notes}`
                       )}`}
                     >
-                      CONFIRM VIA WHATSAPP
+                      Confirm via WhatsApp
                     </a>
                   </div>
                 </div>
@@ -1926,59 +1673,21 @@ function App() {
                 <form onSubmit={handleSampleSubmit}>
                   <p
                     style={{
-                      fontSize: "var(--text-body-sm)",
-                      color: "var(--color-secondary)",
-                      marginBottom: "18px"
+                      fontSize: "0.88rem",
+                      color: "var(--color-text-secondary)",
+                      marginBottom: "16px"
                     }}
                   >
-                    Select the material systems you wish to include in your physical sample box for engineering evaluation and tender submittals:
+                    Enter your company and delivery details below to receive complimentary A4 membrane cuts and technical catalogs:
                   </p>
-
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                      gap: "10px",
-                      marginBottom: "20px"
-                    }}
-                  >
-                    {CATEGORIES.map((cat) => {
-                      const checked = sampleForm.selectedSystems.includes(cat.id);
-                      return (
-                        <label
-                          key={cat.id}
-                          className="checkbox-row"
-                          style={{ marginBottom: 0 }}
-                        >
-                          <input
-                            type="checkbox"
-                            checked={checked}
-                            onChange={() => toggleSampleSystem(cat.id)}
-                          />
-                          <div>
-                            <span
-                              className="tech-label"
-                              style={{ color: "var(--color-primary)", display: "block" }}
-                            >
-                              {cat.shortName}
-                            </span>
-                            <span style={{ fontSize: "0.75rem", color: "var(--color-secondary)" }}>
-                              {cat.count} SKUs Available
-                            </span>
-                          </div>
-                        </label>
-                      );
-                    })}
-                  </div>
-
-                  <div className="form-row-split">
-                    <div className="arch-field">
-                      <label htmlFor="sample-company">COMPANY NAME *</label>
+                  <div className="b2b-form-row">
+                    <div className="b2b-field">
+                      <label htmlFor="s-company">Company Name *</label>
                       <input
-                        id="sample-company"
+                        id="s-company"
                         type="text"
                         required
-                        className="arch-input"
+                        className="b2b-input"
                         value={sampleForm.company}
                         onChange={(e) =>
                           setSampleForm({ ...sampleForm, company: e.target.value })
@@ -1986,30 +1695,32 @@ function App() {
                         placeholder="Your company name"
                       />
                     </div>
-                    <div className="arch-field">
-                      <label htmlFor="sample-contact">CONTACT PERSON &amp; TITLE *</label>
+                    <div className="b2b-field">
+                      <label htmlFor="s-contact">Contact Person *</label>
                       <input
-                        id="sample-contact"
+                        id="s-contact"
                         type="text"
                         required
-                        className="arch-input"
+                        className="b2b-input"
                         value={sampleForm.contactName}
                         onChange={(e) =>
-                          setSampleForm({ ...sampleForm, contactName: e.target.value })
+                          setSampleForm({
+                            ...sampleForm,
+                            contactName: e.target.value
+                          })
                         }
-                        placeholder="e.g. Chief Engineer / Purchasing Director"
+                        placeholder="Your name & title"
                       />
                     </div>
                   </div>
-
-                  <div className="form-row-split">
-                    <div className="arch-field">
-                      <label htmlFor="sample-email">WORK EMAIL *</label>
+                  <div className="b2b-form-row">
+                    <div className="b2b-field">
+                      <label htmlFor="s-email">Business Email *</label>
                       <input
-                        id="sample-email"
+                        id="s-email"
                         type="email"
                         required
-                        className="arch-input"
+                        className="b2b-input"
                         value={sampleForm.email}
                         onChange={(e) =>
                           setSampleForm({ ...sampleForm, email: e.target.value })
@@ -2017,15 +1728,13 @@ function App() {
                         placeholder="name@company.com"
                       />
                     </div>
-                    <div className="arch-field">
-                      <label htmlFor="sample-country">
-                        DESTINATION COUNTRY &amp; CITY *
-                      </label>
+                    <div className="b2b-field">
+                      <label htmlFor="s-country">Country &amp; City *</label>
                       <input
-                        id="sample-country"
+                        id="s-country"
                         type="text"
                         required
-                        className="arch-input"
+                        className="b2b-input"
                         value={sampleForm.country}
                         onChange={(e) =>
                           setSampleForm({ ...sampleForm, country: e.target.value })
@@ -2034,29 +1743,27 @@ function App() {
                       />
                     </div>
                   </div>
-
-                  <div className="arch-field">
-                    <label htmlFor="sample-notes">
-                      SPECIFIC SKU CODES, THICKNESS OR COURIER INSTRUCTIONS
+                  <div className="b2b-field">
+                    <label htmlFor="s-notes">
+                      Samples Needed (e.g. SBS 4mm, TPO 1.5mm, HDPE, PU Coating)
                     </label>
                     <input
-                      id="sample-notes"
+                      id="s-notes"
                       type="text"
-                      className="arch-input"
-                      value={sampleForm.courierNote}
+                      className="b2b-input"
+                      value={sampleForm.notes}
                       onChange={(e) =>
-                        setSampleForm({ ...sampleForm, courierNote: e.target.value })
+                        setSampleForm({ ...sampleForm, notes: e.target.value })
                       }
-                      placeholder="e.g. Need 4mm SBS Torch-on + 1.5mm Pre-applied HDPE samples"
+                      placeholder="Specify product models or thickness..."
                     />
                   </div>
-
                   <button
                     type="submit"
-                    className="arch-btn arch-btn-primary"
+                    className="b2b-btn b2b-btn-primary"
                     style={{ width: "100%" }}
                   >
-                    PREPARE SAMPLE SWATCH BOX DISPATCH REQUEST
+                    Submit Sample Box Request
                   </button>
                 </form>
               )}
