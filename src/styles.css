@@ -857,4 +857,31 @@ button, input, select, textarea {
   .min-form {
     padding: 22px;
   }
+  .min-compare-table,
+  .min-compare-table tbody,
+  .min-compare-table tr,
+  .min-compare-table td {
+    display: block;
+    width: 100%;
+  }
+  .min-compare-table thead {
+    display: none;
+  }
+  .min-compare-table tr {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .min-compare-table tr:last-child {
+    border-bottom: none;
+  }
+  .min-compare-table td {
+    padding: 4px 0;
+    border-bottom: none;
+    font-size: 0.82rem;
+  }
+  .min-compare-table td::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--text-sub);
+  }
 }

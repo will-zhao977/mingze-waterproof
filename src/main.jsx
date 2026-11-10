@@ -317,14 +317,14 @@ function App() {
                 <tbody>
                   {COMPARISON_MATRIX.map((row) => (
                     <tr key={row.system}>
-                      <td>
+                      <td data-label="System">
                         <strong>{row.system}</strong>
                       </td>
-                      <td>{row.standard}</td>
-                      <td>{row.thickness}</td>
-                      <td>{row.tempRange}</td>
-                      <td>{row.application}</td>
-                      <td>{row.loading20GP}</td>
+                      <td data-label="Standard">{row.standard}</td>
+                      <td data-label="Thickness">{row.thickness}</td>
+                      <td data-label="Temp Range">{row.tempRange}</td>
+                      <td data-label="Application">{row.application}</td>
+                      <td data-label="20GP Loading">{row.loading20GP}</td>
                     </tr>
                   ))}
                 </tbody>
