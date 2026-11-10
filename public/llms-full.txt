@@ -1,0 +1,553 @@
+# Weifang Mingze Waterproof Material Co., Ltd. — Complete 37-SKU Technical Data Sheet (TDS) Reference for AI & Engineering Procurement
+
+> Authoritative machine-readable specification dossier for Weifang Mingze Waterproof Material Co., Ltd.. All product specifications align with ASTM, EN/CE, and GB standards. For container quotations (FOB Qingdao / CIF) and complimentary physical sample swatch boxes, contact zhao@mzwaterproof.com or WhatsApp +86 16658506707.
+
+## 1. Company Profile & Manufacturing Capacity
+- **Company**: Weifang Mingze Waterproof Material Co., Ltd. (潍坊明泽防水材料有限公司)
+- **Founded**: undefined
+- **Factory Size**: undefined
+- **Annual Capacity**: 50,000,000+ m² Membrane | 25,000+ Tons Coatings
+- **Plant Address**: Taitou Industrial Zone, Shouguang, Weifang City, Shandong Province, China
+- **Seaport**: Qingdao Port (200 km / 2.5h Highway Transit)
+- **Email**: zhao@mzwaterproof.com / zhao@mingzewaterproof.com
+- **WhatsApp**: +86 16658506707
+
+## 2. Full 37-SKU Technical Specifications & Laboratory Parameters
+### MZ-CAT-01: Elastomeric SBS Modified Bitumen Waterproof Membrane
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB 18242-2008 / ASTM D6164 / EN 13707
+- **Nominal Thickness / Spec**: 3.0mm, 4.0mm, 5.0mm
+- **Roll / Package Dimensions**: 1.0m × 10m / roll
+- **Overview**: Premium polyester/fiberglass reinforced SBS torch-on membrane with unmatched low-temperature flexibility down to -25°C.
+- **Applications**: Commercial flat roofing, basements, podium decks, subways, bridge decks, cold region infrastructure.
+- **Key Features**: Low temperature flexibility down to -20°C / -25°C; High tensile strength and elongation (PY reinforcement); Excellent resistance to root puncture and cyclic thermal fatigue; Available in PE film, Fine Sand (S), Mineral Slate Granule (M) surfaces
+- **Technical Parameters**:
+  - Reinforcement: Polyester (PY) / Glass Fiber (G) / Composite (PYG)
+  - Low Temp Flexibility: No cracks at -20°C (I) / -25°C (II)
+  - Heat Resistance: 90°C (I) / 105°C (II), 2h without sliding
+  - Tensile Strength (Long./Trans.): ≥ 500 / 400 N/50mm (3mm), ≥ 800 / 600 N/50mm (4mm)
+  - Elongation at Break: ≥ 40% (PY Reinforced)
+  - Water Impermeability: 0.3 MPa, 30 min watertight
+
+### MZ-CAT-02: Plastomeric APP Modified Bitumen Waterproof Membrane
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB 18243-2008 / ASTM D6222 / EN 13707
+- **Nominal Thickness / Spec**: 3.0mm, 4.0mm, 5.0mm
+- **Roll / Package Dimensions**: 1.0m × 10m / roll
+- **Overview**: Atactic Polypropylene modified bitumen torch-on membrane engineered for superior high-temperature stability (up to 130°C) in tropical/arid climates.
+- **Applications**: Exposed tropical roofing, industrial factory decks, hot climate infrastructure, bridge piers.
+- **Key Features**: High softening point and heat resistance up to 130°C; Outstanding UV and aging resistance for hot & tropical regions; Superior puncture and foot-traffic durability; Ideal for Middle East, Southeast Asia, South America, and Africa
+- **Technical Parameters**:
+  - Modifier Type: Atactic Polypropylene (APP) / APAO Polymer
+  - Heat Resistance: 110°C (I) / 130°C (II), 2h no flow/drop
+  - Low Temp Flexibility: -5°C (I) / -15°C (II)
+  - Tensile Strength: ≥ 550 / 450 N/50mm (PY)
+  - Elongation: ≥ 35%
+
+### MZ-CAT-03: Self-Adhesive Polymer Modified Bitumen Waterproof Membrane
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB 23441-2009 / ASTM D1970
+- **Nominal Thickness / Spec**: 1.5mm, 2.0mm, 3.0mm
+- **Roll / Package Dimensions**: 1.0m × 10m, 1.0m × 20m
+- **Overview**: Cold-applied, peel-and-stick bitumen membrane eliminating open flames, ideal for fire-restricted sites, timber roofs, and rapid basement installations.
+- **Applications**: Underground substructures, timber frame roofs, oil depots, hospitals, chemical plants, renovation.
+- **Key Features**: 100% Cold-applied peel-and-stick (zero open flame, zero VOC emission); High-tack self-healing capability for minor nail punctures; Strong adhesion to concrete, wood, metal, and insulation boards; Available in single-sided and double-sided adhesive variants
+- **Technical Parameters**:
+  - Surface Finish: PE Film / Aluminum Film / Cross-Laminated Film / Double Silicon
+  - Peel Strength to Concrete: ≥ 1.5 N/mm (dry) / ≥ 1.2 N/mm (wet)
+  - Low Temp Flexibility: No crack at -20°C
+  - Heat Resistance: 70°C, 2h no slide
+
+### MZ-CAT-04: Architectural Fiberglass Asphalt Roofing Shingles
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB/T 20474-2015 / ASTM D3462 / EN 544
+- **Nominal Thickness / Spec**: 2.6mm - 5.3mm (Laminated)
+- **Roll / Package Dimensions**: 1000mm × 333mm / bundle (~3.1 m² / bundle)
+- **Overview**: Multi-layered decorative fiberglass reinforced asphalt shingles with natural ceramic granules for luxury residential villas and slope roofs.
+- **Applications**: Residential villas, resorts, commercial pitched roofs, timber lodges, gazebos, slope retrofits.
+- **Key Features**: Heavy-duty fiberglass core coated with oxidized weathering bitumen; High-temperature ceramic coated colored mineral granules (UV fade-proof); Wind resistance up to Class F / 110 mph (177 km/h); Available styles: 3-Tab, Laminated (Architectural), Mosaic/Hexagonal, Fish Scale, Gothic
+- **Technical Parameters**:
+  - Granule Adhesion: Mass loss ≤ 1.0 g
+  - Tear Strength: ≥ 1700 mN
+  - Fire Rating: Class A / Class B Fire Resistant
+  - Colors Available: Estate Gray, Desert Tan, Forest Green, Tuscan Red, Chateau Blue, Onyx Black
+
+### MZ-CAT-05: Breathable Synthetic Roofing Underlayment
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: ASTM D226 / ASTM D4869 / EN 13859-1
+- **Nominal Thickness / Spec**: 0.45mm - 0.70mm (110 - 180 gsm)
+- **Roll / Package Dimensions**: 1.2m × 50m / 1.5m × 50m
+- **Overview**: High-strength woven polypropylene multi-layer breathable roof underlayment with high vapor permeability and superior slip resistance.
+- **Applications**: Underlayment beneath asphalt shingles, metal standing seam, clay & concrete tiles, slate roofs.
+- **Key Features**: Micro-porous breathable membrane layer allows moisture vapor to escape; Non-woven textured surface provides superior slip-resistant walking grip; 10x tear resistance compared to conventional #30 asphalt felt; 6-month UV exposure resistance during prolonged construction
+- **Technical Parameters**:
+  - Vapor Permeability: ≥ 1200 g/m²/24h
+  - Hydrostatic Head: > 2000 mm H₂O
+  - Tensile Strength (MD/CD): ≥ 320 / 280 N/50mm
+
+### MZ-CAT-06: Mineral Granule Surface SBS Cap Sheet Membrane
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB 18242-2008 / EN 13707 / ASTM D6164 Type I/II
+- **Nominal Thickness / Spec**: 4.0mm, 4.5mm, 5.0mm
+- **Roll / Package Dimensions**: 1.0m × 10m / roll
+- **Overview**: Heavy-duty exposed top-layer SBS membrane covered with colored basalt mineral slates for robust UV shielding and mechanical walkability.
+- **Applications**: Top cap sheet for multi-ply built-up roofing (BUR), exposed industrial roof refurbishment.
+- **Key Features**: Colored mineral slate granules offer permanent UV block and solar reflection; Heavy polyester fabric core withstands thermal expansion and contraction; Fire retardant formulation meeting European & North American fire codes; Aesthetic natural slate colors: Dark Grey, Green, Red, White Reflective
+- **Technical Parameters**:
+  - Slate Loss Rate: ≤ 8% (Centrifugal wash)
+  - Tensile Strength: ≥ 800 N/50mm (PY)
+  - Low Temp Flexibility: -25°C no cracks
+
+### MZ-CAT-07: Root Puncture Resistant SBS Green Roof Membrane
+- **Category**: Modified Bitumen & Shingles
+- **Execution Standards**: GB 18242 / FLL Root Resistance Tested / JC/T 1075-2008
+- **Nominal Thickness / Spec**: 4.0mm, 4.5mm
+- **Roll / Package Dimensions**: 1.0m × 10m / roll
+- **Overview**: Specially formulated SBS membrane infused with chemical root barrier additives (imported Preventol B2) for intensive/extensive green roof systems.
+- **Applications**: Green roofs, rooftop gardens, landscaped podiums, underground garage roof greening.
+- **Key Features**: Dual root defense: high-strength copper foil / polymer core + chemical root inhibitor; Tested and certified to resist aggressive plant root penetration for 15+ years; Non-toxic to plants and drainage run-off ecosystems; High puncture resistance under heavy planting soil and gravel overburden
+- **Technical Parameters**:
+  - Root Inhibitor: Chemical Preventol B2 / Copper Foil Barrier
+  - FLL Test: Passed 2-Year / 4-Year Root Penetration Test
+  - Hydrostatic Resistance: ≥ 0.3 MPa (30 min)
+
+### MZ-CAT-08: Thermoplastic Polyolefin (TPO) Single-Ply Roofing Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB 27789-2011 / ASTM D6878 / EN 13956
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 1.8mm, 2.0mm
+- **Roll / Package Dimensions**: 2.0m × 20m / roll
+- **Overview**: State-of-the-art ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.
+- **Applications**: Large-span industrial steel roofs, logistics hubs, airports, commercial shopping malls, data centers.
+- **Key Features**: High solar reflectance (SRI > 104) drastically lowers building cooling load; Plasticizer-free formulation ensures zero brittleness over 30+ year lifecycle; Hot-air welded seams creating monolithic joints stronger than the sheet itself; Available types: Internally Reinforced (P), Fleece-Backed (L), Homogeneous (H)
+- **Technical Parameters**:
+  - Tensile Strength (Internal Scrim): ≥ 1000 N/50mm (Type P)
+  - Solar Reflectance Index (SRI): ≥ 104 (White color)
+  - Low Temp Flexibility: -40°C no crack
+  - Seam Strength (Hot-Air Weld): ≥ 800 N/50mm (Film break mode)
+  - Artificial Weathering (UV 2500h): No cracks, no crazing
+
+### MZ-CAT-09: Polyvinyl Chloride (PVC) Commercial Single-Ply Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB 12952-2011 / ASTM D4434 Type II/III / EN 13956
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 1.8mm, 2.0mm
+- **Roll / Package Dimensions**: 2.0m × 20m / roll
+- **Overview**: Premium polyester scrim reinforced PVC waterproof sheet formulated with high-molecular plasticizers and UV stabilizers for exposed roofing.
+- **Applications**: Exposed roof retrofits, mechanically fastened roofs, adhere systems, tunnels, civil underground.
+- **Key Features**: Exceptional fire retardancy: self-extinguishing when removed from fire; Hot-air weldable at high speeds for rapid rooftop installation; Resistant to industrial chemical fumes, acid rain, and fungal growth; High puncture and wind-uplift resistance with mechanical fasteners
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 1000 N/50mm (Reinforced)
+  - Fire Reaction: UL 790 Class A / DIN 4102-B2
+  - Low Temperature Bend: -25°C / -35°C no cracks
+
+### MZ-CAT-10: Ethylene Propylene Diene Monomer (EPDM) Rubber Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB 18173.1-2012 / ASTM D4637 Type I
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: 1.2m / 2.0m / 3.0m × 20m
+- **Overview**: 100% vulcanized synthetic rubber membrane offering over 50 years of proven outdoor durability, ozone resistance, and 450% ultimate elongation.
+- **Applications**: Water reservoirs, artificial lakes, exposed flat roofs, facade curtain wall waterproofing.
+- **Key Features**: Extreme elongation (≥ 450%) effortlessly accommodates structural movements; Operating temperature range from -45°C up to +120°C; Zero plasticizer migration ensures permanent flexibility and elasticity; Large sheet widths (up to 3.0m) minimize on-site splice seams
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 9.0 MPa
+  - Elongation at Break: ≥ 450%
+  - Ozone Resistance (200 pphm, 168h): No cracking
+
+### MZ-CAT-11: Pre-Applied HDPE Fully-Bonded Waterproof Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB/T 23457-2017 (Type P) / ASTM D5385
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: 1.0m / 2.0m × 20m
+- **Overview**: High-density polyethylene sheet coated with pressure-sensitive adhesive and weather-resistant particulate layer for pre-applied blindside substructures.
+- **Applications**: Basement raft slabs, blindside diaphragm retaining walls, subway tunnels, underground utility tunnels.
+- **Key Features**: Forms a permanent continuous chemical & mechanical bond with poured concrete; Prevents lateral water tracking under the membrane even if physically damaged; Loose-laid directly onto soil screed, diaphragm walls, or sheet piling without primer; Withstands heavy site traffic and rebar placement without protective screed
+- **Technical Parameters**:
+  - Carrier Film: Virgin High Density Polyethylene (HDPE)
+  - Adhesion to Poured Concrete: ≥ 2.0 N/mm (Cohesive concrete failure)
+  - Hydrostatic Resistance: ≥ 0.7 MPa (70m water head)
+  - Lateral Water Tracking Resistance: 0.7 MPa, No lateral flow
+
+### MZ-CAT-12: Cross-Laminated Film Self-Adhesive Waterproof Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB/T 35467-2017 / GB 23441
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: 1.0m × 20m / roll
+- **Overview**: Biaxially cross-laminated Valéron-grade HDPE film laminated with polymer self-adhesive compound, delivering extreme tear and puncture resistance.
+- **Applications**: Basement exterior walls, podium roofs, wet-application concrete substrates, rail transit.
+- **Key Features**: Special 45° angle cross-laminated film eliminates directional tearing; High dimensional stability with minimal thermal expansion/contraction; Superior nail-sealability and tear propagation resistance; Cold-applied wet or dry with dedicated polymer cement slurry
+- **Technical Parameters**:
+  - Nail Tear Resistance: ≥ 400 N
+  - Tensile Strength: ≥ 200 N/50mm
+  - Elongation: ≥ 200%
+
+### MZ-CAT-13: Non-Bituminous Polymer Self-Adhesive Film Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB/T 23457-2017
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm
+- **Roll / Package Dimensions**: 1.0m / 2.0m × 20m
+- **Overview**: Bitumen-free pure synthetic polymer adhesive film with high optical clarity, excellent aging resistance, and zero oil leaching.
+- **Applications**: Drinking water reservoirs, subterranean residential spaces, cleanroom basements.
+- **Key Features**: 100% bitumen-free: no volatile plasticizer or oil bleed onto concrete; Eco-friendly and odorless, suitable for enclosed potable water tanks; Superior long-term weather and alkaline resistance; Strong initial tack and permanent elastomeric bond
+- **Technical Parameters**:
+  - Adhesive Type: Synthetic Non-Asphalt Polymeric Gel
+  - Peel Strength to Concrete: ≥ 2.5 N/mm
+  - Low Temp Flexibility: -30°C
+
+### MZ-CAT-14: T-Ribbed HDPE Concrete Protection Geomembrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GRI-GM13 / GB/T 17643
+- **Nominal Thickness / Spec**: 1.5mm, 2.0mm, 2.5mm, 3.0mm (Rib Height: 9.5mm)
+- **Roll / Package Dimensions**: 2.0m × 15m / roll
+- **Overview**: Extruded HDPE sheet with integral T-shaped continuous anchor ribs that lock physically into cast-in-place concrete structures.
+- **Applications**: Sewage concrete pipes, wastewater treatment basins, chemical sump pits, underground tunnels.
+- **Key Features**: Integral T-ribs provide massive mechanical pull-out resistance (> 500 N/rib); Protects concrete from severe chemical attacks (H₂S, acids, salts); Seamlessly welded joints using extrusion welding rods; High impact and abrasive wear resistance
+- **Technical Parameters**:
+  - Rib Pullout Resistance: ≥ 500 N per 100mm rib
+  - Chemical Resistance: Resistant to pH 1 - 13 continuous immersion
+  - Density: ≥ 0.940 g/cm³
+
+### MZ-CAT-15: Chlorinated Polyethylene (CPE) Waterproof Membrane
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB 12953-2003
+- **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: 1.0m / 1.2m × 20m
+- **Overview**: Synthetic elastomeric sheet manufactured from high-grade chlorinated polyethylene with outstanding oil, chemical, and ozone resistance.
+- **Applications**: Industrial chemical plants, oil refineries, gas station containment, bridge waterproofing.
+- **Key Features**: Inherent flame-retardant properties (high chlorine content); Excellent oil, fuel, and industrial grease resistance; Outstanding ozone and atmospheric weather resistance; Flexible and easy to fabricate around complex corners
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 8.0 MPa
+  - Elongation at Break: ≥ 300%
+  - Oil Resistance (No. 3 Oil, 24h): Volume change ≤ 15%
+
+### MZ-CAT-16: EVA/ECB Tunnel & Underground Waterproof Sheet
+- **Category**: Polymer & HDPE Pre-Applied
+- **Execution Standards**: GB 18173.1-2012 / TB/T 3360.1-2014
+- **Nominal Thickness / Spec**: 1.0mm, 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: 2.0m / 3.0m × 20m / 30m
+- **Overview**: Ethylene Vinyl Acetate / Ethylene Copolymer Bitumen sheet engineered specifically for tunnel lining and underground civil engineering.
+- **Applications**: High-speed rail tunnels, highway mountain tunnels, culverts, subway stations, underground vaults.
+- **Key Features**: High flexibility allows tight contouring to irregular shotcrete surfaces; Compatible with signal layer / dual-track hot-wedge testing channels; Superior resistance to microbial attack and subterranean root pressure; Fast installation with thermal fixing washers
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 16 MPa
+  - Elongation: ≥ 550%
+  - Puncture Resistance: ≥ 400 N
+
+### MZ-CAT-17: Single-Component Moisture-Curing Polyurethane (PU) Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB/T 19250-2013 (Type I/II/III) / ASTM C836
+- **Nominal Thickness / Spec**: Applied at 1.5mm - 2.0mm dry film (1.8 - 2.4 kg/m²)
+- **Roll / Package Dimensions**: 20 kg / 25 kg Metal Drum
+- **Overview**: High-solids elastomeric polyurethane liquid coating that reacts with ambient moisture to form a tough, seamless, rubber-like waterproof membrane.
+- **Applications**: Balconies, flat roofs, bathrooms, basements, podium decks, bridge piers, non-exposed slabs.
+- **Key Features**: Ready-to-use direct application without on-site ratio mixing errors; Exceptional elasticity (≥ 450%) and tensile strength (≥ 2.4 MPa); Forms a 100% seamless membrane around complex penetrations and drains; High solids content (≥ 85%), low VOC, and excellent water ponding resistance
+- **Technical Parameters**:
+  - Solids Content: ≥ 85%
+  - Tensile Strength: ≥ 2.45 MPa
+  - Elongation at Break: ≥ 450%
+  - Low Temp Flexibility: -35°C (Type II)
+  - Water Impermeability (0.3 MPa, 30min): Watertight
+
+### MZ-CAT-18: Two-Component Polyurethane Waterproof Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB/T 19250-2013 Type I/II
+- **Nominal Thickness / Spec**: Applied at 1.5mm - 2.0mm
+- **Roll / Package Dimensions**: Set of 30 kg (Part A: 10 kg + Part B: 20 kg)
+- **Overview**: Fast chemical-curing two-pack polyurethane system (Isocyanate prepolymer + Polyol blend) for thick heavy-duty waterproof elastomeric layers.
+- **Applications**: Underground basements, water reservoirs, large infrastructure, industrial flooring undercoats.
+- **Key Features**: Fast curing speed independent of ambient humidity levels; High film-build capability in single coats without blistering; Superior chemical, oil, and alkali resistance; High mechanical strength and puncture resistance
+- **Technical Parameters**:
+  - Mixing Ratio (A:B): 1 : 2 by weight
+  - Tensile Strength: ≥ 2.0 MPa (I) / ≥ 3.0 MPa (II)
+  - Elongation at Break: ≥ 450%
+
+### MZ-CAT-19: JS Polymer Cementitious Elastomeric Waterproof Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB/T 23445-2009 (Type I/II/III) / JC 1066-2008
+- **Nominal Thickness / Spec**: 1.5mm - 2.0mm (1.8 - 2.5 kg/m² total)
+- **Roll / Package Dimensions**: Set of 20 kg / 50 kg (Liquid Polymer + Dry Powder)
+- **Overview**: Two-pack flexible waterproof coating combining premium acrylic copolymer emulsion and high-grade Portland cement with active inorganic additives.
+- **Applications**: Bathrooms, kitchens, balconies, drinking water tanks, exterior walls, basements.
+- **Key Features**: Applicable directly on damp (dry-free) concrete substrates; Water-based, non-toxic, odorless: 100% green and certified for drinking water; Direct tile adhesion over cured membrane without bonding agents; Available grades: Type I (High Elasticity for roofs), Type II (General), Type III (Tile backing)
+- **Technical Parameters**:
+  - Type I Elongation / Tensile: ≥ 200% / ≥ 1.2 MPa
+  - Type II Elongation / Tensile: ≥ 80% / ≥ 1.8 MPa
+  - Adhesion to Damp Concrete: ≥ 1.0 MPa
+
+### MZ-CAT-20: Acrylic High-Elastic Metal Roofing Waterproof Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: JG/T 375-2012 / ASTM D6083
+- **Nominal Thickness / Spec**: 1.0mm - 1.5mm (Basecoat + Fabric + Topcoat system)
+- **Roll / Package Dimensions**: 20 kg / 25 kg Plastic Pail
+- **Overview**: Pure acrylic elastomeric emulsion system reinforced with stitch-bonded polyester fabric, specifically engineered for corrugated metal roofs.
+- **Applications**: Corrugated steel roofs, metal lap seams, ridge caps, flashing gutters, fastener sealings.
+- **Key Features**: Outstanding UV and thermal reflection (> 85%), reducing roof surface temps by 15-20°C; 350% elastic elongation accommodates metal thermal expansion and vibration; Excellent adhesion to rusted steel, galvanized sheets, aluminum, and paints; 10-year proven outdoor weather durability without chalking
+- **Technical Parameters**:
+  - Solar Reflectance: ≥ 85% (Bright White)
+  - Tensile Strength: ≥ 1.5 MPa
+  - Elongation: ≥ 300%
+  - Low Temp Flexibility: -20°C
+
+### MZ-CAT-21: K11 Polymer Waterproof Slurry (Flexible / General)
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: JC/T 2090-2011
+- **Nominal Thickness / Spec**: 1.2mm - 1.5mm
+- **Roll / Package Dimensions**: 20 kg set / 25 kg set (Liquid + Powder)
+- **Overview**: Two-component polymer-modified cement slurry that penetrates microscopic concrete pores while creating a tough waterproof surface barrier.
+- **Applications**: Toilets, shower rooms, kitchens, basement walls, swimming pools, retaining walls.
+- **Key Features**: Dual action: crystallization penetration into capillaries + flexible surface barrier; High positive and negative hydrostatic pressure resistance; Forms an integral part of concrete substrate, will not debond or delaminate; Ideal substrate foundation for subsequent ceramic tile tiling
+- **Technical Parameters**:
+  - Flexural Adhesion: ≥ 1.2 MPa
+  - Water Impermeability (Positive): ≥ 0.8 MPa
+  - Water Impermeability (Negative): ≥ 0.4 MPa
+
+### MZ-CAT-22: Cementitious Capillary Crystalline Waterproofing (CCCW)
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB 18445-2012 / ACI 212.3R-10
+- **Nominal Thickness / Spec**: Applied as slurry coat (1.2 - 1.5 kg/m²) or Dry-Shake / Admixture
+- **Roll / Package Dimensions**: 25 kg Valve Paper Bag / Plastic Drum
+- **Overview**: Active chemical crystalline powder that reacts with moisture and unhydrated cement to grow insoluble dendritic crystals deep inside concrete capillaries.
+- **Applications**: Tunnels, dams, subway stations, marine docks, water reservoirs, elevator pits.
+- **Key Features**: Self-healing mechanism: reactivates whenever water appears to seal micro-cracks ≤ 0.4mm; Penetrates deep into concrete matrix (> 50mm over 12 months); Withstands extreme hydrostatic pressure (> 1.2 MPa); Does not require protection board against backfill damage
+- **Technical Parameters**:
+  - Crack Self-Healing Ability: Seals cracks up to 0.4 mm width
+  - Hydrostatic Pressure Resistance: ≥ 1.2 MPa (120 m water head)
+  - Depth of Crystal Penetration: > 50 mm
+
+### MZ-CAT-23: Transparent Polyurethane Waterproof Sealer
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: Enterprise Standard / JC/T 984
+- **Nominal Thickness / Spec**: 0.2mm - 0.4mm (2 - 3 coats, 0.3 - 0.5 kg/m²)
+- **Roll / Package Dimensions**: 1 kg, 5 kg, 10 kg, 20 kg Plastic Can
+- **Overview**: Non-yellowing crystal-clear aliphatic polyurethane liquid sealant designed for direct repair over existing tiles, marble, and glass mosaics without demolition.
+- **Applications**: Balconies with tiles, external wall mosaic leaks, glass roofs, bathrooms, marble facades.
+- **Key Features**: 100% transparent and glossy: preserves original tile appearance and color; Aliphatic UV-stable polymer: zero yellowing under prolonged sunlight; High abrasion and foot-traffic wear resistance; Simple roller / brush application directly over existing glazed tiles and grout
+- **Technical Parameters**:
+  - Optical Clarity: ≥ 95% Light Transmittance (Crystal Clear)
+  - UV Resistance (1000h): No yellowing, ΔE < 1.0
+  - Tack-Free Time: 2 - 4 hours at 25°C
+
+### MZ-CAT-24: Non-Curing Rubber Bitumen Waterproof Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: JC/T 2428-2017
+- **Nominal Thickness / Spec**: 1.5mm - 2.0mm (Composite with membrane)
+- **Roll / Package Dimensions**: 20 kg / 200 kg Metal Drum
+- **Overview**: High-performance hot-melt rubber modified bitumen compound that remains perpetually paste-like, self-healing, and viscous over its entire lifespan.
+- **Applications**: Composite waterproofing systems (Non-curing + SBS/HDPE membrane) for basements, subway stations, podium roofs.
+- **Key Features**: Never cures: maintains permanent flexible paste state (zero fatigue failure); Instant self-healing against punctures and structural cracking movements; Outstanding bond strength to both concrete substrate and top bitumen/polymer membranes; Can be hot-sprayed or squeegeed at 130°C - 150°C
+- **Technical Parameters**:
+  - Non-Volatile Content: ≥ 99%
+  - Self-Healing Property: Instant re-closure of 2mm puncture
+  - Heat Resistance: 65°C no sliding
+  - Low Temp Flexibility: -20°C
+
+### MZ-CAT-25: Spray Applied Polyurea Elastomer Waterproof Coating
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB/T 23446-2009 / ASTM D822
+- **Nominal Thickness / Spec**: 1.5mm - 3.0mm
+- **Roll / Package Dimensions**: Set of 420 kg (Part A: 220 kg + Part B: 200 kg drum)
+- **Overview**: Two-component 100% solid pure polyurea elastomer processed via high-pressure plural component spray equipment, curing within 15 seconds.
+- **Applications**: High-speed rail concrete decks, stadium seating, theme park water rides, mining tanks, secondary containment.
+- **Key Features**: Ultra-fast curing: tack-free in 15 seconds, walkable in 10 minutes; Extreme tensile strength (≥ 16 MPa) and abrasion resistance; 100% solids, zero VOC, zero solvents, zero catalysts; Seamless lining for chemical resistance, blast mitigation, and waterproofing
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 16.0 MPa
+  - Elongation at Break: ≥ 350%
+  - Gel Time: 5 - 15 seconds
+  - Taber Abrasion (1000g, 1000r): ≤ 25 mg
+
+### MZ-CAT-26: Fast-Setting Hydrophobic Water Plug / Leak Stopper
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: GB 23440-2009 (Type I Fast Setting / Type II Instant Plug)
+- **Nominal Thickness / Spec**: Spot plugging / Mortar patch
+- **Roll / Package Dimensions**: 5 kg, 25 kg Bag / Plastic Drum
+- **Overview**: Rapid hardening inorganic hydraulic cementitious compound that sets in 60-90 seconds to instantly stop active water gushing under pressure.
+- **Applications**: Active gushing leaks in basements, elevator pits, concrete cracks, pipe joints, tunnels.
+- **Key Features**: Initial set in 1 - 2 minutes, final hard set in 3 - 5 minutes; Stops high-pressure active running water leaks instantaneously; High early compressive strength (> 15 MPa in 1 hour); Non-toxic, safe for drinking water pipelines and tanks
+- **Technical Parameters**:
+  - Initial Setting Time: 60 - 90 seconds
+  - 1-Hour Compressive Strength: ≥ 15.0 MPa
+  - 3-Day Compressive Strength: ≥ 30.0 MPa
+
+### MZ-CAT-27: Water-Based Polyurethane Polymer Waterproof Emulsion
+- **Category**: Liquid Coatings & Slurry
+- **Execution Standards**: JC/T 1017-2006
+- **Nominal Thickness / Spec**: 1.2mm - 1.5mm
+- **Roll / Package Dimensions**: 20 kg / 25 kg Pail
+- **Overview**: Eco-friendly aqueous polyurethane dispersion coating with high tensile elasticity, zero toxic solvents, and exceptional wet-substrate adhesion.
+- **Applications**: Interior bathroom walls, lightweight partition walls, wooden structures, eco-friendly buildings.
+- **Key Features**: Water-based green formulation with near-zero VOC; High film elasticity and resilient recovery; Safe and non-flammable storage and transport; Excellent bonding to wood, gypsum board, concrete, and lightweight blocks
+- **Technical Parameters**:
+  - Tensile Strength: ≥ 1.8 MPa
+  - Elongation at Break: ≥ 350%
+  - Solids Content: ≥ 65%
+
+### MZ-CAT-28: Aluminum Foil Reinforced Butyl Waterproof Flashing Tape
+- **Category**: Flashing & Butyl Tapes
+- **Execution Standards**: JC/T 942-2004 / ASTM C771
+- **Nominal Thickness / Spec**: 1.0mm, 1.2mm, 1.5mm, 2.0mm
+- **Roll / Package Dimensions**: Width: 5cm, 10cm, 15cm, 20cm, 30cm, 100cm; Length: 5m, 10m
+- **Overview**: Pure butyl rubber adhesive compounded onto heavy-duty embossed aluminum/foil facing for instant, permanent, weather-resistant flashing repairs.
+- **Applications**: Metal roof cracks, flashing valleys, sunroom joints, pipe penetrations, RV / camper roofs, gutter leaks.
+- **Key Features**: Reflective metallic aluminum foil provides 100% UV and weather shielding; High-tack butyl compound bonds instantly without heating or primers; Maintains flexibility from -40°C to +100°C without flowing or embrittlement; Surface finishes: Bright Aluminum, Plaid Embossed Foil, PET Film, Lead Look
+- **Technical Parameters**:
+  - Backing Material: Pure Aluminum Foil / Reinforced PET Foil
+  - Peel Strength (to Steel/Alu): ≥ 8.0 N/cm
+  - Temperature Resistance: -40°C to +100°C
+  - Solids Content: 100% (Solvent Free)
+
+### MZ-CAT-29: Double-Sided Butyl Rubber Sealing Joint Tape
+- **Category**: Flashing & Butyl Tapes
+- **Execution Standards**: JC/T 942-2004
+- **Nominal Thickness / Spec**: 1.0mm, 1.5mm, 2.0mm, 3.0mm; Width: 10mm - 100mm
+- **Roll / Package Dimensions**: 10m, 15m, 20m / roll
+- **Overview**: High-cohesion double-sided butyl bonding tape designed for watertight lap sealing between metal panels, PC sunsheets, and membrane splices.
+- **Applications**: Metal building lap joints, PC sunshine board installation, windshield sealing, membrane edge splicing.
+- **Key Features**: Double-sided aggressive tack for hidden compression joint sealing; Compensates for joint movement, thermal expansion, and mechanical vibrations; Impermeable to water, gases, and air leakage; Easy release silicone paper liner for fast assembly line installation
+- **Technical Parameters**:
+  - Adhesion (Steel to Steel): ≥ 10 N/cm
+  - Shear Strength: ≥ 25 N/cm²
+  - Elongation: ≥ 400%
+
+### MZ-CAT-30: Heavy-Duty Marine Hatch Cover Sealing Tape
+- **Category**: Flashing & Butyl Tapes
+- **Execution Standards**: IMO Marine Standards / ISO 17338
+- **Nominal Thickness / Spec**: 2.0mm, 3.0mm; Width: 100mm, 150mm
+- **Roll / Package Dimensions**: 20m / roll (Packed in export marine carton)
+- **Overview**: Heavy-gauge bituminous rubber strip backed with reinforced woven polyethylene fabric for marine cargo ship hatch cover weatherproofing.
+- **Applications**: Cargo ship hatch covers, barge seams, marine container repair, offshore platform joints.
+- **Key Features**: Withstands high seas, heavy wave wash, and extreme marine salt fog; Flexible down to -20°C and heat resistant up to +80°C; Tested and approved for ocean-going bulk carriers and container vessels; Leaves minimal residue on steel decks during removal
+- **Technical Parameters**:
+  - Adhesion to Steel (at 20°C): ≥ 12 N/cm
+  - Hydrostatic Head: Watertight under 2 bar dynamic water impact
+  - Temperature Range: -20°C to +80°C
+
+### MZ-CAT-31: Bituminous Damp Proof Course (DPC) Strip
+- **Category**: Flashing & Butyl Tapes
+- **Execution Standards**: BS 6398 / EN 14909 / GB 18173.1
+- **Nominal Thickness / Spec**: 0.5mm, 0.8mm, 1.0mm, 1.2mm
+- **Roll / Package Dimensions**: Width: 100mm, 150mm, 225mm, 300mm, 450mm, 900mm; Length: 30m
+- **Overview**: Extruded bitumen/polyethylene barrier strip installed in masonry cavity walls to block rising damp from sub-structures into living spaces.
+- **Applications**: Brick cavity walls, sill flashings, masonry foundations, door and window jambs.
+- **Key Features**: Prevents rising damp and capillary water penetration in brickwork and blockwork; Textured embossed surface provides superior mortar grip and slip keying; Will not extrude or deform under heavy masonry loads; Permanent lifespan matching the lifetime of the brick structure
+- **Technical Parameters**:
+  - Compressive Load Resistance: ≥ 2.5 N/mm² mortar bedding
+  - Low Temp Flexibility: -15°C
+  - Water Vapor Resistance: > 250 MNs/g
+
+### MZ-CAT-32: HDPE Impermeable Smooth / Textured Geomembrane
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: GRI-GM13 Standard / GB/T 17643-2011
+- **Nominal Thickness / Spec**: 0.5mm, 0.75mm, 1.0mm, 1.5mm, 2.0mm, 2.5mm, 3.0mm
+- **Roll / Package Dimensions**: Width: 4.0m - 8.0m; Length: 50m - 100m
+- **Overview**: Prime 100% virgin high-density polyethylene resin liner designed for landfill waste containment, mining tailings, and municipal artificial reservoirs.
+- **Applications**: Landfill basal liners and caps, mining heap leach pads, aquaculture ponds, tailings dams, sewage lagoons.
+- **Key Features**: Exceptional chemical resistance against aggressive acids, alkalis, and toxic leachates; High environmental stress crack resistance (ESCR > 500 hours); Available in smooth, single-textured, and double-textured friction surfaces; Wide roll widths (up to 8.0m) to minimize field fusion welding
+- **Technical Parameters**:
+  - Raw Material: 100% Virgin Resins + 2-3% Carbon Black
+  - Tensile Strength at Break: ≥ 27 MPa (Smooth, 1.5mm)
+  - Stress Crack Resistance (SP-NCTL): ≥ 500 hours
+  - Carbon Black Dispersion: Category 1 or 2
+
+### MZ-CAT-33: Non-Woven Needle-Punched Polyester (PET) Geotextile
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: GB/T 17638-2017 / ASTM D4632 / EN ISO 13426
+- **Nominal Thickness / Spec**: Weight: 100g/m² - 1000g/m²
+- **Roll / Package Dimensions**: Width: 2.0m - 6.0m; Length: 50m - 100m
+- **Overview**: Continuous filament / staple fiber needle-punched geotextile fabric engineered for filtration, soil separation, drainage, and geomembrane cushion protection.
+- **Applications**: Geomembrane protective cushions, road subgrade separation, railway ballast, river embankment filtration.
+- **Key Features**: High multi-directional hydraulic water permeability and soil particle retention; Superior puncture cushioning protects geomembranes against sharp stones; Rot-proof, chemical-resistant, and high CBR burst strength; Weights available from 100 gsm up to 1000 gsm
+- **Technical Parameters**:
+  - CBR Puncture Strength (300gsm): ≥ 2.5 kN
+  - Tensile Strength (300gsm): ≥ 9.5 kN/m
+  - Permeability Coefficient: 10⁻¹ to 10⁻³ cm/s
+
+### MZ-CAT-34: Composite Dimple Drainage Sheet with Geotextile
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: GB/T 18744-2008 / JC/T 2112
+- **Nominal Thickness / Spec**: Dimple Height: 8mm - 25mm; Sheet: 0.8mm - 1.5mm
+- **Roll / Package Dimensions**: Width: 2.0m / 3.0m; Length: 15m / 20m
+- **Overview**: High-impact polystyrene / HDPE vacuum-formed dimple core thermally bonded with non-woven filter geotextile for rapid underground water drainage.
+- **Applications**: Basement retaining wall drainage, podium roof garden drainage, subway tunnel linings, highway retaining walls.
+- **Key Features**: High compressive strength (> 200 - 400 kPa) resists heavy earth backfill pressure; Continuous air gap and drainage channel relieves hydrostatic pressure on walls; Bonded geotextile prevents soil fines from clogging the drainage core; Dimple heights: 8mm, 10mm, 12mm, 16mm, 20mm, 25mm
+- **Technical Parameters**:
+  - Compressive Strength: ≥ 250 kPa
+  - Flow Capacity (i=1.0): ≥ 2.5 L/(s·m)
+  - Geotextile Unit Weight: 100 - 150 gsm
+
+### MZ-CAT-35: Redispersible Polymer Powder (RDP / VAE) for Mortars
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: GB/T 29594-2013 / EN 12004
+- **Nominal Thickness / Spec**: Dry white free-flowing powder
+- **Roll / Package Dimensions**: 25 kg Multi-layer Paper Bag / 1000 kg Big Bag
+- **Overview**: Water-soluble vinyl acetate-ethylene copolymer powder manufactured by spray-drying, boosting flexible adhesion and water repellency in dry-mix mortars.
+- **Applications**: Waterproof tile adhesives, external thermal insulation (EIFS) basecoats, self-leveling floor screeds, repair mortars.
+- **Key Features**: Drastically improves flexural tensile bond strength on concrete, EPS, and tiles; Imparts flexibility, impact toughness, and crack resistance to dry mortars; Enhances water retention and workability during trowel application; Reduces water absorption coefficient of cementitious compounds
+- **Technical Parameters**:
+  - Polymer Base: Vinyl Acetate - Ethylene (VAE)
+  - Solids Content: ≥ 99%
+  - Minimum Film Forming Temp (MFFT): 0°C to +4°C
+  - Ash Content (1000°C): 10 ± 2%
+
+### MZ-CAT-36: Reinforcing Polyester Spunbond / Fiberglass Carrier Mat
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: JC/T 504-2007 / GB/T 18840
+- **Nominal Thickness / Spec**: 140 g/m² - 250 g/m²
+- **Roll / Package Dimensions**: Width: 1.0m - 1.05m; Length: 1000m - 2000m / Master Roll
+- **Overview**: Non-woven spunbond polyester and glass fiber scrim reinforcement carriers used in the continuous industrial production of modified bitumen membranes.
+- **Applications**: Internal carrier backbone for SBS, APP, self-adhesive bitumen, and polymer modified rolls.
+- **Key Features**: High tensile modulus and thermal stability through 200°C bitumen coating pans; Superior asphalt bitumen impregnation and absorption velocity; Uniform mass distribution ensures high burst and tear resistance; Available weights: 140 gsm, 160 gsm, 180 gsm, 200 gsm, 250 gsm
+- **Technical Parameters**:
+  - Tensile Strength (MD/CD): ≥ 550 / 450 N/50mm (180gsm)
+  - Heat Stability (200°C, 10min): Area shrinkage ≤ 1.5%
+  - Bitumen Absorption: ≥ 350%
+
+### MZ-CAT-37: Rapid Setting Leak Stopper Mortar & Grouting Compound
+- **Category**: Geosynthetics & Auxiliaries
+- **Execution Standards**: GB/T 50448-2015
+- **Nominal Thickness / Spec**: 10mm - 100mm per lift
+- **Roll / Package Dimensions**: 25 kg Moisture-Proof Bag
+- **Overview**: High-strength fast-curing expanding cementitious repair mortar for anchoring, crack stitching, and filling structural voids under heavy hydrostatic pressure.
+- **Applications**: Structural bolt anchoring, bridge bearing pads, machine base grouting, basement crack stitching.
+- **Key Features**: Micro-expansion properties eliminate curing shrinkage cracks; Ultra-high compressive strength reaching 50+ MPa at 28 days; High fluidity when grouted into complex honeycombed concrete voids; Corrosion-resistant and chloride-free formula protects embedded steel rebar
+- **Technical Parameters**:
+  - Initial Setting: 15 - 30 minutes
+  - 28-Day Compressive Strength: ≥ 55 MPa
+  - Expansion Rate: +0.02% to +0.05%
+
+## 3. International Standards Compliance Matrix
+### ASTM International
+- **ASTM D6878**: Specification for Thermoplastic Polyolefin (TPO) Sheet Roofing
+- **ASTM D4434**: Specification for Poly(Vinyl Chloride) Sheet Roofing
+- **ASTM D6164**: Specification for SBS-Modified Bituminous Sheet (Polyester)
+- **ASTM D6222**: Specification for APP-Modified Bituminous Sheet
+- **ASTM C836**: High Solids Content Polyurethane Waterproofing
+
+### European Standards (EN / CE)
+- **EN 13707**: Flexible sheets for waterproofing - Reinforced bitumen sheets for roof waterproofing
+- **EN 13956**: Flexible sheets for waterproofing - Plastic and rubber sheets for roof waterproofing
+- **EN 13859-1**: Flexible sheets for waterproofing - Underlays for discontinuous roofing
+- **EN 14909**: Flexible sheets for waterproofing - Plastic and rubber damp proof courses
+
+### Chinese National Standards (GB)
+- **GB 18242-2008**: Elastomer Modified Bituminous Sheet Materials (SBS)
+- **GB 27789-2011**: Thermoplastic Polyolefin (TPO) Waterproof Sheets
+- **GB 12952-2011**: Polyvinyl Chloride (PVC) Waterproof Sheets
+- **GB/T 23457-2017**: Pre-applied and Wet-installed Waterproof Membrane
+- **GB/T 19250-2013**: Polyurethane Waterproof Coating
+
+## 4. Technical & Export FAQ
+### How to choose between SBS and APP modified bitumen waterproof membranes for different climates?
+SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America.
+
+### What international standards do Mingze waterproofing membranes and coatings comply with?
+Our 37 waterproofing products are manufactured under ISO 9001:2015 and ISO 14001:2015 quality systems and tested to comply with ASTM D6164 (SBS), ASTM D6222 (APP), ASTM D6878 (TPO), ASTM D4434 (PVC), ASTM D5385 (Pre-applied HDPE), ASTM C836 (Polyurethane coating), European CE standards EN 13707 / EN 13956, and Chinese GB standards. Batch-specific COA, TDS, and MSDS documents are supplied with every shipment.
+
+### What is the typical container loading capacity and production lead time from Qingdao Port?
+Our 68,000 m² factory in Taitou Industrial Zone, Weifang is located 200 km (approx. 2.5 hours highway transit) from Qingdao Port. Standard production lead time for 20GP or 40HQ container orders is 7 to 10 days after order confirmation, with palletized export packaging.
+
+### Do you provide OEM private-label branding and free physical sample swatch boxes?
+Yes. We provide custom roll widths (1.0m / 2.0m), custom thickness, private-label PE film printing, and custom packaging for global distributors and contractors. Complimentary A4 physical membrane cuts and coating sample kits can be dispatched globally via DHL or FedEx for laboratory verification and project tender submittals.
+
+### Which waterproofing membrane is recommended for blindside underground basements and tunnels?
+For underground foundations, basements, and civil tunnels, we recommend Pre-Applied HDPE Self-Adhesive Waterproof Membrane (MZ-CAT-11, 1.2mm–2.0mm) compliant with ASTM D5385 and GB/T 23457, which forms a permanent chemical-mechanical bond with poured structural concrete to prevent lateral water migration, paired with EVA/ECB tunnel sheets (MZ-CAT-16) and HDPE dimple drainage boards (MZ-CAT-14 / MZ-CAT-34).
+
+### How can overseas buyers request a factory FOB or CIF quotation?
+Buyers can contact our export engineering desk directly via email at zhao@mzwaterproof.com (or zhao@mingzewaterproof.com) or via WhatsApp at +86 16658506707, stating the product model (e.g., MZ-CAT-01 to MZ-CAT-37), thickness, estimated quantity, and destination port. Formal FOB Qingdao or CIF quotations are issued within 24 hours.

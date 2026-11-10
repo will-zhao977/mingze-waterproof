@@ -6,7 +6,8 @@ import {
   CATEGORIES,
   PRODUCTS,
   SOLUTIONS,
-  WHY_CHOOSE_US
+  WHY_CHOOSE_US,
+  EXPORT_FAQS
 } from "./data";
 
 const HERO_SLIDES = [
@@ -110,6 +111,7 @@ function App() {
             <a href="#products">Products</a>
             <a href="#solutions">Solutions</a>
             <a href="#factory">Factory</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
           </nav>
 
@@ -257,7 +259,7 @@ function App() {
                   <div className="min-card-img">
                     <img
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.code} ${product.name} (${product.standards})`}
                       loading="lazy"
                     />
                   </div>
@@ -313,6 +315,34 @@ function App() {
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 5.5 Minimalist Technical & Export FAQ (GEO & SEO Structured Section) */}
+        <section id="faq" className="min-section-soft">
+          <div className="min-container">
+            <div className="min-sec-head">
+              <div>
+                <span className="min-tag">Technical &amp; Export FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                  Key specifications, ASTM / EN compliance, container loading, and direct export terms.
+                </p>
+              </div>
+            </div>
+
+            <div className="min-faq-list">
+              {EXPORT_FAQS.map((item, idx) => (
+                <details
+                  key={item.q}
+                  className="min-faq-item"
+                  open={idx === 0}
+                >
+                  <summary className="min-faq-q">{item.q}</summary>
+                  <p className="min-faq-a">{item.a}</p>
+                </details>
               ))}
             </div>
           </div>

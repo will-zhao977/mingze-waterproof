@@ -505,6 +505,64 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   4.5 Minimal FAQ Accordion (GEO & SEO Structured Section)
+   ========================================================================== */
+.min-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.min-faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 24px;
+  transition: border-color 0.15s ease;
+}
+
+.min-faq-item[open] {
+  border-color: var(--accent);
+}
+
+.min-faq-q {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.min-faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.min-faq-q::after {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.min-faq-item[open] .min-faq-q::after {
+  content: "−";
+}
+
+.min-faq-a {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.68;
+}
+
+/* ==========================================================================
    5. Minimal Contact & Direct Inquiry
    ========================================================================== */
 .min-contact-grid {

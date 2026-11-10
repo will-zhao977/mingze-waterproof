@@ -1086,3 +1086,31 @@ export const WHY_CHOOSE_US = [
     desc: "Custom roll dimensions, specialized thickness, private-label packaging, customized technical formulations (tropical/arctic grade), and full technical submittal packages (TDS, COA, MSDS)."
   }
 ];
+
+export const EXPORT_FAQS = [
+  {
+    q: "How to choose between SBS and APP modified bitumen waterproof membranes for different climates?",
+    a: "SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America."
+  },
+  {
+    q: "What international standards do Mingze waterproofing membranes and coatings comply with?",
+    a: "Our 37 waterproofing products are manufactured under ISO 9001:2015 and ISO 14001:2015 quality systems and tested to comply with ASTM D6164 (SBS), ASTM D6222 (APP), ASTM D6878 (TPO), ASTM D4434 (PVC), ASTM D5385 (Pre-applied HDPE), ASTM C836 (Polyurethane coating), European CE standards EN 13707 / EN 13956, and Chinese GB standards. Batch-specific COA, TDS, and MSDS documents are supplied with every shipment."
+  },
+  {
+    q: "What is the typical container loading capacity and production lead time from Qingdao Port?",
+    a: "Our 68,000 m² factory in Taitou Industrial Zone, Weifang is located 200 km (approx. 2.5 hours highway transit) from Qingdao Port. Standard production lead time for 20GP or 40HQ container orders is 7 to 10 days after order confirmation, with palletized export packaging."
+  },
+  {
+    q: "Do you provide OEM private-label branding and free physical sample swatch boxes?",
+    a: "Yes. We provide custom roll widths (1.0m / 2.0m), custom thickness, private-label PE film printing, and custom packaging for global distributors and contractors. Complimentary A4 physical membrane cuts and coating sample kits can be dispatched globally via DHL or FedEx for laboratory verification and project tender submittals."
+  },
+  {
+    q: "Which waterproofing membrane is recommended for blindside underground basements and tunnels?",
+    a: "For underground foundations, basements, and civil tunnels, we recommend Pre-Applied HDPE Self-Adhesive Waterproof Membrane (MZ-CAT-11, 1.2mm–2.0mm) compliant with ASTM D5385 and GB/T 23457, which forms a permanent chemical-mechanical bond with poured structural concrete to prevent lateral water migration, paired with EVA/ECB tunnel sheets (MZ-CAT-16) and HDPE dimple drainage boards (MZ-CAT-14 / MZ-CAT-34)."
+  },
+  {
+    q: "How can overseas buyers request a factory FOB or CIF quotation?",
+    a: "Buyers can contact our export engineering desk directly via email at zhao@mzwaterproof.com (or zhao@mingzewaterproof.com) or via WhatsApp at +86 16658506707, stating the product model (e.g., MZ-CAT-01 to MZ-CAT-37), thickness, estimated quantity, and destination port. Formal FOB Qingdao or CIF quotations are issued within 24 hours."
+  }
+];
+

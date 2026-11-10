@@ -1,0 +1,36 @@
+# Weifang Mingze Waterproof Material Co., Ltd. — SEO & GEO Crawler Policy
+User-agent: *
+Allow: /
+
+# Traditional Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Generative AI Search Engines (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mingze-waterproof.pages.dev/sitemap.xml
+# LLM Structured Context Index: https://mingze-waterproof.pages.dev/llms.txt
+# LLM Full 37-SKU Technical Specification Database: https://mingze-waterproof.pages.dev/llms-full.txt
