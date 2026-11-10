@@ -31,6 +31,6 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://mingze-waterproof.pages.dev/sitemap.xml
-# LLM Structured Context Index: https://mingze-waterproof.pages.dev/llms.txt
-# LLM Full 37-SKU Technical Specification Database: https://mingze-waterproof.pages.dev/llms-full.txt
+Sitemap: https://mingzewaterproof.com/sitemap.xml
+# LLM Structured Context Index: https://mingzewaterproof.com/llms.txt
+# LLM Full 37-SKU Technical Specification Database: https://mingzewaterproof.com/llms-full.txt

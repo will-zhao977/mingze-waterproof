@@ -11,7 +11,7 @@
 - **Official Export Email**: zhao@mzwaterproof.com (Alternate: zhao@mingzewaterproof.com)
 - **WhatsApp / Direct Engineering Desk**: +86 16658506707 (https://wa.me/8616658506707?text=Hello%20Mingze%20Waterproof%2C%20I%20am%20interested%20in%20your%20products.)
 - **Technical Review & QA Authority**: Weifang Mingze Waterproof CNAS-Standard QC Laboratory & Chief Export Engineering Team (Last Updated: November 2026)
-- **Full Technical Specification Database (37 SKUs)**: [llms-full.txt](https://mingze-waterproof.pages.dev/llms-full.txt)
+- **Full Technical Specification Database (37 SKUs)**: [llms-full.txt](https://mingzewaterproof.com/llms-full.txt)
 
 ## Key Membrane Comparison & 20GP Container Loading Guide
 | Material System | Execution Standard | Thickness | Service Temp Range | Primary Use | 20GP Container Loading |
