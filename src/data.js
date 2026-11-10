@@ -1090,15 +1090,15 @@ export const WHY_CHOOSE_US = [
 export const EXPORT_FAQS = [
   {
     q: "How to choose between SBS and APP modified bitumen waterproof membranes for different climates?",
-    a: "SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America."
+    a: "SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C and ≥40% elongation, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America."
+  },
+  {
+    q: "How many rolls of 3mm or 4mm waterproof membrane fit in a 20GP export container?",
+    a: "For standard 1m × 10m modified bitumen rolls palletized at our Weifang factory: a 20GP container loads approximately 620–650 rolls (6,200–6,500 m²) of 3.0mm SBS/APP membrane, or 480–500 rolls (4,800–5,000 m²) of 4.0mm SBS/APP membrane. For 1.2mm–1.5mm Pre-Applied HDPE or TPO membranes (2m × 20m rolls), a 20GP container loads approximately 14,000–18,000 m². Standard lead time to Qingdao Port (200 km) is 7–10 days."
   },
   {
     q: "What international standards do Mingze waterproofing membranes and coatings comply with?",
     a: "Our 37 waterproofing products are manufactured under ISO 9001:2015 and ISO 14001:2015 quality systems and tested to comply with ASTM D6164 (SBS), ASTM D6222 (APP), ASTM D6878 (TPO), ASTM D4434 (PVC), ASTM D5385 (Pre-applied HDPE), ASTM C836 (Polyurethane coating), European CE standards EN 13707 / EN 13956, and Chinese GB standards. Batch-specific COA, TDS, and MSDS documents are supplied with every shipment."
-  },
-  {
-    q: "What is the typical container loading capacity and production lead time from Qingdao Port?",
-    a: "Our 68,000 m² factory in Taitou Industrial Zone, Weifang is located 200 km (approx. 2.5 hours highway transit) from Qingdao Port. Standard production lead time for 20GP or 40HQ container orders is 7 to 10 days after order confirmation, with palletized export packaging."
   },
   {
     q: "Do you provide OEM private-label branding and free physical sample swatch boxes?",
@@ -1113,4 +1113,56 @@ export const EXPORT_FAQS = [
     a: "Buyers can contact our export engineering desk directly via email at zhao@mzwaterproof.com (or zhao@mingzewaterproof.com) or via WhatsApp at +86 16658506707, stating the product model (e.g., MZ-CAT-01 to MZ-CAT-37), thickness, estimated quantity, and destination port. Formal FOB Qingdao or CIF quotations are issued within 24 hours."
   }
 ];
+
+export const COMPARISON_MATRIX = [
+  {
+    system: "SBS Modified Bitumen (MZ-CAT-01)",
+    standard: "ASTM D6164 / EN 13707 / GB 18242",
+    thickness: "3.0mm / 4.0mm / 5.0mm",
+    tempRange: "-25°C to +90°C (Cold & Temperate)",
+    application: "Roofs, Basements, Bridges (Torch-On)",
+    loading20GP: "3mm: ~6,400 m² | 4mm: ~4,900 m²"
+  },
+  {
+    system: "APP Modified Bitumen (MZ-CAT-02)",
+    standard: "ASTM D6222 / EN 13707 / GB 18243",
+    thickness: "3.0mm / 4.0mm / 5.0mm",
+    tempRange: "-10°C to +130°C (Tropical & High UV)",
+    application: "Exposed Roofs, Highway Bridges",
+    loading20GP: "3mm: ~6,400 m² | 4mm: ~4,900 m²"
+  },
+  {
+    system: "Pre-Applied HDPE (MZ-CAT-11)",
+    standard: "ASTM D5385 / GB/T 23457 (Type P)",
+    thickness: "1.2mm / 1.5mm / 2.0mm",
+    tempRange: "-30°C to +80°C (70m Hydrostatic Head)",
+    application: "Blindside Basements, Subways, Tunnels",
+    loading20GP: "1.2mm: ~18,000 m² | 1.5mm: ~14,500 m²"
+  },
+  {
+    system: "TPO Single-Ply Sheet (MZ-CAT-08)",
+    standard: "ASTM D6878 / EN 13956 / GB 27789",
+    thickness: "1.2mm / 1.5mm / 1.8mm / 2.0mm",
+    tempRange: "-40°C to +115°C (High SRI Cool Roof)",
+    application: "Exposed Steel & Concrete Industrial Roofs",
+    loading20GP: "1.2mm: ~16,000 m² | 1.5mm: ~12,800 m²"
+  },
+  {
+    system: "PVC Single-Ply Sheet (MZ-CAT-09)",
+    standard: "ASTM D4434 / EN 13956 / GB 12952",
+    thickness: "1.2mm / 1.5mm / 1.8mm / 2.0mm",
+    tempRange: "-25°C to +95°C (Chemical Resistant)",
+    application: "Commercial Flat Roofs, Green Roofs, Tunnels",
+    loading20GP: "1.2mm: ~15,000 m² | 1.5mm: ~12,000 m²"
+  },
+  {
+    system: "PU Waterproof Coating (MZ-CAT-17/18)",
+    standard: "ASTM C836 / GB/T 19250",
+    thickness: "1.5mm – 2.0mm Dry Film (≥450% Elongation)",
+    tempRange: "-35°C to +90°C (Seamless Liquid Film)",
+    application: "Wet Rooms, Balconies, Complex Roof Details",
+    loading20GP: "20kg Pails: ~900 Pails (18 Metric Tons)"
+  }
+];
+
 

@@ -7,7 +7,8 @@ import {
   PRODUCTS,
   SOLUTIONS,
   WHY_CHOOSE_US,
-  EXPORT_FAQS
+  EXPORT_FAQS,
+  COMPARISON_MATRIX
 } from "./data";
 
 const HERO_SLIDES = [
@@ -295,6 +296,40 @@ function App() {
                 </div>
               ))}
             </div>
+
+            <div className="min-table-wrap">
+              <table className="min-compare-table">
+                <caption>
+                  <span className="sr-only">
+                    Waterproofing Membrane Technical Comparison and 20GP Container Loading Guide
+                  </span>
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Material System</th>
+                    <th>Execution Standard</th>
+                    <th>Thickness</th>
+                    <th>Service Temp Range</th>
+                    <th>Primary Engineering Use</th>
+                    <th>20GP Container Loading</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISON_MATRIX.map((row) => (
+                    <tr key={row.system}>
+                      <td>
+                        <strong>{row.system}</strong>
+                      </td>
+                      <td>{row.standard}</td>
+                      <td>{row.thickness}</td>
+                      <td>{row.tempRange}</td>
+                      <td>{row.application}</td>
+                      <td>{row.loading20GP}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
@@ -344,6 +379,15 @@ function App() {
                   <p className="min-faq-a">{item.a}</p>
                 </details>
               ))}
+            </div>
+
+            <div className="min-eeat-bar">
+              <span>
+                <strong>Technical Verification:</strong> Compiled &amp; reviewed by Weifang Mingze Waterproof CNAS-Standard QC Laboratory &amp; Chief Export Engineering Team (ISO 9001:2015 · CE EN 13707 / EN 13956).
+              </span>
+              <span>
+                <strong>Last Updated:</strong> November 2026 · Direct Factory Dossier
+              </span>
             </div>
           </div>
         </section>

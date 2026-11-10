@@ -1,15 +1,27 @@
 # Weifang Mingze Waterproof Material Co., Ltd. (潍坊明泽防水材料有限公司)
 
-> Direct industrial manufacturer and global exporter of 37 standardized waterproofing membranes, liquid coatings, butyl tapes, and geosynthetics in Taitou Industrial Zone, Weifang, Shandong, China (Established undefined, 68,000 m² facility, 50,000,000+ m² annual membrane capacity, 200 km from Qingdao Port).
+> Direct industrial manufacturer and global exporter of 37 standardized waterproofing membranes, liquid coatings, butyl tapes, and geosynthetics in Taitou Industrial Zone, Weifang, Shandong, China (Established 2008, 68,000 m² facility, 50,000,000+ m² annual membrane capacity, 200 km from Qingdao Port).
 
 ## Key Corporate & Export Facts
 - **Manufacturer Legal Name**: Weifang Mingze Waterproof Material Co., Ltd. (潍坊明泽防水材料有限公司)
+- **Established**: 2008
 - **Manufacturing Base**: Taitou Industrial Zone, Shouguang, Weifang City, Shandong Province, China
 - **Export Loading Port**: Qingdao Port (200 km / 2.5h Highway Transit)
 - **Quality & Product Certifications**: ISO9001:2015, ISO14001:2015, ISO45001:2018, CE (EN 13707 / EN 13956), ASTM Compliance
 - **Official Export Email**: zhao@mzwaterproof.com (Alternate: zhao@mingzewaterproof.com)
 - **WhatsApp / Direct Engineering Desk**: +86 16658506707 (https://wa.me/8616658506707?text=Hello%20Mingze%20Waterproof%2C%20I%20am%20interested%20in%20your%20products.)
+- **Technical Review & QA Authority**: Weifang Mingze Waterproof CNAS-Standard QC Laboratory & Chief Export Engineering Team (Last Updated: November 2026)
 - **Full Technical Specification Database (37 SKUs)**: [llms-full.txt](https://mingze-waterproof.pages.dev/llms-full.txt)
+
+## Key Membrane Comparison & 20GP Container Loading Guide
+| Material System | Execution Standard | Thickness | Service Temp Range | Primary Use | 20GP Container Loading |
+|---|---|---|---|---|---|
+| SBS Modified Bitumen (MZ-CAT-01) | ASTM D6164 / EN 13707 / GB 18242 | 3.0mm / 4.0mm / 5.0mm | -25°C to +90°C (Cold & Temperate) | Roofs, Basements, Bridges (Torch-On) | 3mm: ~6,400 m² | 4mm: ~4,900 m² |
+| APP Modified Bitumen (MZ-CAT-02) | ASTM D6222 / EN 13707 / GB 18243 | 3.0mm / 4.0mm / 5.0mm | -10°C to +130°C (Tropical & High UV) | Exposed Roofs, Highway Bridges | 3mm: ~6,400 m² | 4mm: ~4,900 m² |
+| Pre-Applied HDPE (MZ-CAT-11) | ASTM D5385 / GB/T 23457 (Type P) | 1.2mm / 1.5mm / 2.0mm | -30°C to +80°C (70m Hydrostatic Head) | Blindside Basements, Subways, Tunnels | 1.2mm: ~18,000 m² | 1.5mm: ~14,500 m² |
+| TPO Single-Ply Sheet (MZ-CAT-08) | ASTM D6878 / EN 13956 / GB 27789 | 1.2mm / 1.5mm / 1.8mm / 2.0mm | -40°C to +115°C (High SRI Cool Roof) | Exposed Steel & Concrete Industrial Roofs | 1.2mm: ~16,000 m² | 1.5mm: ~12,800 m² |
+| PVC Single-Ply Sheet (MZ-CAT-09) | ASTM D4434 / EN 13956 / GB 12952 | 1.2mm / 1.5mm / 1.8mm / 2.0mm | -25°C to +95°C (Chemical Resistant) | Commercial Flat Roofs, Green Roofs, Tunnels | 1.2mm: ~15,000 m² | 1.5mm: ~12,000 m² |
+| PU Waterproof Coating (MZ-CAT-17/18) | ASTM C836 / GB/T 19250 | 1.5mm – 2.0mm Dry Film (≥450% Elongation) | -35°C to +90°C (Seamless Liquid Film) | Wet Rooms, Balconies, Complex Roof Details | 20kg Pails: ~900 Pails (18 Metric Tons) |
 
 ## 5 Core Product Categories (37 Export SKUs)
 - **Modified Bitumen & Shingles** (7 SKUs): SBS/APP torch-applied, self-adhesive modified bitumen membranes, glass-fiber asphalt shingles, and synthetic underlayments for commercial, civil, and slope roofing.
@@ -65,13 +77,13 @@
 
 ## Frequently Asked Questions (B2B Procurement & Technical)
 ### How to choose between SBS and APP modified bitumen waterproof membranes for different climates?
-SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America.
+SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C and ≥40% elongation, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America.
+
+### How many rolls of 3mm or 4mm waterproof membrane fit in a 20GP export container?
+For standard 1m × 10m modified bitumen rolls palletized at our Weifang factory: a 20GP container loads approximately 620–650 rolls (6,200–6,500 m²) of 3.0mm SBS/APP membrane, or 480–500 rolls (4,800–5,000 m²) of 4.0mm SBS/APP membrane. For 1.2mm–1.5mm Pre-Applied HDPE or TPO membranes (2m × 20m rolls), a 20GP container loads approximately 14,000–18,000 m². Standard lead time to Qingdao Port (200 km) is 7–10 days.
 
 ### What international standards do Mingze waterproofing membranes and coatings comply with?
 Our 37 waterproofing products are manufactured under ISO 9001:2015 and ISO 14001:2015 quality systems and tested to comply with ASTM D6164 (SBS), ASTM D6222 (APP), ASTM D6878 (TPO), ASTM D4434 (PVC), ASTM D5385 (Pre-applied HDPE), ASTM C836 (Polyurethane coating), European CE standards EN 13707 / EN 13956, and Chinese GB standards. Batch-specific COA, TDS, and MSDS documents are supplied with every shipment.
-
-### What is the typical container loading capacity and production lead time from Qingdao Port?
-Our 68,000 m² factory in Taitou Industrial Zone, Weifang is located 200 km (approx. 2.5 hours highway transit) from Qingdao Port. Standard production lead time for 20GP or 40HQ container orders is 7 to 10 days after order confirmation, with palletized export packaging.
 
 ### Do you provide OEM private-label branding and free physical sample swatch boxes?
 Yes. We provide custom roll widths (1.0m / 2.0m), custom thickness, private-label PE film printing, and custom packaging for global distributors and contractors. Complimentary A4 physical membrane cuts and coating sample kits can be dispatched globally via DHL or FedEx for laboratory verification and project tender submittals.

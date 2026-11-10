@@ -563,6 +563,75 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   4.6 Minimal Comparison Table & E-E-A-T Credential Strip (GEO Optimization)
+   ========================================================================== */
+.min-table-wrap {
+  margin-top: 36px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.min-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.min-compare-table th,
+.min-compare-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.min-compare-table th {
+  background: var(--bg-soft);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.min-compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+.min-eeat-bar {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-sub);
+}
+
+.min-eeat-bar strong {
+  color: var(--text);
+}
+
+/* ==========================================================================
    5. Minimal Contact & Direct Inquiry
    ========================================================================== */
 .min-contact-grid {
