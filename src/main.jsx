@@ -41,6 +41,12 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  // Motion Prompt #150 (Scrollspy), #151 (Back-to-top), #160 (Loading button), #162 (Lightbox)
+  const [activeSection, setActiveSection] = useState("");
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   const [rfqForm, setRfqForm] = useState({
     company: "",
     email: "",
@@ -51,15 +57,47 @@ function App() {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  // Motion Prompt #159 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#159
+  const emailTrim = rfqForm.email.trim();
+  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrim);
+  const isEmailInvalid = emailTrim.length >= 2 && !isEmailValid;
+
   useEffect(() => {
     const onKeyDown = (e) => {
-      if (e.key === "Escape" && selectedProduct) {
-        setSelectedProduct(null);
+      if (e.key === "Escape") {
+        if (lightboxOpen) {
+          setLightboxOpen(false);
+        } else if (selectedProduct) {
+          setSelectedProduct(null);
+        }
       }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [selectedProduct]);
+  }, [selectedProduct, lightboxOpen]);
+
+  // Motion Prompt #150 (Scrollspy) & #151 (Back-to-top) scroll listener
+  useEffect(() => {
+    const sectionIds = ["products", "solutions", "factory", "faq", "contact"];
+    const onScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      setShowBackToTop(y > 140);
+      let current = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 130) {
+            current = id;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((item) => {
@@ -89,10 +127,15 @@ function App() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Motion Prompt #160 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#160
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!rfqForm.company.trim() || !rfqForm.email.trim()) return;
-    setSubmitted(true);
+    if (!rfqForm.company.trim() || !isEmailValid) return;
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 650);
   };
 
   return (
@@ -109,11 +152,36 @@ function App() {
           </a>
 
           <nav className="min-nav">
-            <a href="#products">Products</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#factory">Factory</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
+            <a
+              href="#products"
+              className={activeSection === "products" ? "mp-active" : ""}
+            >
+              Products
+            </a>
+            <a
+              href="#solutions"
+              className={activeSection === "solutions" ? "mp-active" : ""}
+            >
+              Solutions
+            </a>
+            <a
+              href="#factory"
+              className={activeSection === "factory" ? "mp-active" : ""}
+            >
+              Factory
+            </a>
+            <a
+              href="#faq"
+              className={activeSection === "faq" ? "mp-active" : ""}
+            >
+              FAQ
+            </a>
+            <a
+              href="#contact"
+              className={activeSection === "contact" ? "mp-active" : ""}
+            >
+              Contact
+            </a>
           </nav>
 
           <div className="min-header-right">
@@ -494,16 +562,43 @@ function App() {
                       </div>
                       <div className="min-field">
                         <label>Business Email *</label>
-                        <input
-                          type="email"
-                          required
-                          className="min-input"
-                          value={rfqForm.email}
-                          onChange={(e) =>
-                            setRfqForm({ ...rfqForm, email: e.target.value })
-                          }
-                          placeholder="name@company.com"
-                        />
+                        <div
+                          className={`mp-input-wrap ${
+                            isEmailInvalid
+                              ? "is-invalid"
+                              : isEmailValid
+                              ? "is-valid"
+                              : ""
+                          }`}
+                        >
+                          <input
+                            type="email"
+                            required
+                            className="min-input"
+                            value={rfqForm.email}
+                            onChange={(e) =>
+                              setRfqForm({ ...rfqForm, email: e.target.value })
+                            }
+                            placeholder="name@company.com"
+                          />
+                          {isEmailValid && (
+                            <span className="mp-valid-badge" aria-hidden="true">
+                              ✓
+                            </span>
+                          )}
+                        </div>
+                        {isEmailInvalid && (
+                          <div className="mp-inline-hint err">
+                            <span>!</span>
+                            <span>Invalid email format (e.g. name@company.com)</span>
+                          </div>
+                        )}
+                        {isEmailValid && (
+                          <div className="mp-inline-hint ok">
+                            <span>✓</span>
+                            <span>Valid business email</span>
+                          </div>
+                        )}
                       </div>
                     </div>
 
@@ -561,10 +656,20 @@ function App() {
 
                     <button
                       type="submit"
-                      className="min-btn min-btn-dark"
+                      disabled={isSubmitting}
+                      className={`min-btn min-btn-dark mp-submit-btn ${
+                        isSubmitting ? "is-loading" : ""
+                      }`}
                       style={{ width: "100%" }}
                     >
-                      Send Inquiry
+                      {isSubmitting ? (
+                        <>
+                          <span className="mp-spinner" aria-hidden="true" />
+                          <span>Preparing Inquiry...</span>
+                        </>
+                      ) : (
+                        "Send Inquiry"
+                      )}
                     </button>
                   </form>
                 )}
@@ -583,6 +688,16 @@ function App() {
           </span>
         </div>
       </footer>
+
+      {/* Motion Prompt #151: Back-to-top Button */}
+      <button
+        type="button"
+        aria-label="Back to top"
+        className={`mp-back-to-top ${showBackToTop ? "visible" : ""}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        ↑
+      </button>
 
       {/* Product Detail Modal */}
       {selectedProduct && (
@@ -608,18 +723,20 @@ function App() {
             </div>
 
             <div className="min-modal-grid">
-              <div
-                style={{
-                  background: "var(--bg-soft)",
-                  border: "1px solid var(--line)",
-                  borderRadius: "8px",
-                  padding: "16px"
-                }}
-              >
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                />
+              <div>
+                <div
+                  className="mp-modal-thumb"
+                  onClick={() => setLightboxOpen(true)}
+                  title="Click to open full-size lightbox (#162)"
+                >
+                  <img
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                  />
+                </div>
+                <span className="mp-zoom-caption">
+                  Click image to zoom ⤢
+                </span>
               </div>
               <div>
                 <p
@@ -693,6 +810,36 @@ function App() {
                 onClick={() => handleInquireProduct(selectedProduct)}
               >
                 Inquire This Product →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Motion Prompt #162: Full-Size Product Image Lightbox */}
+      {selectedProduct && lightboxOpen && (
+        <div
+          className="mp-lightbox-backdrop"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <div
+            className="mp-lightbox-stage"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedProduct.image}
+              alt={`${selectedProduct.code} ${selectedProduct.name}`}
+            />
+            <div className="mp-lightbox-bar">
+              <div>
+                <strong>{selectedProduct.code}</strong> · {selectedProduct.name}
+              </div>
+              <button
+                type="button"
+                className="min-btn min-btn-ghost"
+                onClick={() => setLightboxOpen(false)}
+              >
+                Close Lightbox ✕
               </button>
             </div>
           </div>
