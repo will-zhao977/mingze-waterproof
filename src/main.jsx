@@ -300,7 +300,7 @@ function App() {
             <div className="min-table-wrap">
               <table className="min-compare-table">
                 <caption>
-                  <span className="sr-only">
+                  <span className="min-visually-hidden">
                     Waterproofing Membrane Technical Comparison and 20GP Container Loading Guide
                   </span>
                 </caption>
