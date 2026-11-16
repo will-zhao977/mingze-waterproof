@@ -1,0 +1,2 @@
+# Enforce canonical apex domain (301 redirect from www to non-www)
+https://www.mingzewaterproof.com/* https://mingzewaterproof.com/:splat 301!
