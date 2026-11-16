@@ -5,12 +5,14 @@
 ## 1. Company Profile & Manufacturing Capacity
 - **Company**: Weifang Mingze Waterproof Material Co., Ltd. (潍坊明泽防水材料有限公司)
 - **Established**: 2008
-- **Factory Size**: undefined
+- **Factory Size**: 68,000 m²
 - **Annual Capacity**: 50,000,000+ m² Membrane | 25,000+ Tons Coatings
 - **Plant Address**: Taitou Industrial Zone, Shouguang, Weifang City, Shandong Province, China
 - **Seaport**: Qingdao Port (200 km / 2.5h Highway Transit)
 - **Email**: zhao@mzwaterproof.com / zhao@mingzewaterproof.com
 - **WhatsApp**: +86 16658506707
+- **Telephone**: +86-400-0563-996
+- **Certifications**: ISO9001:2015, ISO14001:2015, ISO45001:2018, CE (EN 13707 / EN 13956), ASTM Compliance
 
 ## 2. Key Membrane Comparison & 20GP Container Loading Guide
 | Material System | Execution Standard | Thickness | Service Temp Range | Primary Use | 20GP Container Loading |
@@ -22,13 +24,18 @@
 | PVC Single-Ply Sheet (MZ-CAT-09) | ASTM D4434 / EN 13956 / GB 12952 | 1.2mm / 1.5mm / 1.8mm / 2.0mm | -25°C to +95°C (Chemical Resistant) | Commercial Flat Roofs, Green Roofs, Tunnels | 1.2mm: ~15,000 m² | 1.5mm: ~12,000 m² |
 | PU Waterproof Coating (MZ-CAT-17/18) | ASTM C836 / GB/T 19250 | 1.5mm – 2.0mm Dry Film (≥450% Elongation) | -35°C to +90°C (Seamless Liquid Film) | Wet Rooms, Balconies, Complex Roof Details | 20kg Pails: ~900 Pails (18 Metric Tons) |
 
-## 3. Full 37-SKU Technical Specifications & Laboratory Parameters
+## 3. Published Engineering Selection & Container Procurement Guides
+- **[D1] [SBS vs. APP Modified Bitumen Membrane: Complete Climate Selection Guide (-25°C to +130°C)](https://mingzewaterproof.com/articles/sbs-vs-app-modified-bitumen-membrane-climate-guide/)** | Target SKUs: MZ-CAT-01, MZ-CAT-02, MZ-CAT-06 | Summary: Compare SBS vs APP modified bitumen membranes by temperature
+- **[D2] [How Many Rolls of 3mm & 4mm Bitumen Waterproof Membrane Fit in a 20GP Container? (FOB Qingdao Loading Table)](https://mingzewaterproof.com/articles/bitumen-waterproof-membrane-20gp-container-loading-guide/)** | Target SKUs: MZ-CAT-01, MZ-CAT-02, MZ-CAT-03, MZ-CAT-06, MZ-CAT-07 | Summary: Calculate 20GP container capacity for 3mm and 4mm bitumen waterproof membranes. Compare floor-loaded vs palletized roll counts, weights, and FOB Qingdao specs.
+
+## 4. Full 37-SKU Technical Specifications & Laboratory Parameters
 ### MZ-CAT-01: Elastomeric SBS Modified Bitumen Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-01
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB 18242-2008 / ASTM D6164 / EN 13707
 - **Nominal Thickness / Spec**: 3.0mm, 4.0mm, 5.0mm
 - **Roll / Package Dimensions**: 1.0m × 10m / roll
-- **Overview**: Premium polyester/fiberglass reinforced SBS torch-on membrane with unmatched low-temperature flexibility down to -25°C.
+- **Overview**: Polyester/fiberglass reinforced SBS torch-on membrane with verified low-temperature flexibility down to -25°C.
 - **Applications**: Commercial flat roofing, basements, podium decks, subways, bridge decks, cold region infrastructure.
 - **Key Features**: Low temperature flexibility down to -20°C / -25°C; High tensile strength and elongation (PY reinforcement); Excellent resistance to root puncture and cyclic thermal fatigue; Available in PE film, Fine Sand (S), Mineral Slate Granule (M) surfaces
 - **Technical Parameters**:
@@ -40,6 +47,7 @@
   - Water Impermeability: 0.3 MPa, 30 min watertight
 
 ### MZ-CAT-02: Plastomeric APP Modified Bitumen Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-02
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB 18243-2008 / ASTM D6222 / EN 13707
 - **Nominal Thickness / Spec**: 3.0mm, 4.0mm, 5.0mm
@@ -55,6 +63,7 @@
   - Elongation: ≥ 35%
 
 ### MZ-CAT-03: Self-Adhesive Polymer Modified Bitumen Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-03
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB 23441-2009 / ASTM D1970
 - **Nominal Thickness / Spec**: 1.5mm, 2.0mm, 3.0mm
@@ -69,6 +78,7 @@
   - Heat Resistance: 70°C, 2h no slide
 
 ### MZ-CAT-04: Architectural Fiberglass Asphalt Roofing Shingles
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-04
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB/T 20474-2015 / ASTM D3462 / EN 544
 - **Nominal Thickness / Spec**: 2.6mm - 5.3mm (Laminated)
@@ -83,6 +93,7 @@
   - Colors Available: Estate Gray, Desert Tan, Forest Green, Tuscan Red, Chateau Blue, Onyx Black
 
 ### MZ-CAT-05: Breathable Synthetic Roofing Underlayment
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-05
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: ASTM D226 / ASTM D4869 / EN 13859-1
 - **Nominal Thickness / Spec**: 0.45mm - 0.70mm (110 - 180 gsm)
@@ -96,6 +107,7 @@
   - Tensile Strength (MD/CD): ≥ 320 / 280 N/50mm
 
 ### MZ-CAT-06: Mineral Granule Surface SBS Cap Sheet Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-06
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB 18242-2008 / EN 13707 / ASTM D6164 Type I/II
 - **Nominal Thickness / Spec**: 4.0mm, 4.5mm, 5.0mm
@@ -109,6 +121,7 @@
   - Low Temp Flexibility: -25°C no cracks
 
 ### MZ-CAT-07: Root Puncture Resistant SBS Green Roof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-07
 - **Category**: Modified Bitumen & Shingles
 - **Execution Standards**: GB 18242 / FLL Root Resistance Tested / JC/T 1075-2008
 - **Nominal Thickness / Spec**: 4.0mm, 4.5mm
@@ -122,11 +135,12 @@
   - Hydrostatic Resistance: ≥ 0.3 MPa (30 min)
 
 ### MZ-CAT-08: Thermoplastic Polyolefin (TPO) Single-Ply Roofing Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-08
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB 27789-2011 / ASTM D6878 / EN 13956
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 1.8mm, 2.0mm
 - **Roll / Package Dimensions**: 2.0m × 20m / roll
-- **Overview**: State-of-the-art ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.
+- **Overview**: Ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.
 - **Applications**: Large-span industrial steel roofs, logistics hubs, airports, commercial shopping malls, data centers.
 - **Key Features**: High solar reflectance (SRI > 104) drastically lowers building cooling load; Plasticizer-free formulation ensures zero brittleness over 30+ year lifecycle; Hot-air welded seams creating monolithic joints stronger than the sheet itself; Available types: Internally Reinforced (P), Fleece-Backed (L), Homogeneous (H)
 - **Technical Parameters**:
@@ -137,6 +151,7 @@
   - Artificial Weathering (UV 2500h): No cracks, no crazing
 
 ### MZ-CAT-09: Polyvinyl Chloride (PVC) Commercial Single-Ply Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-09
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB 12952-2011 / ASTM D4434 Type II/III / EN 13956
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 1.8mm, 2.0mm
@@ -150,6 +165,7 @@
   - Low Temperature Bend: -25°C / -35°C no cracks
 
 ### MZ-CAT-10: Ethylene Propylene Diene Monomer (EPDM) Rubber Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-10
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB 18173.1-2012 / ASTM D4637 Type I
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
@@ -163,6 +179,7 @@
   - Ozone Resistance (200 pphm, 168h): No cracking
 
 ### MZ-CAT-11: Pre-Applied HDPE Fully-Bonded Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-11
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB/T 23457-2017 (Type P) / ASTM D5385
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
@@ -177,6 +194,7 @@
   - Lateral Water Tracking Resistance: 0.7 MPa, No lateral flow
 
 ### MZ-CAT-12: Cross-Laminated Film Self-Adhesive Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-12
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB/T 35467-2017 / GB 23441
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
@@ -190,6 +208,7 @@
   - Elongation: ≥ 200%
 
 ### MZ-CAT-13: Non-Bituminous Polymer Self-Adhesive Film Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-13
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB/T 23457-2017
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm
@@ -203,6 +222,7 @@
   - Low Temp Flexibility: -30°C
 
 ### MZ-CAT-14: T-Ribbed HDPE Concrete Protection Geomembrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-14
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GRI-GM13 / GB/T 17643
 - **Nominal Thickness / Spec**: 1.5mm, 2.0mm, 2.5mm, 3.0mm (Rib Height: 9.5mm)
@@ -216,6 +236,7 @@
   - Density: ≥ 0.940 g/cm³
 
 ### MZ-CAT-15: Chlorinated Polyethylene (CPE) Waterproof Membrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-15
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB 12953-2003
 - **Nominal Thickness / Spec**: 1.2mm, 1.5mm, 2.0mm
@@ -229,6 +250,7 @@
   - Oil Resistance (No. 3 Oil, 24h): Volume change ≤ 15%
 
 ### MZ-CAT-16: EVA/ECB Tunnel & Underground Waterproof Sheet
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-16
 - **Category**: Polymer & HDPE Pre-Applied
 - **Execution Standards**: GB 18173.1-2012 / TB/T 3360.1-2014
 - **Nominal Thickness / Spec**: 1.0mm, 1.2mm, 1.5mm, 2.0mm
@@ -242,6 +264,7 @@
   - Puncture Resistance: ≥ 400 N
 
 ### MZ-CAT-17: Single-Component Moisture-Curing Polyurethane (PU) Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-17
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB/T 19250-2013 (Type I/II/III) / ASTM C836
 - **Nominal Thickness / Spec**: Applied at 1.5mm - 2.0mm dry film (1.8 - 2.4 kg/m²)
@@ -257,6 +280,7 @@
   - Water Impermeability (0.3 MPa, 30min): Watertight
 
 ### MZ-CAT-18: Two-Component Polyurethane Waterproof Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-18
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB/T 19250-2013 Type I/II
 - **Nominal Thickness / Spec**: Applied at 1.5mm - 2.0mm
@@ -270,6 +294,7 @@
   - Elongation at Break: ≥ 450%
 
 ### MZ-CAT-19: JS Polymer Cementitious Elastomeric Waterproof Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-19
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB/T 23445-2009 (Type I/II/III) / JC 1066-2008
 - **Nominal Thickness / Spec**: 1.5mm - 2.0mm (1.8 - 2.5 kg/m² total)
@@ -283,6 +308,7 @@
   - Adhesion to Damp Concrete: ≥ 1.0 MPa
 
 ### MZ-CAT-20: Acrylic High-Elastic Metal Roofing Waterproof Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-20
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: JG/T 375-2012 / ASTM D6083
 - **Nominal Thickness / Spec**: 1.0mm - 1.5mm (Basecoat + Fabric + Topcoat system)
@@ -297,6 +323,7 @@
   - Low Temp Flexibility: -20°C
 
 ### MZ-CAT-21: K11 Polymer Waterproof Slurry (Flexible / General)
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-21
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: JC/T 2090-2011
 - **Nominal Thickness / Spec**: 1.2mm - 1.5mm
@@ -310,6 +337,7 @@
   - Water Impermeability (Negative): ≥ 0.4 MPa
 
 ### MZ-CAT-22: Cementitious Capillary Crystalline Waterproofing (CCCW)
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-22
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB 18445-2012 / ACI 212.3R-10
 - **Nominal Thickness / Spec**: Applied as slurry coat (1.2 - 1.5 kg/m²) or Dry-Shake / Admixture
@@ -323,6 +351,7 @@
   - Depth of Crystal Penetration: > 50 mm
 
 ### MZ-CAT-23: Transparent Polyurethane Waterproof Sealer
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-23
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: Enterprise Standard / JC/T 984
 - **Nominal Thickness / Spec**: 0.2mm - 0.4mm (2 - 3 coats, 0.3 - 0.5 kg/m²)
@@ -336,6 +365,7 @@
   - Tack-Free Time: 2 - 4 hours at 25°C
 
 ### MZ-CAT-24: Non-Curing Rubber Bitumen Waterproof Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-24
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: JC/T 2428-2017
 - **Nominal Thickness / Spec**: 1.5mm - 2.0mm (Composite with membrane)
@@ -350,6 +380,7 @@
   - Low Temp Flexibility: -20°C
 
 ### MZ-CAT-25: Spray Applied Polyurea Elastomer Waterproof Coating
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-25
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB/T 23446-2009 / ASTM D822
 - **Nominal Thickness / Spec**: 1.5mm - 3.0mm
@@ -364,6 +395,7 @@
   - Taber Abrasion (1000g, 1000r): ≤ 25 mg
 
 ### MZ-CAT-26: Fast-Setting Hydrophobic Water Plug / Leak Stopper
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-26
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: GB 23440-2009 (Type I Fast Setting / Type II Instant Plug)
 - **Nominal Thickness / Spec**: Spot plugging / Mortar patch
@@ -377,6 +409,7 @@
   - 3-Day Compressive Strength: ≥ 30.0 MPa
 
 ### MZ-CAT-27: Water-Based Polyurethane Polymer Waterproof Emulsion
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-27
 - **Category**: Liquid Coatings & Slurry
 - **Execution Standards**: JC/T 1017-2006
 - **Nominal Thickness / Spec**: 1.2mm - 1.5mm
@@ -390,6 +423,7 @@
   - Solids Content: ≥ 65%
 
 ### MZ-CAT-28: Aluminum Foil Reinforced Butyl Waterproof Flashing Tape
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-28
 - **Category**: Flashing & Butyl Tapes
 - **Execution Standards**: JC/T 942-2004 / ASTM C771
 - **Nominal Thickness / Spec**: 1.0mm, 1.2mm, 1.5mm, 2.0mm
@@ -404,6 +438,7 @@
   - Solids Content: 100% (Solvent Free)
 
 ### MZ-CAT-29: Double-Sided Butyl Rubber Sealing Joint Tape
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-29
 - **Category**: Flashing & Butyl Tapes
 - **Execution Standards**: JC/T 942-2004
 - **Nominal Thickness / Spec**: 1.0mm, 1.5mm, 2.0mm, 3.0mm; Width: 10mm - 100mm
@@ -417,6 +452,7 @@
   - Elongation: ≥ 400%
 
 ### MZ-CAT-30: Heavy-Duty Marine Hatch Cover Sealing Tape
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-30
 - **Category**: Flashing & Butyl Tapes
 - **Execution Standards**: IMO Marine Standards / ISO 17338
 - **Nominal Thickness / Spec**: 2.0mm, 3.0mm; Width: 100mm, 150mm
@@ -430,6 +466,7 @@
   - Temperature Range: -20°C to +80°C
 
 ### MZ-CAT-31: Bituminous Damp Proof Course (DPC) Strip
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-31
 - **Category**: Flashing & Butyl Tapes
 - **Execution Standards**: BS 6398 / EN 14909 / GB 18173.1
 - **Nominal Thickness / Spec**: 0.5mm, 0.8mm, 1.0mm, 1.2mm
@@ -443,6 +480,7 @@
   - Water Vapor Resistance: > 250 MNs/g
 
 ### MZ-CAT-32: HDPE Impermeable Smooth / Textured Geomembrane
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-32
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: GRI-GM13 Standard / GB/T 17643-2011
 - **Nominal Thickness / Spec**: 0.5mm, 0.75mm, 1.0mm, 1.5mm, 2.0mm, 2.5mm, 3.0mm
@@ -457,6 +495,7 @@
   - Carbon Black Dispersion: Category 1 or 2
 
 ### MZ-CAT-33: Non-Woven Needle-Punched Polyester (PET) Geotextile
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-33
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: GB/T 17638-2017 / ASTM D4632 / EN ISO 13426
 - **Nominal Thickness / Spec**: Weight: 100g/m² - 1000g/m²
@@ -470,6 +509,7 @@
   - Permeability Coefficient: 10⁻¹ to 10⁻³ cm/s
 
 ### MZ-CAT-34: Composite Dimple Drainage Sheet with Geotextile
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-34
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: GB/T 18744-2008 / JC/T 2112
 - **Nominal Thickness / Spec**: Dimple Height: 8mm - 25mm; Sheet: 0.8mm - 1.5mm
@@ -483,6 +523,7 @@
   - Geotextile Unit Weight: 100 - 150 gsm
 
 ### MZ-CAT-35: Redispersible Polymer Powder (RDP / VAE) for Mortars
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-35
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: GB/T 29594-2013 / EN 12004
 - **Nominal Thickness / Spec**: Dry white free-flowing powder
@@ -497,6 +538,7 @@
   - Ash Content (1000°C): 10 ± 2%
 
 ### MZ-CAT-36: Reinforcing Polyester Spunbond / Fiberglass Carrier Mat
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-36
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: JC/T 504-2007 / GB/T 18840
 - **Nominal Thickness / Spec**: 140 g/m² - 250 g/m²
@@ -510,6 +552,7 @@
   - Bitumen Absorption: ≥ 350%
 
 ### MZ-CAT-37: Rapid Setting Leak Stopper Mortar & Grouting Compound
+- **Direct Product URL**: https://mingzewaterproof.com/#MZ-CAT-37
 - **Category**: Geosynthetics & Auxiliaries
 - **Execution Standards**: GB/T 50448-2015
 - **Nominal Thickness / Spec**: 10mm - 100mm per lift
@@ -521,43 +564,3 @@
   - Initial Setting: 15 - 30 minutes
   - 28-Day Compressive Strength: ≥ 55 MPa
   - Expansion Rate: +0.02% to +0.05%
-
-## 4. International Standards Compliance Matrix
-### ASTM International
-- **ASTM D6878**: Specification for Thermoplastic Polyolefin (TPO) Sheet Roofing
-- **ASTM D4434**: Specification for Poly(Vinyl Chloride) Sheet Roofing
-- **ASTM D6164**: Specification for SBS-Modified Bituminous Sheet (Polyester)
-- **ASTM D6222**: Specification for APP-Modified Bituminous Sheet
-- **ASTM C836**: High Solids Content Polyurethane Waterproofing
-
-### European Standards (EN / CE)
-- **EN 13707**: Flexible sheets for waterproofing - Reinforced bitumen sheets for roof waterproofing
-- **EN 13956**: Flexible sheets for waterproofing - Plastic and rubber sheets for roof waterproofing
-- **EN 13859-1**: Flexible sheets for waterproofing - Underlays for discontinuous roofing
-- **EN 14909**: Flexible sheets for waterproofing - Plastic and rubber damp proof courses
-
-### Chinese National Standards (GB)
-- **GB 18242-2008**: Elastomer Modified Bituminous Sheet Materials (SBS)
-- **GB 27789-2011**: Thermoplastic Polyolefin (TPO) Waterproof Sheets
-- **GB 12952-2011**: Polyvinyl Chloride (PVC) Waterproof Sheets
-- **GB/T 23457-2017**: Pre-applied and Wet-installed Waterproof Membrane
-- **GB/T 19250-2013**: Polyurethane Waterproof Coating
-
-## 5. Technical & Export FAQ
-### How to choose between SBS and APP modified bitumen waterproof membranes for different climates?
-SBS (Styrene-Butadiene-Styrene) modified bitumen membrane (MZ-CAT-01) offers superior low-temperature flexibility down to -25°C and ≥40% elongation, making it ideal for cold and temperate regions. APP (Atactic Polypropylene) modified bitumen membrane (MZ-CAT-02) provides high heat resistance up to +130°C and strong UV stability, engineered for tropical and high-temperature regions such as the Middle East, Africa, Southeast Asia, and South America.
-
-### How many rolls of 3mm or 4mm waterproof membrane fit in a 20GP export container?
-For standard 1m × 10m modified bitumen rolls palletized at our Weifang factory: a 20GP container loads approximately 620–650 rolls (6,200–6,500 m²) of 3.0mm SBS/APP membrane, or 480–500 rolls (4,800–5,000 m²) of 4.0mm SBS/APP membrane. For 1.2mm–1.5mm Pre-Applied HDPE or TPO membranes (2m × 20m rolls), a 20GP container loads approximately 14,000–18,000 m². Standard lead time to Qingdao Port (200 km) is 7–10 days.
-
-### What international standards do Mingze waterproofing membranes and coatings comply with?
-Our 37 waterproofing products are manufactured under ISO 9001:2015 and ISO 14001:2015 quality systems and tested to comply with ASTM D6164 (SBS), ASTM D6222 (APP), ASTM D6878 (TPO), ASTM D4434 (PVC), ASTM D5385 (Pre-applied HDPE), ASTM C836 (Polyurethane coating), European CE standards EN 13707 / EN 13956, and Chinese GB standards. Batch-specific COA, TDS, and MSDS documents are supplied with every shipment.
-
-### Do you provide OEM private-label branding and free physical sample swatch boxes?
-Yes. We provide custom roll widths (1.0m / 2.0m), custom thickness, private-label PE film printing, and custom packaging for global distributors and contractors. Complimentary A4 physical membrane cuts and coating sample kits can be dispatched globally via DHL or FedEx for laboratory verification and project tender submittals.
-
-### Which waterproofing membrane is recommended for blindside underground basements and tunnels?
-For underground foundations, basements, and civil tunnels, we recommend Pre-Applied HDPE Self-Adhesive Waterproof Membrane (MZ-CAT-11, 1.2mm–2.0mm) compliant with ASTM D5385 and GB/T 23457, which forms a permanent chemical-mechanical bond with poured structural concrete to prevent lateral water migration, paired with EVA/ECB tunnel sheets (MZ-CAT-16) and HDPE dimple drainage boards (MZ-CAT-14 / MZ-CAT-34).
-
-### How can overseas buyers request a factory FOB or CIF quotation?
-Buyers can contact our export engineering desk directly via email at zhao@mzwaterproof.com (or zhao@mingzewaterproof.com) or via WhatsApp at +86 16658506707, stating the product model (e.g., MZ-CAT-01 to MZ-CAT-37), thickness, estimated quantity, and destination port. Formal FOB Qingdao or CIF quotations are issued within 24 hours.

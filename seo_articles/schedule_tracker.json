@@ -1,0 +1,358 @@
+{
+  "project_dir": "/Users/chengzhi/workspace/mingze/code",
+  "master_plan": "/Users/chengzhi/workspace/mingze/code/SEO_GEO_MASTER_PLAN.md",
+  "cadence": "daily_0930_asia_shanghai",
+  "publish_policy": "local_md_and_static_html_require_user_confirmation_before_git_push",
+  "html_builder_script": "/Users/chengzhi/workspace/mingze/code/build_seo_article_html.mjs",
+  "articles": [
+    {
+      "day": "D1",
+      "week": "W1",
+      "slug": "sbs-vs-app-modified-bitumen-membrane-climate-guide",
+      "title": "SBS vs. APP Modified Bitumen Membrane: Complete Climate Selection Guide (-25°C to +130°C)",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-02",
+        "MZ-CAT-06"
+      ],
+      "status": "published",
+      "generated_at": "2026-11-11",
+      "published_at": "2026-11-16",
+      "draft_file": "seo_articles/W1-sbs-vs-app-modified-bitumen-membrane-climate-guide.md",
+      "html_file": "public/articles/sbs-vs-app-modified-bitumen-membrane-climate-guide/index.html"
+    },
+    {
+      "day": "D2",
+      "week": "W2",
+      "slug": "bitumen-waterproof-membrane-20gp-container-loading-guide",
+      "title": "How Many Rolls of 3mm & 4mm Bitumen Waterproof Membrane Fit in a 20GP Container? (FOB Qingdao Loading Table)",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-02",
+        "MZ-CAT-03",
+        "MZ-CAT-06",
+        "MZ-CAT-07"
+      ],
+      "status": "published",
+      "generated_at": "2026-11-16",
+      "published_at": "2026-11-16",
+      "draft_file": "seo_articles/D2-bitumen-waterproof-membrane-20gp-container-loading-guide.md",
+      "html_file": "public/articles/bitumen-waterproof-membrane-20gp-container-loading-guide/index.html"
+    },
+    {
+      "day": "D3",
+      "week": "W3",
+      "slug": "pre-applied-hdpe-vs-torch-on-bitumen-basement-waterproofing",
+      "title": "Pre-Applied HDPE Membrane vs. Torch-On Bitumen for Blindside Basement Waterproofing (ASTM D5385 Guide)",
+      "target_skus": [
+        "MZ-CAT-11",
+        "MZ-CAT-12",
+        "MZ-CAT-14"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D4",
+      "week": "W4",
+      "slug": "tpo-vs-pvc-single-ply-roofing-membrane-comparison",
+      "title": "TPO vs. PVC Single-Ply Roofing Membrane: Weldability, Solar Reflectance & Service Life Compared",
+      "target_skus": [
+        "MZ-CAT-08",
+        "MZ-CAT-09",
+        "MZ-CAT-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D5",
+      "week": "W5",
+      "slug": "en-13707-en-13956-ce-astm-waterproofing-standards-guide",
+      "title": "Importing Waterproofing Membranes from China: Understanding EN 13707, EN 13956 (CE) & ASTM Standards",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-08",
+        "MZ-CAT-09",
+        "MZ-CAT-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D6",
+      "week": "W6",
+      "slug": "single-vs-two-component-polyurethane-waterproof-coating-guide",
+      "title": "Single-Component vs. Two-Component Polyurethane Waterproof Coating: Coverage Rate & Application Guide",
+      "target_skus": [
+        "MZ-CAT-17",
+        "MZ-CAT-18",
+        "MZ-CAT-27"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D7",
+      "week": "W7",
+      "slug": "industrial-metal-roof-leak-repair-acrylic-coating-butyl-tape",
+      "title": "Industrial Metal Roof Leak Repair: Acrylic Elastomeric Coating + Aluminum Butyl Flashing Tape System",
+      "target_skus": [
+        "MZ-CAT-20",
+        "MZ-CAT-28",
+        "MZ-CAT-29"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D8",
+      "week": "W8",
+      "slug": "root-resistant-waterproofing-membrane-green-roofs-en-13948",
+      "title": "Root-Resistant Waterproofing Systems for Planted Green Roofs & Podium Decks (FLL & EN 13948 Compliance)",
+      "target_skus": [
+        "MZ-CAT-07",
+        "MZ-CAT-14",
+        "MZ-CAT-34"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D9",
+      "week": "W9",
+      "slug": "hdpe-geomembrane-non-woven-geotextile-selection-guide",
+      "title": "HDPE Geomembrane & Non-Woven Geotextile Selection Guide for Landfills, Mining & Aquaculture Ponds",
+      "target_skus": [
+        "MZ-CAT-32",
+        "MZ-CAT-33",
+        "MZ-CAT-34"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D10",
+      "week": "W10",
+      "slug": "spray-polyurea-vs-crystalline-waterproofing-bridges-tunnels",
+      "title": "Spray Polyurea vs. Cementitious Crystalline Waterproofing for Bridges, Tunnels & Water Tanks",
+      "target_skus": [
+        "MZ-CAT-16",
+        "MZ-CAT-22",
+        "MZ-CAT-25"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D11",
+      "week": "W11",
+      "slug": "taitou-shouguang-china-waterproof-manufacturing-hub-audit-guide",
+      "title": "Why Source from Taitou (Shouguang), China's Waterproof Manufacturing Capital? Factory Audit & QC Checklist",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-08",
+        "MZ-CAT-11",
+        "MZ-CAT-17"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D12",
+      "week": "W12",
+      "slug": "oem-private-label-waterproofing-membranes-butyl-tapes-moq-guide",
+      "title": "Private Label (OEM) Waterproofing Membranes & Butyl Tapes: Custom Roll Widths, Film Printing & MOQ Guide",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-03",
+        "MZ-CAT-28"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D13",
+      "slug": "self-adhesive-bitumen-vs-cross-laminated-hdpe-membrane-cold-applied",
+      "title": "Self-Adhesive Polymer Bitumen vs. Cross-Laminated HDPE Membrane: Cold-Applied Specification Guide (ASTM D1970 / GB/T 35467)",
+      "target_skus": [
+        "MZ-CAT-03",
+        "MZ-CAT-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D14",
+      "slug": "fiberglass-asphalt-shingles-synthetic-underlayment-pitched-roof-guide",
+      "title": "Architectural Fiberglass Asphalt Shingles & Breathable Synthetic Underlayment: High-Wind Pitched Roof Guide (ASTM D3462 / EN 544)",
+      "target_skus": [
+        "MZ-CAT-04",
+        "MZ-CAT-05"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D15",
+      "slug": "epdm-rubber-membrane-exposed-roofs-reservoirs-astm-d4637",
+      "title": "Vulcanized EPDM Rubber Membrane (450% Elongation): Exposed Commercial Roofs & Artificial Reservoir Specification Guide (ASTM D4637)",
+      "target_skus": [
+        "MZ-CAT-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D16",
+      "slug": "non-bituminous-polymer-self-adhesive-vs-cpe-waterproof-membrane",
+      "title": "Bitumen-Free Polymer Self-Adhesive Membrane & Chlorinated Polyethylene (CPE) Sheet for Potable Tanks & Chemical Plants",
+      "target_skus": [
+        "MZ-CAT-13",
+        "MZ-CAT-15"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D17",
+      "slug": "t-ribbed-hdpe-concrete-protection-liner-wastewater-tunnels",
+      "title": "T-Ribbed HDPE Concrete Protection Geomembrane (9.5mm Anchor Ribs): H2S Corrosion Barrier for Sewage Pipes & Basins (GRI-GM13)",
+      "target_skus": [
+        "MZ-CAT-14",
+        "MZ-CAT-32"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D18",
+      "slug": "eva-ecb-tunnel-waterproof-sheet-dual-track-hot-wedge-welding",
+      "title": "EVA / ECB Tunnel Waterproof Sheet & Needle-Punched Geotextile Cushion: Mountain & Subway Tunnel Lining Guide",
+      "target_skus": [
+        "MZ-CAT-16",
+        "MZ-CAT-33"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D19",
+      "slug": "js-polymer-cementitious-vs-k11-waterproof-slurry-wet-rooms",
+      "title": "JS Polymer Cementitious Elastomeric Coating vs. K11 Waterproof Slurry: Direct Tile Adhesion & Hydrostatic Head Comparison",
+      "target_skus": [
+        "MZ-CAT-19",
+        "MZ-CAT-21"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D20",
+      "slug": "non-curing-rubber-bitumen-coating-sbs-composite-waterproofing",
+      "title": "Non-Curing Rubberized Bitumen Coating + SBS Membrane Composite System: Zero-Fatigue Self-Healing Basement Waterproofing",
+      "target_skus": [
+        "MZ-CAT-24",
+        "MZ-CAT-01"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D21",
+      "slug": "transparent-polyurethane-tile-sealer-fast-setting-water-plug-repair",
+      "title": "Non-Demolition Tile Balcony Leak Repair & Active Water Plugging: Aliphatic Transparent PU Sealer & Rapid Leak Stopper Guide",
+      "target_skus": [
+        "MZ-CAT-23",
+        "MZ-CAT-26",
+        "MZ-CAT-37"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D22",
+      "slug": "marine-hatch-cover-sealing-tape-bituminous-dpc-strip-specification",
+      "title": "Heavy-Duty Marine Hatch Cover Sealing Tape (ISO 17338) & Bituminous Damp Proof Course (DPC, EN 14909) Export Specification",
+      "target_skus": [
+        "MZ-CAT-30",
+        "MZ-CAT-31"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D23",
+      "slug": "spunbond-polyester-carrier-mat-weight-selection-bitumen-membrane",
+      "title": "Inside Modified Bitumen Membrane Manufacturing: Selecting 140gsm to 250gsm Spunbond Polyester Carrier Mats (PY)",
+      "target_skus": [
+        "MZ-CAT-36",
+        "MZ-CAT-01",
+        "MZ-CAT-02"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D24",
+      "slug": "redispersible-polymer-powder-rdp-vae-waterproof-mortar-formulation",
+      "title": "Redispersible Polymer Powder (RDP / VAE, EN 12004): Dosage & MFFT Formulation Guide for Waterproof Mortars & Tile Adhesives",
+      "target_skus": [
+        "MZ-CAT-35",
+        "MZ-CAT-21",
+        "MZ-CAT-37"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D25",
+      "slug": "middle-east-gcc-high-temp-roof-waterproofing-app-tpo-specification",
+      "title": "Roof & Substructure Waterproofing for Middle East (GCC) Extreme Heat: APP Bitumen (+130°C), High-SRI TPO & Pre-Applied HDPE",
+      "target_skus": [
+        "MZ-CAT-02",
+        "MZ-CAT-08",
+        "MZ-CAT-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D26",
+      "slug": "southeast-asia-monsoon-basement-roof-waterproofing-selection",
+      "title": "Monsoon & Tropical Humidity Waterproofing Guide for Southeast Asia: Wet-Applied Membranes, JS Slurry & Metal Roof Coatings",
+      "target_skus": [
+        "MZ-CAT-12",
+        "MZ-CAT-19",
+        "MZ-CAT-20",
+        "MZ-CAT-28"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D27",
+      "slug": "cold-climate-sub-zero-waterproofing-sbs-epdm-tpo-guide",
+      "title": "Sub-Zero Winter Waterproofing (-25°C to -45°C) for Northern Europe, Central Asia & Canada: SBS Type II, EPDM & TPO Systems",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-06",
+        "MZ-CAT-08",
+        "MZ-CAT-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D28",
+      "slug": "mining-heap-leach-landfill-containment-hdpe-geomembrane-geotextile",
+      "title": "Mining Heap Leach Pads & Municipal Landfill Containment: GRI-GM13 HDPE Geomembrane & PET Geotextile Engineering Guide",
+      "target_skus": [
+        "MZ-CAT-32",
+        "MZ-CAT-33",
+        "MZ-CAT-34"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D29",
+      "slug": "potable-drinking-water-tank-reservoir-waterproofing-systems",
+      "title": "Non-Toxic Waterproofing for Potable Drinking Water Tanks & Reservoirs: CCCW Crystalline, JS Cementitious & Non-Bituminous Sheets",
+      "target_skus": [
+        "MZ-CAT-13",
+        "MZ-CAT-19",
+        "MZ-CAT-22",
+        "MZ-CAT-27"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": "D30",
+      "slug": "mixed-20gp-container-waterproofing-procurement-fob-qingdao-guide",
+      "title": "How to Optimize a Mixed 20GP Container Order of Membranes, Coatings & Butyl Tapes (FOB Qingdao Distributor Guide)",
+      "target_skus": [
+        "MZ-CAT-01",
+        "MZ-CAT-11",
+        "MZ-CAT-17",
+        "MZ-CAT-28",
+        "MZ-CAT-32"
+      ],
+      "status": "pending"
+    }
+  ]
+}

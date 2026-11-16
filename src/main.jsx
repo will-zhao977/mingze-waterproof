@@ -8,8 +8,25 @@ import {
   SOLUTIONS,
   WHY_CHOOSE_US,
   EXPORT_FAQS,
-  COMPARISON_MATRIX
+  COMPARISON_MATRIX,
+  ENGINEERING_GUIDES
 } from "./data";
+
+function formatCardStandard(standards) {
+  const parts = String(standards || "")
+    .split(/\s+\/\s+(?![^()]*\))/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const intl = parts.filter((p) =>
+    /^(ASTM|EN|GRI|IMO|ISO|BS|ACI|FLL)/i.test(p)
+  );
+  if (intl.length > 0) {
+    return [...intl, ...parts.filter((p) => !intl.includes(p))]
+      .slice(0, 2)
+      .join(" / ");
+  }
+  return parts[0] || standards;
+}
 
 const HERO_SLIDES = [
   {
@@ -99,6 +116,28 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Support direct SKU anchor deep-linking (e.g. /#MZ-CAT-01)
+  useEffect(() => {
+    const syncHashProduct = () => {
+      const hash = decodeURIComponent(window.location.hash || "").replace(/^#/, "");
+      if (/^MZ-CAT-\d+$/i.test(hash)) {
+        const found = PRODUCTS.find(
+          (p) => p.code.toUpperCase() === hash.toUpperCase()
+        );
+        if (found) {
+          setSelectedProduct(found);
+          const cardEl = document.getElementById(found.code);
+          if (cardEl) {
+            cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+      }
+    };
+    syncHashProduct();
+    window.addEventListener("hashchange", syncHashProduct);
+    return () => window.removeEventListener("hashchange", syncHashProduct);
+  }, []);
+
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((item) => {
       const matchCat =
@@ -176,6 +215,7 @@ function App() {
             >
               FAQ
             </a>
+            <a href="/articles/">Guides</a>
             <a
               href="#contact"
               className={activeSection === "contact" ? "mp-active" : ""}
@@ -322,6 +362,7 @@ function App() {
               {visibleProducts.map((product) => (
                 <article
                   key={product.id}
+                  id={product.code}
                   className="min-card"
                   onClick={() => setSelectedProduct(product)}
                 >
@@ -337,7 +378,7 @@ function App() {
                   </div>
                   <h3 className="min-card-title">{product.name}</h3>
                   <div className="min-card-spec">
-                    {product.thickness} · {product.standards.split("/")[0].trim()}
+                    {product.thickness} · {formatCardStandard(product.standards)}
                   </div>
                 </article>
               ))}
@@ -398,6 +439,51 @@ function App() {
                 </tbody>
               </table>
             </div>
+
+            {ENGINEERING_GUIDES && ENGINEERING_GUIDES.length > 0 && (
+              <div style={{ marginTop: "32px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "baseline",
+                    flexWrap: "wrap",
+                    gap: "12px",
+                    marginBottom: "14px"
+                  }}
+                >
+                  <h3 style={{ fontSize: "1.15rem" }}>
+                    Engineering Specification &amp; Procurement Guides
+                  </h3>
+                  <a
+                    href="/articles/"
+                    style={{
+                      color: "var(--accent)",
+                      fontWeight: 600,
+                      fontSize: "0.9rem"
+                    }}
+                  >
+                    View All Engineering Guides →
+                  </a>
+                </div>
+                <div className="min-three-grid">
+                  {ENGINEERING_GUIDES.map((g) => (
+                    <a
+                      key={g.slug}
+                      href={g.url}
+                      className="min-clean-box"
+                      style={{ display: "block", borderLeft: "3px solid var(--accent)" }}
+                    >
+                      <div className="min-clean-num">
+                        {g.day} · {g.skus.join(", ")}
+                      </div>
+                      <h3>{g.title}</h3>
+                      <p>{g.summary}</p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
@@ -681,11 +767,44 @@ function App() {
 
       {/* 7. Minimalist Footer */}
       <footer className="min-footer">
-        <div className="min-container min-footer-inner">
-          <span>© {new Date().getFullYear()} {COMPANY_INFO.name}</span>
-          <span>
-            {COMPANY_INFO.email} · WhatsApp {COMPANY_INFO.whatsapp}
-          </span>
+        <div
+          className="min-container min-footer-inner"
+          style={{ flexWrap: "wrap", gap: "16px" }}
+        >
+          <div>
+            <strong>© {new Date().getFullYear()} {COMPANY_INFO.name}</strong>
+            <div style={{ fontSize: "0.82rem", marginTop: "4px" }}>
+              {COMPANY_INFO.address} · {COMPANY_INFO.port}
+            </div>
+          </div>
+          <div style={{ textAlign: "right", fontSize: "0.85rem" }}>
+            <div>
+              <a href={`mailto:${COMPANY_INFO.email}`}>{COMPANY_INFO.email}</a>
+              {" / "}
+              <a href={`mailto:${COMPANY_INFO.altEmail}`}>
+                {COMPANY_INFO.altEmail}
+              </a>
+              {" · WhatsApp "}
+              <a
+                href={COMPANY_INFO.whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {COMPANY_INFO.whatsapp}
+              </a>
+              {" · Tel "}
+              <span>{COMPANY_INFO.phone}</span>
+            </div>
+            <div style={{ marginTop: "4px", fontSize: "0.8rem" }}>
+              <a href="/articles/">Engineering Guides</a>
+              {" · "}
+              <a href="/llms.txt">llms.txt</a>
+              {" · "}
+              <a href="/llms-full.txt">llms-full.txt</a>
+              {" · "}
+              <a href="/sitemap.xml">Sitemap</a>
+            </div>
+          </div>
         </div>
       </footer>
 

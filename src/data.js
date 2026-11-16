@@ -72,7 +72,7 @@ export const PRODUCTS = [
     categoryId: "bitumen-shingles",
     categoryName: "Modified Bitumen & Shingles",
     image: "/assets/images/products/cat-01-v2.jpg",
-    brief: "Premium polyester/fiberglass reinforced SBS torch-on membrane with unmatched low-temperature flexibility down to -25°C.",
+    brief: "Polyester/fiberglass reinforced SBS torch-on membrane with verified low-temperature flexibility down to -25°C.",
     features: [
       "Low temperature flexibility down to -20°C / -25°C",
       "High tensile strength and elongation (PY reinforcement)",
@@ -249,7 +249,7 @@ export const PRODUCTS = [
     categoryId: "polymer-hdpe",
     categoryName: "Polymer & HDPE Pre-Applied",
     image: "/assets/images/products/cat-08-v2.jpg",
-    brief: "State-of-the-art ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.",
+    brief: "Ethylene propylene diene rubber & polypropylene polymer alloy membrane, internally reinforced with polyester scrim for cool roofs.",
     features: [
       "High solar reflectance (SRI > 104) drastically lowers building cooling load",
       "Plasticizer-free formulation ensures zero brittleness over 30+ year lifecycle",
@@ -1071,7 +1071,7 @@ export const STANDARDS_MATRIX = [
 export const WHY_CHOOSE_US = [
   {
     title: "Direct Factory Pricing & 50M m² Capacity",
-    desc: "Located in China's waterproof manufacturing capital with 68,000 m² state-of-the-art automated production lines, offering direct FOB/CIF container pricing with zero middlemen markup."
+    desc: "Located in China's waterproof manufacturing capital with 68,000 m² automated multi-line production facilities, offering direct FOB/CIF container pricing with zero middlemen markup."
   },
   {
     title: "100% Quality Assurance & Batch Testing",
@@ -1164,5 +1164,25 @@ export const COMPARISON_MATRIX = [
     loading20GP: "20kg Pails: ~900 Pails (18 Metric Tons)"
   }
 ];
+
+export const ENGINEERING_GUIDES = [
+  {
+    day: "D1",
+    slug: "sbs-vs-app-modified-bitumen-membrane-climate-guide",
+    url: "/articles/sbs-vs-app-modified-bitumen-membrane-climate-guide/",
+    title: "SBS vs. APP Modified Bitumen Membrane: Complete Climate Selection Guide (-25°C to +130°C)",
+    summary: "Empirical polymer-bitumen phase behavior, ASTM D6164 / D6222 & EN 13707 mandrel cold-bend parameters, and FOB Qingdao 20GP pallet loading specifications.",
+    skus: ["MZ-CAT-01", "MZ-CAT-02", "MZ-CAT-06"]
+  },
+  {
+    day: "D2",
+    slug: "bitumen-waterproof-membrane-20gp-container-loading-guide",
+    url: "/articles/bitumen-waterproof-membrane-20gp-container-loading-guide/",
+    title: "How Many Rolls of 3mm & 4mm Bitumen Waterproof Membrane Fit in a 20GP Container? (FOB Qingdao Loading Table)",
+    summary: "Calculate 20GP container capacity for 3mm and 4mm bitumen waterproof membranes. Compare floor-loaded vs palletized roll counts, weights, and FOB Qingdao specs.",
+    skus: ["MZ-CAT-01", "MZ-CAT-02", "MZ-CAT-03", "MZ-CAT-06", "MZ-CAT-07"]
+  }
+];
+
 
 
