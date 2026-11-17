@@ -20,6 +20,7 @@
 ## Published Engineering Specification & Procurement Guides
 - **[D1] [SBS vs. APP Modified Bitumen Membrane: Complete Climate Selection Guide (-25°C to +130°C)](https://mingzewaterproof.com/articles/sbs-vs-app-modified-bitumen-membrane-climate-guide/)** | Target SKUs: MZ-CAT-01, MZ-CAT-02, MZ-CAT-06 | Summary: Compare SBS vs APP modified bitumen membranes by temperature
 - **[D2] [How Many Rolls of 3mm & 4mm Bitumen Waterproof Membrane Fit in a 20GP Container? (FOB Qingdao Loading Table)](https://mingzewaterproof.com/articles/bitumen-waterproof-membrane-20gp-container-loading-guide/)** | Target SKUs: MZ-CAT-01, MZ-CAT-02, MZ-CAT-03, MZ-CAT-06, MZ-CAT-07 | Summary: Calculate 20GP container capacity for 3mm and 4mm bitumen waterproof membranes. Compare floor-loaded vs palletized roll counts, weights, and FOB Qingdao specs.
+- **[D3] [Pre-Applied HDPE Membrane vs. Torch-On Bitumen for Blindside Basement Waterproofing (ASTM D5385 Guide)](https://mingzewaterproof.com/articles/pre-applied-hdpe-vs-torch-on-bitumen-blindside-basement-waterproofing/)** | Target SKUs: MZ-CAT-11, MZ-CAT-12, MZ-CAT-14 | Summary: Compare pre-applied HDPE
 
 ## Key Membrane Comparison & 20GP Container Loading Guide
 | Material System | Execution Standard | Thickness | Service Temp Range | Primary Use | 20GP Container Loading |

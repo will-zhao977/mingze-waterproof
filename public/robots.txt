@@ -1,37 +1,63 @@
-# Weifang Mingze Waterproof Material Co., Ltd. — SEO & GEO Crawler Policy
+# Weifang Mingze Waterproof Material Co., Ltd. — SEO & GEO Crawler Policy (2026 3-Tier Bot Taxonomy)
 User-agent: *
 Allow: /
 
-# Traditional Search Engines
+# 1. Traditional Search Engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-# Generative AI Search Engines (GEO)
-User-agent: GPTBot
-Allow: /
-
+# 2. Tier-1 AI Search & Grounding Indexers (Eligibility Layer)
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: DuckAssistBot
 Allow: /
 
-User-agent: Claude-SearchBot
+User-agent: Applebot-Extended
+Allow: /
+
+# 3. Tier-2 User-Triggered Live AI Fetchers (Real-Time Buyer Prompt Demand Layer)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Google-Agent
+Allow: /
+
+User-agent: Google-NotebookLM
+Allow: /
+
+# 4. Tier-3 LLM Model Training & Entity Knowledge Graph Crawlers (Parametric Memory Layer)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://mingzewaterproof.com/sitemap.xml

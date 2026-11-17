@@ -42,14 +42,18 @@
     {
       "day": "D3",
       "week": "W3",
-      "slug": "pre-applied-hdpe-vs-torch-on-bitumen-basement-waterproofing",
+      "slug": "pre-applied-hdpe-vs-torch-on-bitumen-blindside-basement-waterproofing",
       "title": "Pre-Applied HDPE Membrane vs. Torch-On Bitumen for Blindside Basement Waterproofing (ASTM D5385 Guide)",
       "target_skus": [
         "MZ-CAT-11",
         "MZ-CAT-12",
         "MZ-CAT-14"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-11-17",
+      "published_at": "2026-11-17",
+      "draft_file": "seo_articles/D3-pre-applied-hdpe-vs-torch-on-bitumen-blindside-basement-waterproofing.md",
+      "html_file": "public/articles/pre-applied-hdpe-vs-torch-on-bitumen-blindside-basement-waterproofing/index.html"
     },
     {
       "day": "D4",
