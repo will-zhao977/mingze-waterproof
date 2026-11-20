@@ -65,7 +65,11 @@
         "MZ-CAT-09",
         "MZ-CAT-10"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-11-18",
+      "published_at": "2026-11-20",
+      "draft_file": "seo_articles/D4-tpo-vs-pvc-single-ply-roofing-membrane-comparison.md",
+      "html_file": "public/articles/tpo-vs-pvc-single-ply-roofing-membrane-comparison/index.html"
     },
     {
       "day": "D5",
@@ -78,7 +82,11 @@
         "MZ-CAT-09",
         "MZ-CAT-11"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-11-19",
+      "published_at": "2026-11-20",
+      "draft_file": "seo_articles/D5-en-13707-en-13956-ce-astm-waterproofing-standards-guide.md",
+      "html_file": "public/articles/en-13707-en-13956-ce-astm-waterproofing-standards-guide/index.html"
     },
     {
       "day": "D6",
@@ -90,7 +98,11 @@
         "MZ-CAT-18",
         "MZ-CAT-27"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-11-20",
+      "published_at": "2026-11-20",
+      "draft_file": "seo_articles/D6-single-vs-two-component-polyurethane-waterproof-coating-guide.md",
+      "html_file": "public/articles/single-vs-two-component-polyurethane-waterproof-coating-guide/index.html"
     },
     {
       "day": "D7",
